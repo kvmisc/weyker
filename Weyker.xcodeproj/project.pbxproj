@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9449DEBC9DCEE133344F91BA /* libPods-Weyker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF0111BC1D5DF1721B2D86E /* libPods-Weyker.a */; };
 		BB431DD3225F426000537A90 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DC9225F426000537A90 /* ViewController.m */; };
 		BB431DD4225F426000537A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB431DCC225F426000537A90 /* Assets.xcassets */; };
 		BB431DD5225F426000537A90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DD0225F426000537A90 /* main.m */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		211EB5C4B48B12C0B606E397 /* Pods-Weyker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weyker.debug.xcconfig"; path = "Target Support Files/Pods-Weyker/Pods-Weyker.debug.xcconfig"; sourceTree = "<group>"; };
+		2BF0111BC1D5DF1721B2D86E /* libPods-Weyker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Weyker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9940D838517181638F5A5510 /* Pods-Weyker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weyker.release.xcconfig"; path = "Target Support Files/Pods-Weyker/Pods-Weyker.release.xcconfig"; sourceTree = "<group>"; };
 		BB431DAF225F417E00537A90 /* Weyker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weyker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB431DC9225F426000537A90 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BB431DCA225F426000537A90 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9449DEBC9DCEE133344F91BA /* libPods-Weyker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76DE8AF63CB9935DCE2256DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BF0111BC1D5DF1721B2D86E /* libPods-Weyker.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB37B02B06DEF3766EF97240 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				211EB5C4B48B12C0B606E397 /* Pods-Weyker.debug.xcconfig */,
+				9940D838517181638F5A5510 /* Pods-Weyker.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BB431DA6225F417E00537A90 = {
 			isa = PBXGroup;
 			children = (
 				BB431DB1225F417E00537A90 /* Weyker */,
 				BB431DB0225F417E00537A90 /* Products */,
+				AB37B02B06DEF3766EF97240 /* Pods */,
+				76DE8AF63CB9935DCE2256DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +124,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB431DC5225F417F00537A90 /* Build configuration list for PBXNativeTarget "Weyker" */;
 			buildPhases = (
+				B2199261F92E9708E5E7FFFF /* [CP] Check Pods Manifest.lock */,
 				BB431DAB225F417E00537A90 /* Sources */,
 				BB431DAC225F417E00537A90 /* Frameworks */,
 				BB431DAD225F417E00537A90 /* Resources */,
@@ -155,6 +181,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B2199261F92E9708E5E7FFFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Weyker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BB431DAB225F417E00537A90 /* Sources */ = {
@@ -284,6 +335,7 @@
 		};
 		BB431DC6225F417F00537A90 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 211EB5C4B48B12C0B606E397 /* Pods-Weyker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -304,6 +356,7 @@
 		};
 		BB431DC7225F417F00537A90 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9940D838517181638F5A5510 /* Pods-Weyker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
