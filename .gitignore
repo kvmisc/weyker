@@ -1,0 +1,12 @@
+
+Weyker.xcodeproj/*
+!Weyker.xcodeproj/project.pbxproj
+
+Weyker.xcworkspace/*
+!Weyker.xcworkspace/contents.xcworkspacedata
+
+Pods/Pods.xcodeproj/*
+!Pods/Pods.xcodeproj/project.pbxproj
+
+# Misc
+.DS_Store
