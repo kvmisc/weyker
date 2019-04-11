@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
   - CocoaLumberjack (3.5.2):
     - CocoaLumberjack/Core (= 3.5.2)
   - CocoaLumberjack/Core (3.5.2)
@@ -40,12 +55,14 @@ PODS:
   - tapkit (2.0.9)
 
 DEPENDENCIES:
+  - AFNetworking
   - CocoaLumberjack
   - libextobjc
   - tapkit (from `https://github.com/kvmisc/tapkit.git`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AFNetworking
     - CocoaLumberjack
     - libextobjc
 
@@ -59,10 +76,11 @@ CHECKOUT OPTIONS:
     :git: https://github.com/kvmisc/tapkit.git
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CocoaLumberjack: 118bf4a820efc641f79fa487b75ed928dccfae23
   libextobjc: aed8b7d2b07f511c1a7ecaacb33ea03e327c69b7
   tapkit: 483bd35cf0f098b16bb11dccf2efe5eb76f984f4
 
-PODFILE CHECKSUM: 3e7f4be51473db678dd9f6e786259a2566060adf
+PODFILE CHECKSUM: ec7d34db861b3576a9a52355a13eb062c9fd2050
 
 COCOAPODS: 1.6.0.beta.1

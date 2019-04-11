@@ -8,4 +8,6 @@ pod 'tapkit', :git => 'https://github.com/kvmisc/tapkit.git'
 pod 'CocoaLumberjack'
 pod 'libextobjc'
 
+pod 'AFNetworking'
+
 end
