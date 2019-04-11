@@ -12,7 +12,6 @@
 		BB431DD4225F426000537A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB431DCC225F426000537A90 /* Assets.xcassets */; };
 		BB431DD5225F426000537A90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DD0225F426000537A90 /* main.m */; };
 		BB431DD6225F426000537A90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DD1225F426000537A90 /* AppDelegate.m */; };
-		BB431DD7225F426000537A90 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB431DD2225F426000537A90 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +55,6 @@
 				211EB5C4B48B12C0B606E397 /* Pods-Weyker.debug.xcconfig */,
 				9940D838517181638F5A5510 /* Pods-Weyker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -175,7 +173,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB431DD7225F426000537A90 /* Info.plist in Resources */,
 				BB431DD4225F426000537A90 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
