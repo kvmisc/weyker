@@ -22,8 +22,9 @@
   UIViewController *vc = [[ViewController alloc] init];
   UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
   nc.navigationBarHidden = YES;
-  //nc.delegate = self;
   _window.rootViewController = nc;
+
+  [_window makeKeyAndVisible];
 
 
   YYFPSLabel *FPSLabel = [[YYFPSLabel alloc] initWithFrame:CGRectMake(0.0, XYZ_SCREEN_HET-30.0, 50.0, 30.0)];
