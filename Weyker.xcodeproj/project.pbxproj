@@ -18,24 +18,24 @@
 		BB349DBB2264216A00515502 /* NSStringUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DA22264216A00515502 /* NSStringUnicode.m */; };
 		BB349DBC2264216A00515502 /* UIButtonExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DA62264216A00515502 /* UIButtonExtentions.m */; };
 		BB349DBD2264216A00515502 /* UIAlertControllerExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DA72264216A00515502 /* UIAlertControllerExtentions.m */; };
-		BB349DBE2264216A00515502 /* XYZDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DA92264216A00515502 /* XYZDateFormatter.m */; };
-		BB349DBF2264216A00515502 /* XYZLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DAC2264216A00515502 /* XYZLogger.m */; };
-		BB349DC12264216A00515502 /* XYZGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DB02264216A00515502 /* XYZGlobal.m */; };
+		BB349DBE2264216A00515502 /* WBDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DA92264216A00515502 /* WBDateFormatter.m */; };
+		BB349DBF2264216A00515502 /* WBLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DAC2264216A00515502 /* WBLogger.m */; };
+		BB349DC12264216A00515502 /* WBGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DB02264216A00515502 /* WBGlobal.m */; };
 		BB349DCA2264227E00515502 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DC52264227E00515502 /* YYWeakProxy.m */; };
 		BB349DCB2264227E00515502 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DC72264227E00515502 /* YYFPSLabel.m */; };
-		BB349DEF226423A600515502 /* XYZCoverActionContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DD3226423A500515502 /* XYZCoverActionContentView.m */; };
-		BB349DF0226423A600515502 /* XYZWeakScriptMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DD5226423A500515502 /* XYZWeakScriptMessageHandler.m */; };
-		BB349DF1226423A600515502 /* XYZMessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DD6226423A500515502 /* XYZMessageCenter.m */; };
-		BB349DF2226423A600515502 /* XYZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DD9226423A500515502 /* XYZNavigationController.m */; };
-		BB349DF5226423A600515502 /* XYZBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DDF226423A500515502 /* XYZBaseTableViewCell.m */; };
-		BB349DF6226423A600515502 /* XYZCoverContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DE0226423A500515502 /* XYZCoverContentView.m */; };
-		BB349DF7226423A600515502 /* XYZHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DE1226423A500515502 /* XYZHUDView.m */; };
-		BB349DF8226423A600515502 /* XYZCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DE2226423A500515502 /* XYZCoverView.m */; };
-		BB349DFA226423A600515502 /* XYZCoverAlertContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DE7226423A500515502 /* XYZCoverAlertContentView.m */; };
-		BB349DFB226423A600515502 /* XYZBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DE8226423A500515502 /* XYZBaseView.m */; };
-		BB349DFD226423A600515502 /* XYZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DEC226423A500515502 /* XYZBaseViewController.m */; };
-		BB349DFE226423A600515502 /* XYZWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DED226423A500515502 /* XYZWebViewController.m */; };
-		BB349DFF226423A600515502 /* XYZBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DEE226423A500515502 /* XYZBaseTableViewController.m */; };
+		BB349DEF226423A600515502 /* WBCoverActionContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DD3226423A500515502 /* WBCoverActionContentView.m */; };
+		BB349DF0226423A600515502 /* WBWeakScriptMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DD5226423A500515502 /* WBWeakScriptMessageHandler.m */; };
+		BB349DF1226423A600515502 /* WBMessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DD6226423A500515502 /* WBMessageCenter.m */; };
+		BB349DF2226423A600515502 /* WBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DD9226423A500515502 /* WBNavigationController.m */; };
+		BB349DF5226423A600515502 /* WBBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DDF226423A500515502 /* WBBaseTableViewCell.m */; };
+		BB349DF6226423A600515502 /* WBCoverContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DE0226423A500515502 /* WBCoverContentView.m */; };
+		BB349DF7226423A600515502 /* WBHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DE1226423A500515502 /* WBHUDView.m */; };
+		BB349DF8226423A600515502 /* WBCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DE2226423A500515502 /* WBCoverView.m */; };
+		BB349DFA226423A600515502 /* WBCoverAlertContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DE7226423A500515502 /* WBCoverAlertContentView.m */; };
+		BB349DFB226423A600515502 /* WBBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DE8226423A500515502 /* WBBaseView.m */; };
+		BB349DFD226423A600515502 /* WBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DEC226423A500515502 /* WBBaseViewController.m */; };
+		BB349DFE226423A600515502 /* WBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DED226423A500515502 /* WBWebViewController.m */; };
+		BB349DFF226423A600515502 /* WBBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DEE226423A500515502 /* WBBaseTableViewController.m */; };
 		BB431DD3225F426000537A90 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DC9225F426000537A90 /* ViewController.m */; };
 		BB431DD4225F426000537A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB431DCC225F426000537A90 /* Assets.xcassets */; };
 		BB431DD5225F426000537A90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DD0225F426000537A90 /* main.m */; };
@@ -67,46 +67,46 @@
 		BB349DA52264216A00515502 /* UIImageExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageExtentions.h; sourceTree = "<group>"; };
 		BB349DA62264216A00515502 /* UIButtonExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonExtentions.m; sourceTree = "<group>"; };
 		BB349DA72264216A00515502 /* UIAlertControllerExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertControllerExtentions.m; sourceTree = "<group>"; };
-		BB349DA92264216A00515502 /* XYZDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZDateFormatter.m; sourceTree = "<group>"; };
-		BB349DAB2264216A00515502 /* XYZGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZGlobal.h; sourceTree = "<group>"; };
-		BB349DAC2264216A00515502 /* XYZLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZLogger.m; sourceTree = "<group>"; };
+		BB349DA92264216A00515502 /* WBDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBDateFormatter.m; sourceTree = "<group>"; };
+		BB349DAB2264216A00515502 /* WBGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBGlobal.h; sourceTree = "<group>"; };
+		BB349DAC2264216A00515502 /* WBLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBLogger.m; sourceTree = "<group>"; };
 		BB349DAD2264216A00515502 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		BB349DAE2264216A00515502 /* XYZDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZDateFormatter.h; sourceTree = "<group>"; };
-		BB349DAF2264216A00515502 /* XYZMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZMacros.h; sourceTree = "<group>"; };
-		BB349DB02264216A00515502 /* XYZGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZGlobal.m; sourceTree = "<group>"; };
-		BB349DB12264216A00515502 /* XYZLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZLogger.h; sourceTree = "<group>"; };
+		BB349DAE2264216A00515502 /* WBDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBDateFormatter.h; sourceTree = "<group>"; };
+		BB349DAF2264216A00515502 /* WBMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMacros.h; sourceTree = "<group>"; };
+		BB349DB02264216A00515502 /* WBGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBGlobal.m; sourceTree = "<group>"; };
+		BB349DB12264216A00515502 /* WBLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBLogger.h; sourceTree = "<group>"; };
 		BB349DC52264227E00515502 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
 		BB349DC62264227E00515502 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
 		BB349DC72264227E00515502 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
 		BB349DC82264227E00515502 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
 		BB349DC92264227E00515502 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		BB349DCE226423A500515502 /* XYZHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZHUDView.h; sourceTree = "<group>"; };
-		BB349DCF226423A500515502 /* XYZBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZBaseTableViewCell.h; sourceTree = "<group>"; };
-		BB349DD0226423A500515502 /* XYZCoverContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZCoverContentView.h; sourceTree = "<group>"; };
-		BB349DD1226423A500515502 /* XYZBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZBaseView.h; sourceTree = "<group>"; };
-		BB349DD2226423A500515502 /* XYZCoverAlertContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZCoverAlertContentView.h; sourceTree = "<group>"; };
-		BB349DD3226423A500515502 /* XYZCoverActionContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZCoverActionContentView.m; sourceTree = "<group>"; };
-		BB349DD5226423A500515502 /* XYZWeakScriptMessageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZWeakScriptMessageHandler.m; sourceTree = "<group>"; };
-		BB349DD6226423A500515502 /* XYZMessageCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZMessageCenter.m; sourceTree = "<group>"; };
-		BB349DD7226423A500515502 /* XYZCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZCoverView.h; sourceTree = "<group>"; };
-		BB349DD8226423A500515502 /* XYZBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZBaseViewController.h; sourceTree = "<group>"; };
-		BB349DD9226423A500515502 /* XYZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZNavigationController.m; sourceTree = "<group>"; };
-		BB349DDC226423A500515502 /* XYZBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZBaseTableViewController.h; sourceTree = "<group>"; };
-		BB349DDD226423A500515502 /* XYZWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZWebViewController.h; sourceTree = "<group>"; };
+		BB349DCE226423A500515502 /* WBHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHUDView.h; sourceTree = "<group>"; };
+		BB349DCF226423A500515502 /* WBBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBBaseTableViewCell.h; sourceTree = "<group>"; };
+		BB349DD0226423A500515502 /* WBCoverContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCoverContentView.h; sourceTree = "<group>"; };
+		BB349DD1226423A500515502 /* WBBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBBaseView.h; sourceTree = "<group>"; };
+		BB349DD2226423A500515502 /* WBCoverAlertContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCoverAlertContentView.h; sourceTree = "<group>"; };
+		BB349DD3226423A500515502 /* WBCoverActionContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCoverActionContentView.m; sourceTree = "<group>"; };
+		BB349DD5226423A500515502 /* WBWeakScriptMessageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWeakScriptMessageHandler.m; sourceTree = "<group>"; };
+		BB349DD6226423A500515502 /* WBMessageCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMessageCenter.m; sourceTree = "<group>"; };
+		BB349DD7226423A500515502 /* WBCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCoverView.h; sourceTree = "<group>"; };
+		BB349DD8226423A500515502 /* WBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBBaseViewController.h; sourceTree = "<group>"; };
+		BB349DD9226423A500515502 /* WBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBNavigationController.m; sourceTree = "<group>"; };
+		BB349DDC226423A500515502 /* WBBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBBaseTableViewController.h; sourceTree = "<group>"; };
+		BB349DDD226423A500515502 /* WBWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBWebViewController.h; sourceTree = "<group>"; };
 		BB349DDE226423A500515502 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		BB349DDF226423A500515502 /* XYZBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZBaseTableViewCell.m; sourceTree = "<group>"; };
-		BB349DE0226423A500515502 /* XYZCoverContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZCoverContentView.m; sourceTree = "<group>"; };
-		BB349DE1226423A500515502 /* XYZHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZHUDView.m; sourceTree = "<group>"; };
-		BB349DE2226423A500515502 /* XYZCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZCoverView.m; sourceTree = "<group>"; };
-		BB349DE3226423A500515502 /* XYZMessageCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZMessageCenter.h; sourceTree = "<group>"; };
-		BB349DE4226423A500515502 /* XYZWeakScriptMessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZWeakScriptMessageHandler.h; sourceTree = "<group>"; };
-		BB349DE5226423A500515502 /* XYZCoverActionContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZCoverActionContentView.h; sourceTree = "<group>"; };
-		BB349DE7226423A500515502 /* XYZCoverAlertContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZCoverAlertContentView.m; sourceTree = "<group>"; };
-		BB349DE8226423A500515502 /* XYZBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZBaseView.m; sourceTree = "<group>"; };
-		BB349DEB226423A500515502 /* XYZNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZNavigationController.h; sourceTree = "<group>"; };
-		BB349DEC226423A500515502 /* XYZBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZBaseViewController.m; sourceTree = "<group>"; };
-		BB349DED226423A500515502 /* XYZWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZWebViewController.m; sourceTree = "<group>"; };
-		BB349DEE226423A500515502 /* XYZBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZBaseTableViewController.m; sourceTree = "<group>"; };
+		BB349DDF226423A500515502 /* WBBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBBaseTableViewCell.m; sourceTree = "<group>"; };
+		BB349DE0226423A500515502 /* WBCoverContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCoverContentView.m; sourceTree = "<group>"; };
+		BB349DE1226423A500515502 /* WBHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBHUDView.m; sourceTree = "<group>"; };
+		BB349DE2226423A500515502 /* WBCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCoverView.m; sourceTree = "<group>"; };
+		BB349DE3226423A500515502 /* WBMessageCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMessageCenter.h; sourceTree = "<group>"; };
+		BB349DE4226423A500515502 /* WBWeakScriptMessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBWeakScriptMessageHandler.h; sourceTree = "<group>"; };
+		BB349DE5226423A500515502 /* WBCoverActionContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCoverActionContentView.h; sourceTree = "<group>"; };
+		BB349DE7226423A500515502 /* WBCoverAlertContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCoverAlertContentView.m; sourceTree = "<group>"; };
+		BB349DE8226423A500515502 /* WBBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBBaseView.m; sourceTree = "<group>"; };
+		BB349DEB226423A500515502 /* WBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBNavigationController.h; sourceTree = "<group>"; };
+		BB349DEC226423A500515502 /* WBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBBaseViewController.m; sourceTree = "<group>"; };
+		BB349DED226423A500515502 /* WBWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWebViewController.m; sourceTree = "<group>"; };
+		BB349DEE226423A500515502 /* WBBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBBaseTableViewController.m; sourceTree = "<group>"; };
 		BB431DAF225F417E00537A90 /* Weyker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weyker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB431DC9225F426000537A90 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BB431DCA225F426000537A90 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -179,13 +179,13 @@
 			isa = PBXGroup;
 			children = (
 				BB349DAD2264216A00515502 /* README.md */,
-				BB349DAF2264216A00515502 /* XYZMacros.h */,
-				BB349DAB2264216A00515502 /* XYZGlobal.h */,
-				BB349DB02264216A00515502 /* XYZGlobal.m */,
-				BB349DB12264216A00515502 /* XYZLogger.h */,
-				BB349DAC2264216A00515502 /* XYZLogger.m */,
-				BB349DAE2264216A00515502 /* XYZDateFormatter.h */,
-				BB349DA92264216A00515502 /* XYZDateFormatter.m */,
+				BB349DAF2264216A00515502 /* WBMacros.h */,
+				BB349DAB2264216A00515502 /* WBGlobal.h */,
+				BB349DB02264216A00515502 /* WBGlobal.m */,
+				BB349DB12264216A00515502 /* WBLogger.h */,
+				BB349DAC2264216A00515502 /* WBLogger.m */,
+				BB349DAE2264216A00515502 /* WBDateFormatter.h */,
+				BB349DA92264216A00515502 /* WBDateFormatter.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -214,12 +214,12 @@
 			isa = PBXGroup;
 			children = (
 				BB349DDE226423A500515502 /* README.md */,
-				BB349DD1226423A500515502 /* XYZBaseView.h */,
-				BB349DE8226423A500515502 /* XYZBaseView.m */,
-				BB349DD8226423A500515502 /* XYZBaseViewController.h */,
-				BB349DEC226423A500515502 /* XYZBaseViewController.m */,
-				BB349DEB226423A500515502 /* XYZNavigationController.h */,
-				BB349DD9226423A500515502 /* XYZNavigationController.m */,
+				BB349DD1226423A500515502 /* WBBaseView.h */,
+				BB349DE8226423A500515502 /* WBBaseView.m */,
+				BB349DD8226423A500515502 /* WBBaseViewController.h */,
+				BB349DEC226423A500515502 /* WBBaseViewController.m */,
+				BB349DEB226423A500515502 /* WBNavigationController.h */,
+				BB349DD9226423A500515502 /* WBNavigationController.m */,
 				BB349E02226424AC00515502 /* CoverView */,
 				BB349E03226424DC00515502 /* MessageCenter */,
 				BB349E042264252600515502 /* WebController */,
@@ -231,14 +231,14 @@
 		BB349E02226424AC00515502 /* CoverView */ = {
 			isa = PBXGroup;
 			children = (
-				BB349DD7226423A500515502 /* XYZCoverView.h */,
-				BB349DE2226423A500515502 /* XYZCoverView.m */,
-				BB349DD0226423A500515502 /* XYZCoverContentView.h */,
-				BB349DE0226423A500515502 /* XYZCoverContentView.m */,
-				BB349DD2226423A500515502 /* XYZCoverAlertContentView.h */,
-				BB349DE7226423A500515502 /* XYZCoverAlertContentView.m */,
-				BB349DE5226423A500515502 /* XYZCoverActionContentView.h */,
-				BB349DD3226423A500515502 /* XYZCoverActionContentView.m */,
+				BB349DD7226423A500515502 /* WBCoverView.h */,
+				BB349DE2226423A500515502 /* WBCoverView.m */,
+				BB349DD0226423A500515502 /* WBCoverContentView.h */,
+				BB349DE0226423A500515502 /* WBCoverContentView.m */,
+				BB349DD2226423A500515502 /* WBCoverAlertContentView.h */,
+				BB349DE7226423A500515502 /* WBCoverAlertContentView.m */,
+				BB349DE5226423A500515502 /* WBCoverActionContentView.h */,
+				BB349DD3226423A500515502 /* WBCoverActionContentView.m */,
 			);
 			name = CoverView;
 			sourceTree = "<group>";
@@ -246,10 +246,10 @@
 		BB349E03226424DC00515502 /* MessageCenter */ = {
 			isa = PBXGroup;
 			children = (
-				BB349DE3226423A500515502 /* XYZMessageCenter.h */,
-				BB349DD6226423A500515502 /* XYZMessageCenter.m */,
-				BB349DCE226423A500515502 /* XYZHUDView.h */,
-				BB349DE1226423A500515502 /* XYZHUDView.m */,
+				BB349DE3226423A500515502 /* WBMessageCenter.h */,
+				BB349DD6226423A500515502 /* WBMessageCenter.m */,
+				BB349DCE226423A500515502 /* WBHUDView.h */,
+				BB349DE1226423A500515502 /* WBHUDView.m */,
 			);
 			name = MessageCenter;
 			sourceTree = "<group>";
@@ -257,10 +257,10 @@
 		BB349E042264252600515502 /* WebController */ = {
 			isa = PBXGroup;
 			children = (
-				BB349DDD226423A500515502 /* XYZWebViewController.h */,
-				BB349DED226423A500515502 /* XYZWebViewController.m */,
-				BB349DE4226423A500515502 /* XYZWeakScriptMessageHandler.h */,
-				BB349DD5226423A500515502 /* XYZWeakScriptMessageHandler.m */,
+				BB349DDD226423A500515502 /* WBWebViewController.h */,
+				BB349DED226423A500515502 /* WBWebViewController.m */,
+				BB349DE4226423A500515502 /* WBWeakScriptMessageHandler.h */,
+				BB349DD5226423A500515502 /* WBWeakScriptMessageHandler.m */,
 			);
 			name = WebController;
 			sourceTree = "<group>";
@@ -268,10 +268,10 @@
 		BB349E052264255200515502 /* TableViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BB349DDC226423A500515502 /* XYZBaseTableViewController.h */,
-				BB349DEE226423A500515502 /* XYZBaseTableViewController.m */,
-				BB349DCF226423A500515502 /* XYZBaseTableViewCell.h */,
-				BB349DDF226423A500515502 /* XYZBaseTableViewCell.m */,
+				BB349DDC226423A500515502 /* WBBaseTableViewController.h */,
+				BB349DEE226423A500515502 /* WBBaseTableViewController.m */,
+				BB349DCF226423A500515502 /* WBBaseTableViewCell.h */,
+				BB349DDF226423A500515502 /* WBBaseTableViewCell.m */,
 			);
 			name = TableViewController;
 			sourceTree = "<group>";
@@ -433,33 +433,33 @@
 			files = (
 				BB349DCB2264227E00515502 /* YYFPSLabel.m in Sources */,
 				BB349DB52264216A00515502 /* UITextXXXMaxLength.m in Sources */,
-				BB349DF1226423A600515502 /* XYZMessageCenter.m in Sources */,
-				BB349DFA226423A600515502 /* XYZCoverAlertContentView.m in Sources */,
-				BB349DFF226423A600515502 /* XYZBaseTableViewController.m in Sources */,
-				BB349DEF226423A600515502 /* XYZCoverActionContentView.m in Sources */,
+				BB349DF1226423A600515502 /* WBMessageCenter.m in Sources */,
+				BB349DFA226423A600515502 /* WBCoverAlertContentView.m in Sources */,
+				BB349DFF226423A600515502 /* WBBaseTableViewController.m in Sources */,
+				BB349DEF226423A600515502 /* WBCoverActionContentView.m in Sources */,
 				BB349DB32264216A00515502 /* UINavigationControllerExtentions.m in Sources */,
-				BB349DC12264216A00515502 /* XYZGlobal.m in Sources */,
+				BB349DC12264216A00515502 /* WBGlobal.m in Sources */,
 				BB349DBC2264216A00515502 /* UIButtonExtentions.m in Sources */,
-				BB349DF7226423A600515502 /* XYZHUDView.m in Sources */,
+				BB349DF7226423A600515502 /* WBHUDView.m in Sources */,
 				BB349DBA2264216A00515502 /* NSObjectExtentions.m in Sources */,
 				BB349DBD2264216A00515502 /* UIAlertControllerExtentions.m in Sources */,
 				BB349DB42264216A00515502 /* UITableViewCellExtentions.m in Sources */,
-				BB349DBE2264216A00515502 /* XYZDateFormatter.m in Sources */,
+				BB349DBE2264216A00515502 /* WBDateFormatter.m in Sources */,
 				BB349DBB2264216A00515502 /* NSStringUnicode.m in Sources */,
-				BB349DF0226423A600515502 /* XYZWeakScriptMessageHandler.m in Sources */,
-				BB349DF6226423A600515502 /* XYZCoverContentView.m in Sources */,
-				BB349DF2226423A600515502 /* XYZNavigationController.m in Sources */,
+				BB349DF0226423A600515502 /* WBWeakScriptMessageHandler.m in Sources */,
+				BB349DF6226423A600515502 /* WBCoverContentView.m in Sources */,
+				BB349DF2226423A600515502 /* WBNavigationController.m in Sources */,
 				BB431DD5225F426000537A90 /* main.m in Sources */,
 				BB349DB82264216A00515502 /* UIColorExtentions.m in Sources */,
 				BB431DD3225F426000537A90 /* ViewController.m in Sources */,
-				BB349DF5226423A600515502 /* XYZBaseTableViewCell.m in Sources */,
-				BB349DFD226423A600515502 /* XYZBaseViewController.m in Sources */,
+				BB349DF5226423A600515502 /* WBBaseTableViewCell.m in Sources */,
+				BB349DFD226423A600515502 /* WBBaseViewController.m in Sources */,
 				BB349DB92264216A00515502 /* NSStringExtentions.m in Sources */,
 				BB349DCA2264227E00515502 /* YYWeakProxy.m in Sources */,
-				BB349DBF2264216A00515502 /* XYZLogger.m in Sources */,
-				BB349DFE226423A600515502 /* XYZWebViewController.m in Sources */,
-				BB349DF8226423A600515502 /* XYZCoverView.m in Sources */,
-				BB349DFB226423A600515502 /* XYZBaseView.m in Sources */,
+				BB349DBF2264216A00515502 /* WBLogger.m in Sources */,
+				BB349DFE226423A600515502 /* WBWebViewController.m in Sources */,
+				BB349DF8226423A600515502 /* WBCoverView.m in Sources */,
+				BB349DFB226423A600515502 /* WBBaseView.m in Sources */,
 				BB431DD6225F426000537A90 /* AppDelegate.m in Sources */,
 				BB349DB62264216A00515502 /* UIImageExtentions.m in Sources */,
 			);

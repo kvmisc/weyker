@@ -40,7 +40,7 @@
 {
   UIAlertController *ac = [self alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
   [ac tk_addAction:confirm handler:^(UIAlertAction *action) { if ( completion ) { completion(); } }];
-  [[XYZGlobal topmostViewController] presentViewController:ac animated:YES completion:NULL];
+  [[WBGlobal topmostViewController] presentViewController:ac animated:YES completion:NULL];
   return ac;
 }
 
@@ -54,7 +54,7 @@
   [ac tk_addAction:cancel handler:^(UIAlertAction *action) { if ( completion ) { completion(NO); } }];
   ac.preferredAction =
   [ac tk_addAction:confirm handler:^(UIAlertAction *action) { if ( completion ) { completion(YES); } }];
-  [[XYZGlobal topmostViewController] presentViewController:ac animated:YES completion:NULL];
+  [[WBGlobal topmostViewController] presentViewController:ac animated:YES completion:NULL];
   return ac;
 }
 + (UIAlertController *)tk_presentConfirm:(NSString *)title
@@ -67,7 +67,7 @@
   [ac tk_addAction:confirm handler:^(UIAlertAction *action) { if ( completion ) { completion(YES); } }];
   ac.preferredAction =
   [ac tk_addAction:cancel handler:^(UIAlertAction *action) { if ( completion ) { completion(NO); } }];
-  [[XYZGlobal topmostViewController] presentViewController:ac animated:YES completion:NULL];
+  [[WBGlobal topmostViewController] presentViewController:ac animated:YES completion:NULL];
   return ac;
 }
 
@@ -91,7 +91,7 @@
     if ( completion ) { completion(YES, ac.textFields[0].text); }
   }];
   [ac addTextFieldWithConfigurationHandler:field];
-  [[XYZGlobal topmostViewController] presentViewController:ac animated:YES completion:NULL];
+  [[WBGlobal topmostViewController] presentViewController:ac animated:YES completion:NULL];
   return ac;
 }
 + (UIAlertController *)tk_presentInput:(NSString *)title
@@ -114,7 +114,7 @@
     if ( completion ) { completion(NO, ac.textFields[0].text); }
   }];
   [ac addTextFieldWithConfigurationHandler:field];
-  [[XYZGlobal topmostViewController] presentViewController:ac animated:YES completion:NULL];
+  [[WBGlobal topmostViewController] presentViewController:ac animated:YES completion:NULL];
   return ac;
 }
 

@@ -27,7 +27,7 @@
   [_window makeKeyAndVisible];
 
 
-  YYFPSLabel *FPSLabel = [[YYFPSLabel alloc] initWithFrame:CGRectMake(0.0, XYZ_SCREEN_HET-30.0, 50.0, 30.0)];
+  YYFPSLabel *FPSLabel = [[YYFPSLabel alloc] initWithFrame:CGRectMake(0.0, WB_SCREEN_HET-30.0, 50.0, 30.0)];
   [_window addSubview:FPSLabel];
   FPSLabel.layer.zPosition = 100.0;
 

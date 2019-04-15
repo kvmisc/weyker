@@ -23,10 +23,10 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 #import "AppDelegate.h"
 
 // Core
-#import "Core/XYZMacros.h"
-#import "Core/XYZGlobal.h"
-#import "Core/XYZLogger.h"
-#import "Core/XYZDateFormatter.h"
+#import "Core/WBMacros.h"
+#import "Core/WBGlobal.h"
+#import "Core/WBLogger.h"
+#import "Core/WBDateFormatter.h"
 
 // Extentions
 #import "Extentions/NSObjectExtentions.h"
@@ -41,12 +41,12 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 #import "Extentions/UINavigationControllerExtentions.h"
 
 // Common
-#import "Common/XYZBaseView.h"
-#import "Common/XYZBaseViewController.h"
-#import "Common/XYZNavigationController.h"
-#import "Common/XYZCoverView.h"
-#import "Common/XYZMessageCenter.h"
-#import "Common/XYZWebViewController.h"
-#import "Common/XYZBaseTableViewController.h"
+#import "Common/WBBaseView.h"
+#import "Common/WBBaseViewController.h"
+#import "Common/WBNavigationController.h"
+#import "Common/WBCoverView.h"
+#import "Common/WBMessageCenter.h"
+#import "Common/WBWebViewController.h"
+#import "Common/WBBaseTableViewController.h"
 
 #endif

@@ -158,12 +158,12 @@
 
 + (UIImage *)tk_screenWImageNamed:(NSString *)name
 {
-  NSString *imageName = [name stringByAppendingFormat:@"-%dw", (int)XYZ_SCREEN_WID];
+  NSString *imageName = [name stringByAppendingFormat:@"-%dw", (int)WB_SCREEN_WID];
   return [UIImage imageNamed:imageName];
 }
 + (UIImage *)tk_screenHImageNamed:(NSString *)name
 {
-  NSString *imageName = [name stringByAppendingFormat:@"-%dh", (int)XYZ_SCREEN_HET];
+  NSString *imageName = [name stringByAppendingFormat:@"-%dh", (int)WB_SCREEN_HET];
   return [UIImage imageNamed:imageName];
 }
 
@@ -189,7 +189,7 @@
   //   height = image.size.height * image.scale
   size_t imageWidth = CGImageGetWidth(imageRef);
   size_t imageHeight = CGImageGetHeight(imageRef);
-  XYZLog(@"%@ %f, %d, %d", NSStringFromCGSize(image.size), image.scale, (int)imageWidth, (int)imageHeight);
+  WBLog(@"%@ %f, %d, %d", NSStringFromCGSize(image.size), image.scale, (int)imageWidth, (int)imageHeight);
 
   CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
 
