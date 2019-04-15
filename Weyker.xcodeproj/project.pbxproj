@@ -36,7 +36,9 @@
 		BB349DFD226423A600515502 /* WBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DEC226423A500515502 /* WBBaseViewController.m */; };
 		BB349DFE226423A600515502 /* WBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DED226423A500515502 /* WBWebViewController.m */; };
 		BB349DFF226423A600515502 /* WBBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DEE226423A500515502 /* WBBaseTableViewController.m */; };
-		BB431DD3225F426000537A90 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DC9225F426000537A90 /* ViewController.m */; };
+		BB349E0C2264593000515502 /* WBRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349E0A2264593000515502 /* WBRootViewController.m */; };
+		BB349E0D2264593000515502 /* WBRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB349E0B2264593000515502 /* WBRootViewController.xib */; };
+		BB349E1322645FFC00515502 /* WBAuthorizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349E1222645FFC00515502 /* WBAuthorizeView.m */; };
 		BB431DD4225F426000537A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB431DCC225F426000537A90 /* Assets.xcassets */; };
 		BB431DD5225F426000537A90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DD0225F426000537A90 /* main.m */; };
 		BB431DD6225F426000537A90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DD1225F426000537A90 /* AppDelegate.m */; };
@@ -107,9 +109,12 @@
 		BB349DEC226423A500515502 /* WBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBBaseViewController.m; sourceTree = "<group>"; };
 		BB349DED226423A500515502 /* WBWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWebViewController.m; sourceTree = "<group>"; };
 		BB349DEE226423A500515502 /* WBBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBBaseTableViewController.m; sourceTree = "<group>"; };
+		BB349E092264593000515502 /* WBRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBRootViewController.h; sourceTree = "<group>"; };
+		BB349E0A2264593000515502 /* WBRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBRootViewController.m; sourceTree = "<group>"; };
+		BB349E0B2264593000515502 /* WBRootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBRootViewController.xib; sourceTree = "<group>"; };
+		BB349E1122645FFC00515502 /* WBAuthorizeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAuthorizeView.h; sourceTree = "<group>"; };
+		BB349E1222645FFC00515502 /* WBAuthorizeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAuthorizeView.m; sourceTree = "<group>"; };
 		BB431DAF225F417E00537A90 /* Weyker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weyker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB431DC9225F426000537A90 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BB431DCA225F426000537A90 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BB431DCC225F426000537A90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB431DCE225F426000537A90 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BB431DCF225F426000537A90 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
@@ -261,6 +266,8 @@
 				BB349DED226423A500515502 /* WBWebViewController.m */,
 				BB349DE4226423A500515502 /* WBWeakScriptMessageHandler.h */,
 				BB349DD5226423A500515502 /* WBWeakScriptMessageHandler.m */,
+				BB349E1122645FFC00515502 /* WBAuthorizeView.h */,
+				BB349E1222645FFC00515502 /* WBAuthorizeView.m */,
 			);
 			name = WebController;
 			sourceTree = "<group>";
@@ -311,8 +318,9 @@
 		BB431DC8225F426000537A90 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				BB431DC9225F426000537A90 /* ViewController.m */,
-				BB431DCA225F426000537A90 /* ViewController.h */,
+				BB349E092264593000515502 /* WBRootViewController.h */,
+				BB349E0A2264593000515502 /* WBRootViewController.m */,
+				BB349E0B2264593000515502 /* WBRootViewController.xib */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -396,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB431DD4225F426000537A90 /* Assets.xcassets in Resources */,
+				BB349E0D2264593000515502 /* WBRootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +448,7 @@
 				BB349DEF226423A600515502 /* WBCoverActionContentView.m in Sources */,
 				BB349DB32264216A00515502 /* UINavigationControllerExtentions.m in Sources */,
 				BB349DC12264216A00515502 /* WBGlobal.m in Sources */,
+				BB349E0C2264593000515502 /* WBRootViewController.m in Sources */,
 				BB349DBC2264216A00515502 /* UIButtonExtentions.m in Sources */,
 				BB349DF7226423A600515502 /* WBHUDView.m in Sources */,
 				BB349DBA2264216A00515502 /* NSObjectExtentions.m in Sources */,
@@ -451,13 +461,13 @@
 				BB349DF2226423A600515502 /* WBNavigationController.m in Sources */,
 				BB431DD5225F426000537A90 /* main.m in Sources */,
 				BB349DB82264216A00515502 /* UIColorExtentions.m in Sources */,
-				BB431DD3225F426000537A90 /* ViewController.m in Sources */,
 				BB349DF5226423A600515502 /* WBBaseTableViewCell.m in Sources */,
 				BB349DFD226423A600515502 /* WBBaseViewController.m in Sources */,
 				BB349DB92264216A00515502 /* NSStringExtentions.m in Sources */,
 				BB349DCA2264227E00515502 /* YYWeakProxy.m in Sources */,
 				BB349DBF2264216A00515502 /* WBLogger.m in Sources */,
 				BB349DFE226423A600515502 /* WBWebViewController.m in Sources */,
+				BB349E1322645FFC00515502 /* WBAuthorizeView.m in Sources */,
 				BB349DF8226423A600515502 /* WBCoverView.m in Sources */,
 				BB349DFB226423A600515502 /* WBBaseView.m in Sources */,
 				BB431DD6225F426000537A90 /* AppDelegate.m in Sources */,

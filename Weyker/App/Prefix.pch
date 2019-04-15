@@ -20,6 +20,8 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 #import <KVOController/KVOController.h>
 #import <Aspects/Aspects.h>
 
+#import <AFNetworking/AFNetworking.h>
+
 #import "AppDelegate.h"
 
 // Core

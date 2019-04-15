@@ -10,16 +10,19 @@
 
 #import "Vendors/YYFPSLabel/YYFPSLabel.h"
 
-#import "Pages/ViewController.h"
+#import "Pages/WBRootViewController.h"
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [WBLogger setup];
+
+
   _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   _window.backgroundColor = [UIColor whiteColor];
-  UIViewController *vc = [[ViewController alloc] init];
+  UIViewController *vc = [[WBRootViewController alloc] init];
   UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
   nc.navigationBarHidden = YES;
   _window.rootViewController = nc;
@@ -27,9 +30,11 @@
   [_window makeKeyAndVisible];
 
 
-  YYFPSLabel *FPSLabel = [[YYFPSLabel alloc] initWithFrame:CGRectMake(0.0, WB_SCREEN_HET-30.0, 50.0, 30.0)];
+#ifdef DEBUG
+  YYFPSLabel *FPSLabel = [[YYFPSLabel alloc] init];
   [_window addSubview:FPSLabel];
   FPSLabel.layer.zPosition = 100.0;
+#endif
 
   return YES;
 }

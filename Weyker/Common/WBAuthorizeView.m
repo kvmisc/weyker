@@ -1,111 +1,127 @@
 //
-//  WBWebViewController.m
-//  GenericProj
+//  WBAuthorizeView.m
+//  Weyker
 //
-//  Created by Kevin Wu on 6/6/17.
-//  Copyright © 2017 firefly.com. All rights reserved.
+//  Created by Haiping Wu on 2019/4/15.
+//  Copyright © 2019 migu. All rights reserved.
 //
 
-#import "WBWebViewController.h"
+#import "WBAuthorizeView.h"
 #import "WBWeakScriptMessageHandler.h"
 
-@interface WBWebViewController () <
+@interface WBAuthorizeView () <
     WKNavigationDelegate,
     WKUIDelegate,
     WKScriptMessageHandler
 >
 
 @property (nonatomic, strong) UIProgressView *progressView;
+@property (nonatomic, strong) UIButton *closeBtn;
+
+@property (nonatomic, copy) void (^completion)(NSString *token);
 
 @end
 
-@implementation WBWebViewController {
-  BOOL _loadedEver;
+
+@implementation WBAuthorizeView {
   NSMutableDictionary *_messageMap;
   WBWeakScriptMessageHandler *_messageHandler;
 }
 
-- (id)initWithURL:(NSString *)url
+- (id)initWithFrame:(CGRect)frame
 {
-  self = [super init];
+  self = [super initWithFrame:frame];
   if (self) {
-    if ( url.length>0 ) {
-      _request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
-      _loadedEver = NO;
-      _messageMap = [[NSMutableDictionary alloc] init];
-      _messageHandler = [[WBWeakScriptMessageHandler alloc] init];
-      _messageHandler.delegate = self;
-    } else {
-      return nil;
-    }
+    [self setup];
   }
   return self;
 }
 
-#ifdef DEBUG
-- (void)dealloc { WBPrintMethod(); }
-#endif
-
-- (void)viewDidLoad
+- (id)initWithCoder:(NSCoder *)coder
 {
-  [super viewDidLoad];
+  self = [super initWithCoder:coder];
+  if (self) {
+    [self setup];
+  }
+  return self;
+}
+
+
+
+- (void)setup
+{
+  _request = nil;
+  _messageMap = [[NSMutableDictionary alloc] init];
+  _messageHandler = [[WBWeakScriptMessageHandler alloc] init];
+  _messageHandler.delegate = self;
 
   WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
   _webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:configuration];
   _webView.UIDelegate = self;
   _webView.navigationDelegate = self;
-  if ( @available(iOS 11.0, *) ) {
-    _webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-  } else {
-    self.automaticallyAdjustsScrollViewInsets = NO;
-  }
-  [self.view addSubview:_webView];
-  [self clearWebViewCache];
-  [self scalePageToFit];
-
+  [self addSubview:_webView];
+  //[self clearWebViewCache];
+  //[self scalePageToFit];
 
   @weakify(self);
 
   _progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleBar];
-  [self.view addSubview:_progressView];
-  [_progressView mas_makeConstraints:^(MASConstraintMaker *make) {
-    @strongify(self);
-    make.top.left.right.equalTo(self.webView);
-  }];
+  [self addSubview:_progressView];
   [self.KVOController observe:_webView keyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew block:^(id observer, id object, NSDictionary<NSString *,id> *change) {
     @strongify(self);
     self.progressView.progress = self.webView.estimatedProgress;
     self.progressView.hidden = (self.webView.estimatedProgress>=0.98);
   }];
 
+  _closeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+  [_closeBtn setImage:[UIImage imageNamed:@"ic_close"] forState:UIControlStateNormal];
+  [_closeBtn addTarget:self action:@selector(closeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+  [self addSubview:_closeBtn];
 
-  //  [self subscribeMessage:@"buySong" handler:^(WKUserContentController *ucc, WKScriptMessage *sm) {
-  //    NSLog(@"buy_song: %@", sm.body);
-  //  }];
-
-  //  NSString *injectJS = @"function injected_func(){ alert(\"Add successfully!!!\"); }";
-  //  [self injectJavaScript:injectJS];
-
-  //  _webView.layer.borderColor = [[UIColor redColor] CGColor];
-  //  _webView.layer.borderWidth = 1.0;
+  self.backgroundColor = TKRGBA(0, 0, 0, 0.5);
+  self.layer.cornerRadius = 10.0;
 }
 
-- (void)viewWillLayoutSubviews
+- (void)closeButtonClicked:(id)sender
 {
-  [super viewWillLayoutSubviews];
-
-  _webView.frame = CGRectMake(10.0, 30.0, self.view.bounds.size.width-20.0, self.view.bounds.size.height-40.0);
+  [self.coverView hide:YES];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+#ifdef DEBUG
+- (void)dealloc { WBPrintMethod(); }
+#endif
+
+- (void)layoutSubviews
 {
-  [super viewDidAppear:animated];
-  if ( !_loadedEver ) {
-    _loadedEver = YES;
-    [_webView loadRequest:_request];
+  [super layoutSubviews];
+  _webView.frame = CGRectMake(10.0, 10.0, self.bounds.size.width-20.0, self.bounds.size.height-20.0);
+  _progressView.frame = CGRectMake(10.0, 10.0, self.bounds.size.width-20.0, _progressView.bounds.size.height);
+  _closeBtn.frame = CGRectMake(self.bounds.size.width-30.0, -10.0, 40.0, 40.0);
+}
+
+- (void)startAuthorize:(void (^)(NSString *token))completion
+{
+  if ( completion ) {
+    _completion = [completion copy];
   }
-}
 
+  NSMutableString *url = [[NSMutableString alloc] initWithString:@"https://api.weibo.com/oauth2/authorize"];
+  NSDictionary *queries = @{
+                            @"client_id": @"475810706",
+                            @"redirect_uri": @"https://api.weibo.com/oauth2/default.html",
+                            @"display": @"mobile"
+                            };
+  NSString *queryString = AFQueryStringFromParameters(queries);
+  if ( queryString.length>0 ) {
+    if ( [url rangeOfString:@"?"].location!=NSNotFound ) {
+      [url appendFormat:@"&%@", queryString];
+    } else {
+      [url appendFormat:@"?%@", queryString];
+    }
+  }
+  NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+  [self loadRequest:request];
+}
 
 - (void)loadRequest:(NSURLRequest *)request
 {
@@ -193,12 +209,86 @@
 }
 
 
+
+
+#pragma mark - CoverView
+
+- (void)prepareForView:(UIView *)inView viewport:(UIView *)viewport
+{
+  [super prepareForView:inView viewport:viewport];
+
+  self.coverView.touchBackgroundToHide = NO;
+
+  self.frame = CGRectMake(20.0,
+                          20.0,
+                          self.coverView.bounds.size.width-2*20.0,
+                          self.coverView.bounds.size.height-2*20.0);
+  self.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1.0);
+}
+- (void)updateStateFromAnimation:(BOOL)completion
+{
+  if ( completion ) {
+    if ( [self.coverView isShowing] ) {
+      self.layer.transform = CATransform3DIdentity;
+    } else if ( [self.coverView isHiding] ) {
+      self.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1.0);
+    }
+  } else {
+    if ( [self.coverView isShowing] || [self.coverView isHiding] ) {
+      if ( self.layer.presentationLayer ) {
+        self.layer.transform = self.layer.presentationLayer.transform;
+      }
+    }
+  }
+}
+- (CAAnimation *)showAnimation
+{
+  CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"transform"];
+  // 模拟质量，影响图层运动时的弹簧惯性，质量越大，弹簧拉伸和压缩的幅度越大。默认值 1
+  animation.mass = 1.0;
+  // 刚度系数（劲度系数/弹性系数），刚度系数越大，形变产生的力就越大，运动越快。默认值 100
+  animation.stiffness = 100.0;
+  // 阻尼系数，阻止弹簧伸缩的系数，阻尼系数越大，停止越快。默认值 10
+  animation.damping = 500.0;
+  // 初始速率，动画视图的初始速度大小。默认值 0
+  // 速率为正数时，速度方向与运动方向一致，速率为负数时，速度方向与运动方向相反
+  animation.initialVelocity = 15.0;
+  // 估算时间 返回弹簧动画到停止时的估算时间，根据当前的动画参数估算
+  WBLogDebug(@"CoverView", @"spring duration: %f", animation.settlingDuration);
+  animation.duration = animation.settlingDuration;
+  animation.fromValue = [NSValue valueWithCATransform3D:self.layer.transform];
+  animation.toValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+  return animation;
+}
+- (CAAnimation *)hideAnimation
+{
+  CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"transform"];
+  animation.fromValue = [NSValue valueWithCATransform3D:self.layer.transform];
+  animation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.1, 0.1, 1.0)];
+  return animation;
+}
+
+
 #pragma mark - WKNavigationDelegate
 
 // Decides whether to allow or cancel a navigation.
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
 {
   WBPrintMethod();
+  NSString *url = navigationAction.request.URL.absoluteString;
+  WBLog(@"Load: %@", url);
+  if ( [url hasPrefix:@"https://api.weibo.com/oauth2/default.html"] ) {
+    NSArray *pairAry = [navigationAction.request.URL.query componentsSeparatedByString:@"&"];
+    for ( NSString *pair in pairAry ) {
+      if ( [pair hasPrefix:@"code="] ) {
+        NSString *code = [pair substringFromIndex:5];
+        if ( _completion ) {
+          _completion(code);
+          [self.coverView hide:YES];
+        }
+      }
+    }
+  }
   decisionHandler(WKNavigationActionPolicyAllow);
 }
 // Decides whether to allow or cancel a navigation after its response is known.
@@ -319,5 +409,6 @@
     }
   }];
 }
+
 
 @end
