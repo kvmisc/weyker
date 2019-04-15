@@ -8,15 +8,28 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+#import "Vendors/YYFPSLabel/YYFPSLabel.h"
 
-@end
+#import "Pages/ViewController.h"
 
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+  _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  _window.backgroundColor = [UIColor whiteColor];
+  UIViewController *vc = [[ViewController alloc] init];
+  UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+  nc.navigationBarHidden = YES;
+  //nc.delegate = self;
+  _window.rootViewController = nc;
+
+
+  YYFPSLabel *FPSLabel = [[YYFPSLabel alloc] initWithFrame:CGRectMake(0.0, XYZ_SCREEN_HET-30.0, 50.0, 30.0)];
+  [_window addSubview:FPSLabel];
+  FPSLabel.layer.zPosition = 100.0;
+
   return YES;
 }
 

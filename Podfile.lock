@@ -14,9 +14,11 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - Aspects (1.4.1)
   - CocoaLumberjack (3.5.2):
     - CocoaLumberjack/Core (= 3.5.2)
   - CocoaLumberjack/Core (3.5.2)
+  - KVOController (1.2.0)
   - libextobjc (0.6):
     - libextobjc/EXTADT (= 0.6)
     - libextobjc/EXTConcreteProtocol (= 0.6)
@@ -52,19 +54,26 @@ PODS:
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.6)
   - libextobjc/UmbrellaHeader (0.6)
+  - Masonry (1.1.0)
   - tapkit (2.0.9)
 
 DEPENDENCIES:
   - AFNetworking
+  - Aspects
   - CocoaLumberjack
+  - KVOController
   - libextobjc
+  - Masonry
   - tapkit (from `https://github.com/kvmisc/tapkit.git`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - Aspects
     - CocoaLumberjack
+    - KVOController
     - libextobjc
+    - Masonry
 
 EXTERNAL SOURCES:
   tapkit:
@@ -77,10 +86,13 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   CocoaLumberjack: 118bf4a820efc641f79fa487b75ed928dccfae23
+  KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   libextobjc: aed8b7d2b07f511c1a7ecaacb33ea03e327c69b7
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   tapkit: 483bd35cf0f098b16bb11dccf2efe5eb76f984f4
 
-PODFILE CHECKSUM: ec7d34db861b3576a9a52355a13eb062c9fd2050
+PODFILE CHECKSUM: a10ee491489dfac0348f752b4cf70c49ff347c10
 
 COCOAPODS: 1.6.0.beta.1
