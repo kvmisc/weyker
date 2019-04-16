@@ -7,7 +7,10 @@
 //
 
 #import "WBRootViewController.h"
-#import "Common/WBAuthorizeView.h"
+#import "WBTimelineViewController.h"
+#import "WBFindViewController.h"
+#import "WBMessageViewController.h"
+#import "WBMeViewController.h"
 
 @interface WBRootViewController ()
 @property (nonatomic, strong) UIView *tabBar;

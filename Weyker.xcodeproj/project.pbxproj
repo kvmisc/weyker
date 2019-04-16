@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		9449DEBC9DCEE133344F91BA /* libPods-Weyker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF0111BC1D5DF1721B2D86E /* libPods-Weyker.a */; };
+		BB1910852265F3E400F3F6E9 /* WBTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1910832265F3E400F3F6E9 /* WBTimelineViewController.m */; };
+		BB1910862265F3E400F3F6E9 /* WBTimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1910842265F3E400F3F6E9 /* WBTimelineViewController.xib */; };
+		BB19108A2265F46100F3F6E9 /* WBMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1910882265F46100F3F6E9 /* WBMessageViewController.m */; };
+		BB19108B2265F46100F3F6E9 /* WBMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1910892265F46100F3F6E9 /* WBMessageViewController.xib */; };
+		BB19108F2265F48600F3F6E9 /* WBMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB19108D2265F48600F3F6E9 /* WBMeViewController.m */; };
+		BB1910902265F48600F3F6E9 /* WBMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB19108E2265F48600F3F6E9 /* WBMeViewController.xib */; };
+		BB1910972265F52100F3F6E9 /* WBFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1910952265F52100F3F6E9 /* WBFindViewController.m */; };
+		BB1910982265F52100F3F6E9 /* WBFindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1910962265F52100F3F6E9 /* WBFindViewController.xib */; };
+		BB19109D2265F70200F3F6E9 /* WBRootTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BB19109C2265F70200F3F6E9 /* WBRootTabBar.m */; };
 		BB349DB32264216A00515502 /* UINavigationControllerExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349D952264216A00515502 /* UINavigationControllerExtentions.m */; };
 		BB349DB42264216A00515502 /* UITableViewCellExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349D972264216A00515502 /* UITableViewCellExtentions.m */; };
 		BB349DB52264216A00515502 /* UITextXXXMaxLength.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349D982264216A00515502 /* UITextXXXMaxLength.m */; };
@@ -48,6 +57,21 @@
 		211EB5C4B48B12C0B606E397 /* Pods-Weyker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weyker.debug.xcconfig"; path = "Target Support Files/Pods-Weyker/Pods-Weyker.debug.xcconfig"; sourceTree = "<group>"; };
 		2BF0111BC1D5DF1721B2D86E /* libPods-Weyker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Weyker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9940D838517181638F5A5510 /* Pods-Weyker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weyker.release.xcconfig"; path = "Target Support Files/Pods-Weyker/Pods-Weyker.release.xcconfig"; sourceTree = "<group>"; };
+		BB1910822265F3E400F3F6E9 /* WBTimelineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBTimelineViewController.h; sourceTree = "<group>"; };
+		BB1910832265F3E400F3F6E9 /* WBTimelineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBTimelineViewController.m; sourceTree = "<group>"; };
+		BB1910842265F3E400F3F6E9 /* WBTimelineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBTimelineViewController.xib; sourceTree = "<group>"; };
+		BB1910872265F46100F3F6E9 /* WBMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBMessageViewController.h; sourceTree = "<group>"; };
+		BB1910882265F46100F3F6E9 /* WBMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBMessageViewController.m; sourceTree = "<group>"; };
+		BB1910892265F46100F3F6E9 /* WBMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBMessageViewController.xib; sourceTree = "<group>"; };
+		BB19108C2265F48600F3F6E9 /* WBMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBMeViewController.h; sourceTree = "<group>"; };
+		BB19108D2265F48600F3F6E9 /* WBMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBMeViewController.m; sourceTree = "<group>"; };
+		BB19108E2265F48600F3F6E9 /* WBMeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBMeViewController.xib; sourceTree = "<group>"; };
+		BB1910942265F52100F3F6E9 /* WBFindViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBFindViewController.h; sourceTree = "<group>"; };
+		BB1910952265F52100F3F6E9 /* WBFindViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBFindViewController.m; sourceTree = "<group>"; };
+		BB1910962265F52100F3F6E9 /* WBFindViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBFindViewController.xib; sourceTree = "<group>"; };
+		BB19109B2265F70200F3F6E9 /* WBRootTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBRootTabBar.h; sourceTree = "<group>"; };
+		BB19109C2265F70200F3F6E9 /* WBRootTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBRootTabBar.m; sourceTree = "<group>"; };
+		BB1910A32265FB3A00F3F6E9 /* WBAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAppearance.h; sourceTree = "<group>"; };
 		BB349D942264216A00515502 /* UIColorExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorExtentions.h; sourceTree = "<group>"; };
 		BB349D952264216A00515502 /* UINavigationControllerExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationControllerExtentions.m; sourceTree = "<group>"; };
 		BB349D962264216A00515502 /* NSObjectExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectExtentions.h; sourceTree = "<group>"; };
@@ -150,6 +174,66 @@
 				9940D838517181638F5A5510 /* Pods-Weyker.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BB1910912265F49000F3F6E9 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				BB19108C2265F48600F3F6E9 /* WBMeViewController.h */,
+				BB19108D2265F48600F3F6E9 /* WBMeViewController.m */,
+				BB19108E2265F48600F3F6E9 /* WBMeViewController.xib */,
+			);
+			name = Me;
+			sourceTree = "<group>";
+		};
+		BB1910922265F49E00F3F6E9 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				BB1910872265F46100F3F6E9 /* WBMessageViewController.h */,
+				BB1910882265F46100F3F6E9 /* WBMessageViewController.m */,
+				BB1910892265F46100F3F6E9 /* WBMessageViewController.xib */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		BB1910932265F4AB00F3F6E9 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				BB1910822265F3E400F3F6E9 /* WBTimelineViewController.h */,
+				BB1910832265F3E400F3F6E9 /* WBTimelineViewController.m */,
+				BB1910842265F3E400F3F6E9 /* WBTimelineViewController.xib */,
+			);
+			name = Timeline;
+			sourceTree = "<group>";
+		};
+		BB1910992265F52600F3F6E9 /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				BB1910942265F52100F3F6E9 /* WBFindViewController.h */,
+				BB1910952265F52100F3F6E9 /* WBFindViewController.m */,
+				BB1910962265F52100F3F6E9 /* WBFindViewController.xib */,
+			);
+			name = Find;
+			sourceTree = "<group>";
+		};
+		BB19109A2265F6B700F3F6E9 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				BB349E092264593000515502 /* WBRootViewController.h */,
+				BB349E0A2264593000515502 /* WBRootViewController.m */,
+				BB349E0B2264593000515502 /* WBRootViewController.xib */,
+				BB19109B2265F70200F3F6E9 /* WBRootTabBar.h */,
+				BB19109C2265F70200F3F6E9 /* WBRootTabBar.m */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
+		BB1910A22265FB3A00F3F6E9 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				BB1910A32265FB3A00F3F6E9 /* WBAppearance.h */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		BB349D922264216A00515502 /* Extentions */ = {
@@ -309,6 +393,7 @@
 				BB349DA82264216A00515502 /* Core */,
 				BB349D922264216A00515502 /* Extentions */,
 				BB349DCD226423A500515502 /* Common */,
+				BB1910A22265FB3A00F3F6E9 /* Config */,
 				BB349DC32264227E00515502 /* Vendors */,
 				BB431DCB225F426000537A90 /* Resources */,
 			);
@@ -318,9 +403,11 @@
 		BB431DC8225F426000537A90 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				BB349E092264593000515502 /* WBRootViewController.h */,
-				BB349E0A2264593000515502 /* WBRootViewController.m */,
-				BB349E0B2264593000515502 /* WBRootViewController.xib */,
+				BB19109A2265F6B700F3F6E9 /* Root */,
+				BB1910932265F4AB00F3F6E9 /* Timeline */,
+				BB1910992265F52600F3F6E9 /* Find */,
+				BB1910922265F49E00F3F6E9 /* Message */,
+				BB1910912265F49000F3F6E9 /* Me */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -404,7 +491,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB431DD4225F426000537A90 /* Assets.xcassets in Resources */,
+				BB1910902265F48600F3F6E9 /* WBMeViewController.xib in Resources */,
+				BB1910982265F52100F3F6E9 /* WBFindViewController.xib in Resources */,
+				BB19108B2265F46100F3F6E9 /* WBMessageViewController.xib in Resources */,
 				BB349E0D2264593000515502 /* WBRootViewController.xib in Resources */,
+				BB1910862265F3E400F3F6E9 /* WBTimelineViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,20 +541,25 @@
 				BB349DC12264216A00515502 /* WBGlobal.m in Sources */,
 				BB349E0C2264593000515502 /* WBRootViewController.m in Sources */,
 				BB349DBC2264216A00515502 /* UIButtonExtentions.m in Sources */,
+				BB19109D2265F70200F3F6E9 /* WBRootTabBar.m in Sources */,
+				BB1910852265F3E400F3F6E9 /* WBTimelineViewController.m in Sources */,
 				BB349DF7226423A600515502 /* WBHUDView.m in Sources */,
 				BB349DBA2264216A00515502 /* NSObjectExtentions.m in Sources */,
 				BB349DBD2264216A00515502 /* UIAlertControllerExtentions.m in Sources */,
+				BB1910972265F52100F3F6E9 /* WBFindViewController.m in Sources */,
 				BB349DB42264216A00515502 /* UITableViewCellExtentions.m in Sources */,
 				BB349DBE2264216A00515502 /* WBDateFormatter.m in Sources */,
 				BB349DBB2264216A00515502 /* NSStringUnicode.m in Sources */,
 				BB9619A22265C335008A4151 /* NSStringURI.m in Sources */,
 				BB349DF0226423A600515502 /* WBWeakScriptMessageHandler.m in Sources */,
+				BB19108A2265F46100F3F6E9 /* WBMessageViewController.m in Sources */,
 				BB349DF6226423A600515502 /* WBCoverContentView.m in Sources */,
 				BB431DD5225F426000537A90 /* main.m in Sources */,
 				BB349DB82264216A00515502 /* UIColorExtentions.m in Sources */,
 				BB349DF5226423A600515502 /* WBBaseTableViewCell.m in Sources */,
 				BB349DFD226423A600515502 /* WBBaseViewController.m in Sources */,
 				BB349DCA2264227E00515502 /* YYWeakProxy.m in Sources */,
+				BB19108F2265F48600F3F6E9 /* WBMeViewController.m in Sources */,
 				BB349DBF2264216A00515502 /* WBLogger.m in Sources */,
 				BB349DFE226423A600515502 /* WBWebViewController.m in Sources */,
 				BB349E1322645FFC00515502 /* WBAuthorizeView.m in Sources */,

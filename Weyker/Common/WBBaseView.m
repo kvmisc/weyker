@@ -53,14 +53,14 @@
 //  [super updateConstraints];
 //}
 
-+ (BOOL)requiresConstraintBasedLayout
-{
-  // 基于约束的布局是懒触发的，只有在添加了约束的情况下，系统才会自动调用 updateConstraints
-  // 方法，如果把所有的约束放在 updateConstraints 中，那么系统将会不知道你的布局方式是基于
-  // 约束的，所以重写 requiresConstraintBasedLayout 并返回 YES 就是明确告诉系统：“虽然
-  // 之前没有添加约束，但我确实是基于约束的布局。”这样可以保证系统一定会调用
-  // updateConstraints 方法，从而正确添加约束。
-  return YES;
-}
+//+ (BOOL)requiresConstraintBasedLayout
+//{
+//  // 基于约束的布局是懒触发的，只有在添加了约束的情况下，系统才会自动调用 updateConstraints
+//  // 方法，如果把所有的约束放在 updateConstraints 中，那么系统将会不知道你的布局方式是基于
+//  // 约束的，所以重写 requiresConstraintBasedLayout 并返回 YES 就是明确告诉系统：“虽然
+//  // 之前没有添加约束，但我确实是基于约束的布局。”这样可以保证系统一定会调用
+//  // updateConstraints 方法，从而正确添加约束。
+//  return YES;
+//}
 
 @end
