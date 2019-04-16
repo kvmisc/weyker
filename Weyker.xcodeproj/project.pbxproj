@@ -13,7 +13,6 @@
 		BB349DB52264216A00515502 /* UITextXXXMaxLength.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349D982264216A00515502 /* UITextXXXMaxLength.m */; };
 		BB349DB62264216A00515502 /* UIImageExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349D9C2264216A00515502 /* UIImageExtentions.m */; };
 		BB349DB82264216A00515502 /* UIColorExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349D9F2264216A00515502 /* UIColorExtentions.m */; };
-		BB349DB92264216A00515502 /* NSStringExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DA02264216A00515502 /* NSStringExtentions.m */; };
 		BB349DBA2264216A00515502 /* NSObjectExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DA12264216A00515502 /* NSObjectExtentions.m */; };
 		BB349DBB2264216A00515502 /* NSStringUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DA22264216A00515502 /* NSStringUnicode.m */; };
 		BB349DBC2264216A00515502 /* UIButtonExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DA62264216A00515502 /* UIButtonExtentions.m */; };
@@ -42,13 +41,14 @@
 		BB431DD4225F426000537A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB431DCC225F426000537A90 /* Assets.xcassets */; };
 		BB431DD5225F426000537A90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DD0225F426000537A90 /* main.m */; };
 		BB431DD6225F426000537A90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DD1225F426000537A90 /* AppDelegate.m */; };
+		BB9619A22265C335008A4151 /* NSStringURI.m in Sources */ = {isa = PBXBuildFile; fileRef = BB96199F2265C335008A4151 /* NSStringURI.m */; };
+		BB9619A32265C335008A4151 /* NSStringExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9619A02265C335008A4151 /* NSStringExtentions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		211EB5C4B48B12C0B606E397 /* Pods-Weyker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weyker.debug.xcconfig"; path = "Target Support Files/Pods-Weyker/Pods-Weyker.debug.xcconfig"; sourceTree = "<group>"; };
 		2BF0111BC1D5DF1721B2D86E /* libPods-Weyker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Weyker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9940D838517181638F5A5510 /* Pods-Weyker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weyker.release.xcconfig"; path = "Target Support Files/Pods-Weyker/Pods-Weyker.release.xcconfig"; sourceTree = "<group>"; };
-		BB349D932264216A00515502 /* NSStringExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringExtentions.h; sourceTree = "<group>"; };
 		BB349D942264216A00515502 /* UIColorExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorExtentions.h; sourceTree = "<group>"; };
 		BB349D952264216A00515502 /* UINavigationControllerExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationControllerExtentions.m; sourceTree = "<group>"; };
 		BB349D962264216A00515502 /* NSObjectExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectExtentions.h; sourceTree = "<group>"; };
@@ -61,7 +61,6 @@
 		BB349D9D2264216A00515502 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BB349D9E2264216A00515502 /* UINavigationControllerExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationControllerExtentions.h; sourceTree = "<group>"; };
 		BB349D9F2264216A00515502 /* UIColorExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorExtentions.m; sourceTree = "<group>"; };
-		BB349DA02264216A00515502 /* NSStringExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringExtentions.m; sourceTree = "<group>"; };
 		BB349DA12264216A00515502 /* NSObjectExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectExtentions.m; sourceTree = "<group>"; };
 		BB349DA22264216A00515502 /* NSStringUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringUnicode.m; sourceTree = "<group>"; };
 		BB349DA32264216A00515502 /* UITextXXXMaxLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextXXXMaxLength.h; sourceTree = "<group>"; };
@@ -121,6 +120,10 @@
 		BB431DD0225F426000537A90 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BB431DD1225F426000537A90 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BB431DD2225F426000537A90 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB96199E2265C335008A4151 /* NSStringURI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringURI.h; sourceTree = "<group>"; };
+		BB96199F2265C335008A4151 /* NSStringURI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringURI.m; sourceTree = "<group>"; };
+		BB9619A02265C335008A4151 /* NSStringExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringExtentions.m; sourceTree = "<group>"; };
+		BB9619A12265C335008A4151 /* NSStringExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringExtentions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +163,10 @@
 				BB349DA12264216A00515502 /* NSObjectExtentions.m */,
 				BB349D992264216A00515502 /* NSStringUnicode.h */,
 				BB349DA22264216A00515502 /* NSStringUnicode.m */,
-				BB349D932264216A00515502 /* NSStringExtentions.h */,
-				BB349DA02264216A00515502 /* NSStringExtentions.m */,
+				BB96199E2265C335008A4151 /* NSStringURI.h */,
+				BB96199F2265C335008A4151 /* NSStringURI.m */,
+				BB9619A12265C335008A4151 /* NSStringExtentions.h */,
+				BB9619A02265C335008A4151 /* NSStringExtentions.m */,
 				BB349D942264216A00515502 /* UIColorExtentions.h */,
 				BB349D9F2264216A00515502 /* UIColorExtentions.m */,
 				BB349DA52264216A00515502 /* UIImageExtentions.h */,
@@ -456,6 +461,7 @@
 				BB349DB42264216A00515502 /* UITableViewCellExtentions.m in Sources */,
 				BB349DBE2264216A00515502 /* WBDateFormatter.m in Sources */,
 				BB349DBB2264216A00515502 /* NSStringUnicode.m in Sources */,
+				BB9619A22265C335008A4151 /* NSStringURI.m in Sources */,
 				BB349DF0226423A600515502 /* WBWeakScriptMessageHandler.m in Sources */,
 				BB349DF6226423A600515502 /* WBCoverContentView.m in Sources */,
 				BB349DF2226423A600515502 /* WBNavigationController.m in Sources */,
@@ -463,13 +469,13 @@
 				BB349DB82264216A00515502 /* UIColorExtentions.m in Sources */,
 				BB349DF5226423A600515502 /* WBBaseTableViewCell.m in Sources */,
 				BB349DFD226423A600515502 /* WBBaseViewController.m in Sources */,
-				BB349DB92264216A00515502 /* NSStringExtentions.m in Sources */,
 				BB349DCA2264227E00515502 /* YYWeakProxy.m in Sources */,
 				BB349DBF2264216A00515502 /* WBLogger.m in Sources */,
 				BB349DFE226423A600515502 /* WBWebViewController.m in Sources */,
 				BB349E1322645FFC00515502 /* WBAuthorizeView.m in Sources */,
 				BB349DF8226423A600515502 /* WBCoverView.m in Sources */,
 				BB349DFB226423A600515502 /* WBBaseView.m in Sources */,
+				BB9619A32265C335008A4151 /* NSStringExtentions.m in Sources */,
 				BB431DD6225F426000537A90 /* AppDelegate.m in Sources */,
 				BB349DB62264216A00515502 /* UIImageExtentions.m in Sources */,
 			);

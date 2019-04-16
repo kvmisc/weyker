@@ -84,6 +84,9 @@
 
 - (void)closeButtonClicked:(id)sender
 {
+  if ( _completion ) {
+    _completion(nil);
+  }
   [self.coverView hide:YES];
 }
 
@@ -111,14 +114,7 @@
                             @"redirect_uri": @"https://api.weibo.com/oauth2/default.html",
                             @"display": @"mobile"
                             };
-  NSString *queryString = AFQueryStringFromParameters(queries);
-  if ( queryString.length>0 ) {
-    if ( [url rangeOfString:@"?"].location!=NSNotFound ) {
-      [url appendFormat:@"&%@", queryString];
-    } else {
-      [url appendFormat:@"?%@", queryString];
-    }
-  }
+  [url tk_addQueryDictionary:queries];
   NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
   [self loadRequest:request];
 }
@@ -278,15 +274,14 @@
   NSString *url = navigationAction.request.URL.absoluteString;
   WBLog(@"Load: %@", url);
   if ( [url hasPrefix:@"https://api.weibo.com/oauth2/default.html"] ) {
-    NSArray *pairAry = [navigationAction.request.URL.query componentsSeparatedByString:@"&"];
-    for ( NSString *pair in pairAry ) {
-      if ( [pair hasPrefix:@"code="] ) {
-        NSString *code = [pair substringFromIndex:5];
-        if ( _completion ) {
-          _completion(code);
-          [self.coverView hide:YES];
-        }
+    NSString *token = [[url tk_queryDictionary] objectForKey:@"code"];
+    if ( token.length>0 ) {
+      if ( _completion ) {
+        _completion(token);
       }
+      [self.coverView hide:YES];
+    } else {
+      // 虽然这次没拿到 token，万一新浪还会打开这网址呢，等着。用户可以手动关闭这个窗口的。
     }
   }
   decisionHandler(WKNavigationActionPolicyAllow);
