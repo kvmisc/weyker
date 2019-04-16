@@ -25,7 +25,6 @@
 		BB349DEF226423A600515502 /* WBCoverActionContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DD3226423A500515502 /* WBCoverActionContentView.m */; };
 		BB349DF0226423A600515502 /* WBWeakScriptMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DD5226423A500515502 /* WBWeakScriptMessageHandler.m */; };
 		BB349DF1226423A600515502 /* WBMessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DD6226423A500515502 /* WBMessageCenter.m */; };
-		BB349DF2226423A600515502 /* WBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DD9226423A500515502 /* WBNavigationController.m */; };
 		BB349DF5226423A600515502 /* WBBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DDF226423A500515502 /* WBBaseTableViewCell.m */; };
 		BB349DF6226423A600515502 /* WBCoverContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DE0226423A500515502 /* WBCoverContentView.m */; };
 		BB349DF7226423A600515502 /* WBHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349DE1226423A500515502 /* WBHUDView.m */; };
@@ -91,7 +90,6 @@
 		BB349DD6226423A500515502 /* WBMessageCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMessageCenter.m; sourceTree = "<group>"; };
 		BB349DD7226423A500515502 /* WBCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCoverView.h; sourceTree = "<group>"; };
 		BB349DD8226423A500515502 /* WBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBBaseViewController.h; sourceTree = "<group>"; };
-		BB349DD9226423A500515502 /* WBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBNavigationController.m; sourceTree = "<group>"; };
 		BB349DDC226423A500515502 /* WBBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBBaseTableViewController.h; sourceTree = "<group>"; };
 		BB349DDD226423A500515502 /* WBWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBWebViewController.h; sourceTree = "<group>"; };
 		BB349DDE226423A500515502 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 		BB349DE5226423A500515502 /* WBCoverActionContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCoverActionContentView.h; sourceTree = "<group>"; };
 		BB349DE7226423A500515502 /* WBCoverAlertContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCoverAlertContentView.m; sourceTree = "<group>"; };
 		BB349DE8226423A500515502 /* WBBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBBaseView.m; sourceTree = "<group>"; };
-		BB349DEB226423A500515502 /* WBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBNavigationController.h; sourceTree = "<group>"; };
 		BB349DEC226423A500515502 /* WBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBBaseViewController.m; sourceTree = "<group>"; };
 		BB349DED226423A500515502 /* WBWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWebViewController.m; sourceTree = "<group>"; };
 		BB349DEE226423A500515502 /* WBBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBBaseTableViewController.m; sourceTree = "<group>"; };
@@ -228,8 +225,6 @@
 				BB349DE8226423A500515502 /* WBBaseView.m */,
 				BB349DD8226423A500515502 /* WBBaseViewController.h */,
 				BB349DEC226423A500515502 /* WBBaseViewController.m */,
-				BB349DEB226423A500515502 /* WBNavigationController.h */,
-				BB349DD9226423A500515502 /* WBNavigationController.m */,
 				BB349E02226424AC00515502 /* CoverView */,
 				BB349E03226424DC00515502 /* MessageCenter */,
 				BB349E042264252600515502 /* WebController */,
@@ -464,7 +459,6 @@
 				BB9619A22265C335008A4151 /* NSStringURI.m in Sources */,
 				BB349DF0226423A600515502 /* WBWeakScriptMessageHandler.m in Sources */,
 				BB349DF6226423A600515502 /* WBCoverContentView.m in Sources */,
-				BB349DF2226423A600515502 /* WBNavigationController.m in Sources */,
 				BB431DD5225F426000537A90 /* main.m in Sources */,
 				BB349DB82264216A00515502 /* UIColorExtentions.m in Sources */,
 				BB349DF5226423A600515502 /* WBBaseTableViewCell.m in Sources */,
