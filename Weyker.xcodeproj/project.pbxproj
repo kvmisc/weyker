@@ -470,6 +470,7 @@
 				BB431DAB225F417E00537A90 /* Sources */,
 				BB431DAC225F417E00537A90 /* Frameworks */,
 				BB431DAD225F417E00537A90 /* Resources */,
+				BB3D3D5E22671C5F00952A4D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -545,6 +546,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		BB3D3D5E22671C5F00952A4D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"Bumping build number...\"\nPLIST_FILE=${PROJECT_DIR}/${INFOPLIST_FILE}\nOLD_BUILD=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PLIST_FILE}\")\nNEW_BUILD=$(expr ${OLD_BUILD} + 1)\n/usr/libexec/Plistbuddy -c \"Set CFBundleVersion ${NEW_BUILD}\" \"${PLIST_FILE}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
