@@ -12,6 +12,6 @@
 #define kWBFontSizeSmall 12.0
 #define kWBFontSizeTiny 10.0
 
-#define kWBRootTabBarHeight 44.0
+#define kWBRootTabBarHeight 49.0
 #define kWBRootTabBarFontSize 12.0
 #define kWBRootTabBarTextColor 0x000000ff

@@ -45,7 +45,31 @@
 - (void)viewWillLayoutSubviews
 {
   [super viewWillLayoutSubviews];
-  _contentView.frame = self.view.bounds;
+
+  CGFloat topSpacing = 0.0;
+  if ( _navBar ) {
+    CGSize navSize = [_navBar intrinsicContentSize];
+    topSpacing = WB_SAFE_AREA_TOP+navSize.height;
+    _navBar.frame = CGRectMake(0.0,
+                               0.0,
+                               WB_SCREEN_WID,
+                               WB_SAFE_AREA_TOP+navSize.height);
+  }
+
+  CGFloat bottomSpacing = WB_SAFE_AREA_BOT;
+  if ( _toolBar ) {
+    CGSize toolSize = [_toolBar intrinsicContentSize];
+    bottomSpacing = toolSize.height+WB_SAFE_AREA_BOT;
+    _toolBar.frame = CGRectMake(0.0,
+                                WB_SCREEN_HET-toolSize.height-WB_SAFE_AREA_BOT,
+                                WB_SCREEN_WID,
+                                toolSize.height+WB_SAFE_AREA_BOT);
+  }
+
+  _contentView.frame = CGRectMake(0.0,
+                                  topSpacing,
+                                  WB_SCREEN_WID,
+                                  WB_SCREEN_HET-topSpacing-bottomSpacing);
 }
 
 

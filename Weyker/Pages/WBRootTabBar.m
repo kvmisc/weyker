@@ -16,7 +16,7 @@
 
 - (void)setup
 {
-  self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tabbar_background"]];
+  self.backgroundColor = [UIColor whiteColor];
 
   UIButton *tab1 = [UIButton buttonWithType:UIButtonTypeCustom];
   tab1.tag = 0;
@@ -63,6 +63,11 @@
   [self addSubview:tab4];
 
   _tabAry = @[tab1, tab2, tab3, tab4];
+
+  _selectedIndex = 0;
+  [self updatePage];
+
+  _shouldNotifyRepeatedly = NO;
 }
 
 - (void)layoutSubviews
@@ -86,6 +91,37 @@
 
 - (void)buttonClicked:(UIButton *)btn
 {
+  NSUInteger idx = btn.tag;
+  if ( [self isIndexValid:idx] ) {
+    NSUInteger oldIndex = _selectedIndex;
+    _selectedIndex = idx;
+    [self updatePage];
+    if ( (_shouldNotifyRepeatedly) || (_selectedIndex!=oldIndex) ) {
+      if ( _didSelect ) {
+        _didSelect(_selectedIndex);
+      }
+    }
+  }
+}
+
+- (void)setSelectedIndex:(NSUInteger)idx
+{
+  if ( [self isIndexValid:idx] ) {
+    _selectedIndex = idx;
+    [self updatePage];
+  }
+}
+
+- (void)updatePage
+{
+  for ( UIButton *btn in _tabAry ) {
+    [btn setSelected:(btn.tag==_selectedIndex)];
+  }
+}
+
+- (BOOL)isIndexValid:(NSUInteger)idx
+{
+  return ( (idx>=0) && (idx<[_tabAry count]) );
 }
 
 @end

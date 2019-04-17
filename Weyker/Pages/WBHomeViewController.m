@@ -7,6 +7,7 @@
 //
 
 #import "WBHomeViewController.h"
+#import "WBRootToolBar.h"
 
 @interface WBHomeViewController ()
 
@@ -17,6 +18,18 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+
+  self.contentView.backgroundColor = [UIColor lightGrayColor];
+
+  self.toolBar = [[WBRootToolBar alloc] init];
+  [self.view addSubview:self.toolBar];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+  Class cls = NSClassFromString(@"WBTestViewController");
+  UIViewController *vc = [[cls alloc] init];
+  [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

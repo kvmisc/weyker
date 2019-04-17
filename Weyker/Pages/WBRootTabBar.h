@@ -10,4 +10,12 @@
 
 @interface WBRootTabBar : WBBaseView
 
+@property (nonatomic, copy) void (^didSelect)(NSUInteger idx);
+
+// 新建成功以后默认选中第一个 tab，所以第一次可能不需要设置此属性
+@property (nonatomic, assign) NSUInteger selectedIndex;
+
+// 点击当前已选中 tab 时是否通知，默认 NO
+@property (nonatomic, assign) BOOL shouldNotifyRepeatedly;
+
 @end
