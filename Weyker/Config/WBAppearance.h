@@ -15,3 +15,9 @@
 #define kWBRootTabBarHeight 49.0
 #define kWBRootTabBarFontSize 12.0
 #define kWBRootTabBarTextColor 0x000000ff
+
+#define kWBNavBarHeight 44.0
+#define kWBNavBarButtonFontSize 14.0
+#define kWBNavBarButtonTextColor 0x000000ff
+#define kWBNavBarTitleFontSize 16.0
+#define kWBNavBarTitleTextColor 0x000000ff

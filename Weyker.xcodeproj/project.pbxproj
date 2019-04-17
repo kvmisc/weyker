@@ -43,6 +43,7 @@
 		BB3D3D522266B9DE00952A4D /* WBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3D3D502266B9DE00952A4D /* WBHomeViewController.m */; };
 		BB3D3D562266EAD900952A4D /* WBTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3D3D552266EAD900952A4D /* WBTestViewController.m */; };
 		BB3D3D5D2267017A00952A4D /* WBRootToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3D3D5C2267017A00952A4D /* WBRootToolBar.m */; };
+		BB3D3D6522671F0400952A4D /* WBNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3D3D6322671F0300952A4D /* WBNavBar.m */; };
 		BB431DD4225F426000537A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB431DCC225F426000537A90 /* Assets.xcassets */; };
 		BB431DD5225F426000537A90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DD0225F426000537A90 /* main.m */; };
 		BB431DD6225F426000537A90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DD1225F426000537A90 /* AppDelegate.m */; };
@@ -130,6 +131,8 @@
 		BB3D3D552266EAD900952A4D /* WBTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBTestViewController.m; sourceTree = "<group>"; };
 		BB3D3D5B2267017A00952A4D /* WBRootToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBRootToolBar.h; sourceTree = "<group>"; };
 		BB3D3D5C2267017A00952A4D /* WBRootToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBRootToolBar.m; sourceTree = "<group>"; };
+		BB3D3D6322671F0300952A4D /* WBNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBNavBar.m; sourceTree = "<group>"; };
+		BB3D3D6422671F0400952A4D /* WBNavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBNavBar.h; sourceTree = "<group>"; };
 		BB431DAF225F417E00537A90 /* Weyker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weyker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB431DCC225F426000537A90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB431DCE225F426000537A90 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -372,6 +375,8 @@
 			children = (
 				BB349DD8226423A500515502 /* WBBaseViewController.h */,
 				BB349DEC226423A500515502 /* WBBaseViewController.m */,
+				BB3D3D6422671F0400952A4D /* WBNavBar.h */,
+				BB3D3D6322671F0300952A4D /* WBNavBar.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -587,6 +592,7 @@
 				BB349DBA2264216A00515502 /* NSObjectExtentions.m in Sources */,
 				BB3D3D522266B9DE00952A4D /* WBHomeViewController.m in Sources */,
 				BB349DBD2264216A00515502 /* UIAlertControllerExtentions.m in Sources */,
+				BB3D3D6522671F0400952A4D /* WBNavBar.m in Sources */,
 				BB349DB42264216A00515502 /* UITableViewCellExtentions.m in Sources */,
 				BB349DBE2264216A00515502 /* WBDateFormatter.m in Sources */,
 				BB349DBB2264216A00515502 /* NSStringUnicode.m in Sources */,

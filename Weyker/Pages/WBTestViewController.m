@@ -16,11 +16,24 @@
   [super viewDidLoad];
   self.contentView.backgroundColor = [UIColor brownColor];
 
-  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    UINavigationController *nc = (UINavigationController *)(WB_APP_DELEGATE.window.rootViewController);
-    WBRootViewController *root = [nc.viewControllers firstObject];
-    [root changeToPage:2];
-  });
+  [self setupNavBar];
+
+//  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//    UINavigationController *nc = (UINavigationController *)(WB_APP_DELEGATE.window.rootViewController);
+//    WBRootViewController *root = [nc.viewControllers firstObject];
+//    [root changeToPage:2];
+//  });
+}
+
+- (void)setupNavBar
+{
+  [super setupNavBar];
+
+  [self.navBar setupTitleLabel];
+  self.navBar.titleLabel.text = @"Test";
+
+  [self.navBar setupRightBtn];
+  [self.navBar.rightBtn setTitle:@"Done" forState:UIControlStateNormal];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

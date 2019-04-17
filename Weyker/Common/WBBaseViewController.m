@@ -27,21 +27,6 @@
   _viewAppeared = NO;
   _appearedEver = YES;
 }
-
-
-//- (void)updateViewConstraints
-//{
-//  if ( _contentView ) {
-//    @weakify(self);
-//    [_contentView mas_updateConstraints:^(MASConstraintMaker *make) {
-//      @strongify(self);
-//      make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0));
-//    }];
-//  }
-//
-//  // 必须在最后调用父类实现。
-//  [super updateViewConstraints];
-//}
 - (void)viewWillLayoutSubviews
 {
   [super viewWillLayoutSubviews];
@@ -49,11 +34,11 @@
   CGFloat topSpacing = 0.0;
   if ( _navBar ) {
     CGSize navSize = [_navBar intrinsicContentSize];
-    topSpacing = WB_SAFE_AREA_TOP+navSize.height;
+    topSpacing = WB_STATUS_BAR_HET+navSize.height;
     _navBar.frame = CGRectMake(0.0,
                                0.0,
                                WB_SCREEN_WID,
-                               WB_SAFE_AREA_TOP+navSize.height);
+                               WB_STATUS_BAR_HET+navSize.height);
   }
 
   CGFloat bottomSpacing = WB_SAFE_AREA_BOT;
@@ -72,6 +57,18 @@
                                   WB_SCREEN_HET-topSpacing-bottomSpacing);
 }
 
+- (void)setupNavBar
+{
+  if ( !_navBar ) {
+    _navBar = [[WBNavBar alloc] init];
+    [self.view addSubview:_navBar];
+  }
+  if ( self.navigationController ) {
+    if ( self.navigationController.viewControllers.count>1 ) {
+      [_navBar setupBackBtn];
+    }
+  }
+}
 
 - (void)disableContentInsetAdjustment:(UIScrollView *)scrollView
 {

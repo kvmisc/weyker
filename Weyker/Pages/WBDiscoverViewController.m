@@ -21,6 +21,8 @@
 
   self.contentView.backgroundColor = [UIColor redColor];
 
+  [self setupNavBar];
+
   self.toolBar = [[WBRootToolBar alloc] init];
   [self.view addSubview:self.toolBar];
 }

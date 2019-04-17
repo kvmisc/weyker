@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WBNavBar.h"
 
 @interface WBBaseViewController : UIViewController
 
@@ -15,10 +16,14 @@
 
 // 除开 NavBar 和 ToolBar 的区域
 @property (nonatomic, strong, readonly) UIView *contentView;
-@property (nonatomic, strong) UIView *navBar;
+@property (nonatomic, strong) WBNavBar *navBar;
 @property (nonatomic, strong) UIView *toolBar;
 
+
+- (void)setupNavBar;
+
 - (void)disableContentInsetAdjustment:(UIScrollView *)scrollView;
+
 
 // to override
 - (BOOL)shouldLoadContentView;
