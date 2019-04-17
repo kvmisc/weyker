@@ -31,9 +31,7 @@
 
 
 #ifdef DEBUG
-  YYFPSLabel *FPSLabel = [[YYFPSLabel alloc] init];
-  [_window addSubview:FPSLabel];
-  FPSLabel.layer.zPosition = 100.0;
+  [YYFPSLabel setup];
 #endif
 
   return YES;

@@ -8,14 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9449DEBC9DCEE133344F91BA /* libPods-Weyker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF0111BC1D5DF1721B2D86E /* libPods-Weyker.a */; };
-		BB1910852265F3E400F3F6E9 /* WBTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1910832265F3E400F3F6E9 /* WBTimelineViewController.m */; };
-		BB1910862265F3E400F3F6E9 /* WBTimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1910842265F3E400F3F6E9 /* WBTimelineViewController.xib */; };
 		BB19108A2265F46100F3F6E9 /* WBMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1910882265F46100F3F6E9 /* WBMessageViewController.m */; };
 		BB19108B2265F46100F3F6E9 /* WBMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1910892265F46100F3F6E9 /* WBMessageViewController.xib */; };
-		BB19108F2265F48600F3F6E9 /* WBMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB19108D2265F48600F3F6E9 /* WBMeViewController.m */; };
-		BB1910902265F48600F3F6E9 /* WBMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB19108E2265F48600F3F6E9 /* WBMeViewController.xib */; };
-		BB1910972265F52100F3F6E9 /* WBFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1910952265F52100F3F6E9 /* WBFindViewController.m */; };
-		BB1910982265F52100F3F6E9 /* WBFindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1910962265F52100F3F6E9 /* WBFindViewController.xib */; };
 		BB19109D2265F70200F3F6E9 /* WBRootTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BB19109C2265F70200F3F6E9 /* WBRootTabBar.m */; };
 		BB349DB32264216A00515502 /* UINavigationControllerExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349D952264216A00515502 /* UINavigationControllerExtentions.m */; };
 		BB349DB42264216A00515502 /* UITableViewCellExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349D972264216A00515502 /* UITableViewCellExtentions.m */; };
@@ -46,6 +40,12 @@
 		BB349E0C2264593000515502 /* WBRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349E0A2264593000515502 /* WBRootViewController.m */; };
 		BB349E0D2264593000515502 /* WBRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB349E0B2264593000515502 /* WBRootViewController.xib */; };
 		BB349E1322645FFC00515502 /* WBAuthorizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB349E1222645FFC00515502 /* WBAuthorizeView.m */; };
+		BB3D3D482266B9B900952A4D /* WBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3D3D462266B9B900952A4D /* WBProfileViewController.m */; };
+		BB3D3D492266B9B900952A4D /* WBProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB3D3D472266B9B900952A4D /* WBProfileViewController.xib */; };
+		BB3D3D4D2266B9CE00952A4D /* WBDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3D3D4B2266B9CE00952A4D /* WBDiscoverViewController.m */; };
+		BB3D3D4E2266B9CE00952A4D /* WBDiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB3D3D4C2266B9CE00952A4D /* WBDiscoverViewController.xib */; };
+		BB3D3D522266B9DE00952A4D /* WBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3D3D502266B9DE00952A4D /* WBHomeViewController.m */; };
+		BB3D3D532266B9DE00952A4D /* WBHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB3D3D512266B9DE00952A4D /* WBHomeViewController.xib */; };
 		BB431DD4225F426000537A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB431DCC225F426000537A90 /* Assets.xcassets */; };
 		BB431DD5225F426000537A90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DD0225F426000537A90 /* main.m */; };
 		BB431DD6225F426000537A90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DD1225F426000537A90 /* AppDelegate.m */; };
@@ -57,18 +57,9 @@
 		211EB5C4B48B12C0B606E397 /* Pods-Weyker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weyker.debug.xcconfig"; path = "Target Support Files/Pods-Weyker/Pods-Weyker.debug.xcconfig"; sourceTree = "<group>"; };
 		2BF0111BC1D5DF1721B2D86E /* libPods-Weyker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Weyker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9940D838517181638F5A5510 /* Pods-Weyker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weyker.release.xcconfig"; path = "Target Support Files/Pods-Weyker/Pods-Weyker.release.xcconfig"; sourceTree = "<group>"; };
-		BB1910822265F3E400F3F6E9 /* WBTimelineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBTimelineViewController.h; sourceTree = "<group>"; };
-		BB1910832265F3E400F3F6E9 /* WBTimelineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBTimelineViewController.m; sourceTree = "<group>"; };
-		BB1910842265F3E400F3F6E9 /* WBTimelineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBTimelineViewController.xib; sourceTree = "<group>"; };
 		BB1910872265F46100F3F6E9 /* WBMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBMessageViewController.h; sourceTree = "<group>"; };
 		BB1910882265F46100F3F6E9 /* WBMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBMessageViewController.m; sourceTree = "<group>"; };
 		BB1910892265F46100F3F6E9 /* WBMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBMessageViewController.xib; sourceTree = "<group>"; };
-		BB19108C2265F48600F3F6E9 /* WBMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBMeViewController.h; sourceTree = "<group>"; };
-		BB19108D2265F48600F3F6E9 /* WBMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBMeViewController.m; sourceTree = "<group>"; };
-		BB19108E2265F48600F3F6E9 /* WBMeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBMeViewController.xib; sourceTree = "<group>"; };
-		BB1910942265F52100F3F6E9 /* WBFindViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBFindViewController.h; sourceTree = "<group>"; };
-		BB1910952265F52100F3F6E9 /* WBFindViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBFindViewController.m; sourceTree = "<group>"; };
-		BB1910962265F52100F3F6E9 /* WBFindViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBFindViewController.xib; sourceTree = "<group>"; };
 		BB19109B2265F70200F3F6E9 /* WBRootTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBRootTabBar.h; sourceTree = "<group>"; };
 		BB19109C2265F70200F3F6E9 /* WBRootTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBRootTabBar.m; sourceTree = "<group>"; };
 		BB1910A32265FB3A00F3F6E9 /* WBAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAppearance.h; sourceTree = "<group>"; };
@@ -134,6 +125,15 @@
 		BB349E0B2264593000515502 /* WBRootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBRootViewController.xib; sourceTree = "<group>"; };
 		BB349E1122645FFC00515502 /* WBAuthorizeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAuthorizeView.h; sourceTree = "<group>"; };
 		BB349E1222645FFC00515502 /* WBAuthorizeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAuthorizeView.m; sourceTree = "<group>"; };
+		BB3D3D452266B9B900952A4D /* WBProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBProfileViewController.h; sourceTree = "<group>"; };
+		BB3D3D462266B9B900952A4D /* WBProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBProfileViewController.m; sourceTree = "<group>"; };
+		BB3D3D472266B9B900952A4D /* WBProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBProfileViewController.xib; sourceTree = "<group>"; };
+		BB3D3D4A2266B9CE00952A4D /* WBDiscoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBDiscoverViewController.h; sourceTree = "<group>"; };
+		BB3D3D4B2266B9CE00952A4D /* WBDiscoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBDiscoverViewController.m; sourceTree = "<group>"; };
+		BB3D3D4C2266B9CE00952A4D /* WBDiscoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBDiscoverViewController.xib; sourceTree = "<group>"; };
+		BB3D3D4F2266B9DE00952A4D /* WBHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBHomeViewController.h; sourceTree = "<group>"; };
+		BB3D3D502266B9DE00952A4D /* WBHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBHomeViewController.m; sourceTree = "<group>"; };
+		BB3D3D512266B9DE00952A4D /* WBHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBHomeViewController.xib; sourceTree = "<group>"; };
 		BB431DAF225F417E00537A90 /* Weyker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weyker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB431DCC225F426000537A90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB431DCE225F426000537A90 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -176,16 +176,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		BB1910912265F49000F3F6E9 /* Me */ = {
-			isa = PBXGroup;
-			children = (
-				BB19108C2265F48600F3F6E9 /* WBMeViewController.h */,
-				BB19108D2265F48600F3F6E9 /* WBMeViewController.m */,
-				BB19108E2265F48600F3F6E9 /* WBMeViewController.xib */,
-			);
-			name = Me;
-			sourceTree = "<group>";
-		};
 		BB1910922265F49E00F3F6E9 /* Message */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,26 +184,6 @@
 				BB1910892265F46100F3F6E9 /* WBMessageViewController.xib */,
 			);
 			name = Message;
-			sourceTree = "<group>";
-		};
-		BB1910932265F4AB00F3F6E9 /* Timeline */ = {
-			isa = PBXGroup;
-			children = (
-				BB1910822265F3E400F3F6E9 /* WBTimelineViewController.h */,
-				BB1910832265F3E400F3F6E9 /* WBTimelineViewController.m */,
-				BB1910842265F3E400F3F6E9 /* WBTimelineViewController.xib */,
-			);
-			name = Timeline;
-			sourceTree = "<group>";
-		};
-		BB1910992265F52600F3F6E9 /* Find */ = {
-			isa = PBXGroup;
-			children = (
-				BB1910942265F52100F3F6E9 /* WBFindViewController.h */,
-				BB1910952265F52100F3F6E9 /* WBFindViewController.m */,
-				BB1910962265F52100F3F6E9 /* WBFindViewController.xib */,
-			);
-			name = Find;
 			sourceTree = "<group>";
 		};
 		BB19109A2265F6B700F3F6E9 /* Root */ = {
@@ -367,6 +337,36 @@
 			name = TableViewController;
 			sourceTree = "<group>";
 		};
+		BB3D3D422266B94400952A4D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BB3D3D4F2266B9DE00952A4D /* WBHomeViewController.h */,
+				BB3D3D502266B9DE00952A4D /* WBHomeViewController.m */,
+				BB3D3D512266B9DE00952A4D /* WBHomeViewController.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		BB3D3D432266B94F00952A4D /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				BB3D3D4A2266B9CE00952A4D /* WBDiscoverViewController.h */,
+				BB3D3D4B2266B9CE00952A4D /* WBDiscoverViewController.m */,
+				BB3D3D4C2266B9CE00952A4D /* WBDiscoverViewController.xib */,
+			);
+			name = Discover;
+			sourceTree = "<group>";
+		};
+		BB3D3D442266B98600952A4D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BB3D3D452266B9B900952A4D /* WBProfileViewController.h */,
+				BB3D3D462266B9B900952A4D /* WBProfileViewController.m */,
+				BB3D3D472266B9B900952A4D /* WBProfileViewController.xib */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 		BB431DA6225F417E00537A90 = {
 			isa = PBXGroup;
 			children = (
@@ -404,10 +404,10 @@
 			isa = PBXGroup;
 			children = (
 				BB19109A2265F6B700F3F6E9 /* Root */,
-				BB1910932265F4AB00F3F6E9 /* Timeline */,
-				BB1910992265F52600F3F6E9 /* Find */,
+				BB3D3D422266B94400952A4D /* Home */,
+				BB3D3D432266B94F00952A4D /* Discover */,
 				BB1910922265F49E00F3F6E9 /* Message */,
-				BB1910912265F49000F3F6E9 /* Me */,
+				BB3D3D442266B98600952A4D /* Profile */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -491,11 +491,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB431DD4225F426000537A90 /* Assets.xcassets in Resources */,
-				BB1910902265F48600F3F6E9 /* WBMeViewController.xib in Resources */,
-				BB1910982265F52100F3F6E9 /* WBFindViewController.xib in Resources */,
+				BB3D3D492266B9B900952A4D /* WBProfileViewController.xib in Resources */,
+				BB3D3D532266B9DE00952A4D /* WBHomeViewController.xib in Resources */,
+				BB3D3D4E2266B9CE00952A4D /* WBDiscoverViewController.xib in Resources */,
 				BB19108B2265F46100F3F6E9 /* WBMessageViewController.xib in Resources */,
 				BB349E0D2264593000515502 /* WBRootViewController.xib in Resources */,
-				BB1910862265F3E400F3F6E9 /* WBTimelineViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,11 +542,11 @@
 				BB349E0C2264593000515502 /* WBRootViewController.m in Sources */,
 				BB349DBC2264216A00515502 /* UIButtonExtentions.m in Sources */,
 				BB19109D2265F70200F3F6E9 /* WBRootTabBar.m in Sources */,
-				BB1910852265F3E400F3F6E9 /* WBTimelineViewController.m in Sources */,
 				BB349DF7226423A600515502 /* WBHUDView.m in Sources */,
+				BB3D3D4D2266B9CE00952A4D /* WBDiscoverViewController.m in Sources */,
 				BB349DBA2264216A00515502 /* NSObjectExtentions.m in Sources */,
+				BB3D3D522266B9DE00952A4D /* WBHomeViewController.m in Sources */,
 				BB349DBD2264216A00515502 /* UIAlertControllerExtentions.m in Sources */,
-				BB1910972265F52100F3F6E9 /* WBFindViewController.m in Sources */,
 				BB349DB42264216A00515502 /* UITableViewCellExtentions.m in Sources */,
 				BB349DBE2264216A00515502 /* WBDateFormatter.m in Sources */,
 				BB349DBB2264216A00515502 /* NSStringUnicode.m in Sources */,
@@ -559,7 +559,6 @@
 				BB349DF5226423A600515502 /* WBBaseTableViewCell.m in Sources */,
 				BB349DFD226423A600515502 /* WBBaseViewController.m in Sources */,
 				BB349DCA2264227E00515502 /* YYWeakProxy.m in Sources */,
-				BB19108F2265F48600F3F6E9 /* WBMeViewController.m in Sources */,
 				BB349DBF2264216A00515502 /* WBLogger.m in Sources */,
 				BB349DFE226423A600515502 /* WBWebViewController.m in Sources */,
 				BB349E1322645FFC00515502 /* WBAuthorizeView.m in Sources */,
@@ -567,6 +566,7 @@
 				BB349DFB226423A600515502 /* WBBaseView.m in Sources */,
 				BB9619A32265C335008A4151 /* NSStringExtentions.m in Sources */,
 				BB431DD6225F426000537A90 /* AppDelegate.m in Sources */,
+				BB3D3D482266B9B900952A4D /* WBProfileViewController.m in Sources */,
 				BB349DB62264216A00515502 /* UIImageExtentions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
