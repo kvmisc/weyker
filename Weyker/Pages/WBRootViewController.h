@@ -19,4 +19,6 @@
 @property (nonatomic, strong, readonly) WBMessageViewController *messageViewController;
 @property (nonatomic, strong, readonly) WBProfileViewController *profileViewController;
 
+- (void)changeToPage:(NSUInteger)idx;
+
 @end

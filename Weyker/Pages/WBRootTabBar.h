@@ -18,4 +18,7 @@
 // 点击当前已选中 tab 时是否通知，默认 NO
 @property (nonatomic, assign) BOOL shouldNotifyRepeatedly;
 
+
+- (BOOL)isIndexValid:(NSUInteger)idx;
+
 @end
