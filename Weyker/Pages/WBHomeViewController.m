@@ -40,12 +40,12 @@
     NSLog(@"before: %@", code);
     if ( [code hasPrefix:@"en"] ) {
       NSLog(@"to: %@", WB_LANGUAGE_CODE_ZH_HANS);
-      [WBLanguageManager setLanguage:WB_LANGUAGE_CODE_ZH_HANS];
+      [WBLanguageManager changeToLanguage:WB_LANGUAGE_CODE_ZH_HANS];
       NSLog(@"become: %@", [WBLanguageManager currentLanguage]);
     }
     if ( [code hasPrefix:@"zh"] ) {
       NSLog(@"to: %@", WB_LANGUAGE_CODE_EN);
-      [WBLanguageManager setLanguage:WB_LANGUAGE_CODE_EN];
+      [WBLanguageManager changeToLanguage:WB_LANGUAGE_CODE_EN];
       NSLog(@"become: %@", [WBLanguageManager currentLanguage]);
     }
     NSLog(@" ");

@@ -52,10 +52,9 @@
 		BB9BFC43226826090071A008 /* WBTestNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9BFC42226826090071A008 /* WBTestNavView.m */; };
 		BB9BFC492268429E0071A008 /* WBPushChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9BFC482268429E0071A008 /* WBPushChildViewController.m */; };
 		BB9BFC4C226843360071A008 /* WBPresentChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9BFC4B226843360071A008 /* WBPresentChildViewController.m */; };
-		BB9BFC58226861060071A008 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB9BFC53226861060071A008 /* Localizable.strings */; };
 		BB9BFC64226869A70071A008 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BB9BFC61226869A70071A008 /* README.md */; };
 		BB9BFC6822686A320071A008 /* WBLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9BFC6622686A310071A008 /* WBLanguageManager.m */; };
-		BBA9AF092268746100D4AFCB /* WBLanguageBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9AF082268746100D4AFCB /* WBLanguageBundle.m */; };
+		BBA9AF202268787100D4AFCB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBA9AF1E2268787100D4AFCB /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,13 +156,11 @@
 		BB9BFC482268429E0071A008 /* WBPushChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBPushChildViewController.m; sourceTree = "<group>"; };
 		BB9BFC4A226843360071A008 /* WBPresentChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBPresentChildViewController.h; sourceTree = "<group>"; };
 		BB9BFC4B226843360071A008 /* WBPresentChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBPresentChildViewController.m; sourceTree = "<group>"; };
-		BB9BFC54226861060071A008 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
-		BB9BFC5A2268612A0071A008 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "../zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		BB9BFC61226869A70071A008 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BB9BFC6622686A310071A008 /* WBLanguageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBLanguageManager.m; sourceTree = "<group>"; };
 		BB9BFC6722686A310071A008 /* WBLanguageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBLanguageManager.h; sourceTree = "<group>"; };
-		BBA9AF072268746100D4AFCB /* WBLanguageBundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBLanguageBundle.h; sourceTree = "<group>"; };
-		BBA9AF082268746100D4AFCB /* WBLanguageBundle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBLanguageBundle.m; sourceTree = "<group>"; };
+		BBA9AF1F2268787100D4AFCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BBA9AF212268788B00D4AFCB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -474,7 +471,7 @@
 		BB431DCB225F426000537A90 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BB9BFC53226861060071A008 /* Localizable.strings */,
+				BBA9AF1E2268787100D4AFCB /* Localizable.strings */,
 				BB431DCC225F426000537A90 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -506,8 +503,6 @@
 			children = (
 				BB9BFC6722686A310071A008 /* WBLanguageManager.h */,
 				BB9BFC6622686A310071A008 /* WBLanguageManager.m */,
-				BBA9AF072268746100D4AFCB /* WBLanguageBundle.h */,
-				BBA9AF082268746100D4AFCB /* WBLanguageBundle.m */,
 			);
 			name = LanguageManager;
 			sourceTree = "<group>";
@@ -573,8 +568,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB9BFC64226869A70071A008 /* README.md in Resources */,
+				BBA9AF202268787100D4AFCB /* Localizable.strings in Resources */,
 				BB431DD4225F426000537A90 /* Assets.xcassets in Resources */,
-				BB9BFC58226861060071A008 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,7 +664,6 @@
 				BB9619A32265C335008A4151 /* NSStringExtentions.m in Sources */,
 				BB431DD6225F426000537A90 /* AppDelegate.m in Sources */,
 				BB3D3D562266EAD900952A4D /* WBTestViewController.m in Sources */,
-				BBA9AF092268746100D4AFCB /* WBLanguageBundle.m in Sources */,
 				BB3D3D482266B9B900952A4D /* WBProfileViewController.m in Sources */,
 				BB349DB62264216A00515502 /* UIImageExtentions.m in Sources */,
 			);
@@ -678,11 +672,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BB9BFC53226861060071A008 /* Localizable.strings */ = {
+		BBA9AF1E2268787100D4AFCB /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BB9BFC54226861060071A008 /* en */,
-				BB9BFC5A2268612A0071A008 /* zh-Hans */,
+				BBA9AF1F2268787100D4AFCB /* en */,
+				BBA9AF212268788B00D4AFCB /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

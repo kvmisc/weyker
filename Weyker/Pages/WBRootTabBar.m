@@ -22,7 +22,7 @@
   tab1.tag = 0;
   [tab1 setTitleColor:[UIColor tk_colorWithHexInteger:kWBRootTabBarTextColor] forState:UIControlStateNormal];
   tab1.titleLabel.font = [UIFont systemFontOfSize:kWBRootTabBarFontSize];
-  [tab1 setTitle:NSLocalizedString(@"tabbar_weibo", @"") forState:UIControlStateNormal];
+  [tab1 setTitle:WBLS(@"tabbar_weibo") forState:UIControlStateNormal];
   [tab1 setImage:[UIImage imageNamed:@"tabbar_home"] forState:UIControlStateNormal];
   [tab1 setImage:[UIImage imageNamed:@"tabbar_home_selected"] forState:UIControlStateSelected];
   [tab1 setImage:[UIImage imageNamed:@"tabbar_home_highlighted"] forState:UIControlStateHighlighted];
@@ -33,7 +33,7 @@
   tab2.tag = 1;
   [tab2 setTitleColor:[UIColor tk_colorWithHexInteger:kWBRootTabBarTextColor] forState:UIControlStateNormal];
   tab2.titleLabel.font = [UIFont systemFontOfSize:kWBRootTabBarFontSize];
-  [tab2 setTitle:NSLocalizedString(@"tabbar_discover", @"") forState:UIControlStateNormal];
+  [tab2 setTitle:WBLS(@"tabbar_discover") forState:UIControlStateNormal];
   [tab2 setImage:[UIImage imageNamed:@"tabbar_discover"] forState:UIControlStateNormal];
   [tab2 setImage:[UIImage imageNamed:@"tabbar_discover_selected"] forState:UIControlStateSelected];
   [tab2 setImage:[UIImage imageNamed:@"tabbar_discover_highlighted"] forState:UIControlStateHighlighted];
@@ -44,7 +44,7 @@
   tab3.tag = 2;
   [tab3 setTitleColor:[UIColor tk_colorWithHexInteger:kWBRootTabBarTextColor] forState:UIControlStateNormal];
   tab3.titleLabel.font = [UIFont systemFontOfSize:kWBRootTabBarFontSize];
-  [tab3 setTitle:NSLocalizedString(@"tabbar_message", @"") forState:UIControlStateNormal];
+  [tab3 setTitle:WBLS(@"tabbar_message") forState:UIControlStateNormal];
   [tab3 setImage:[UIImage imageNamed:@"tabbar_message"] forState:UIControlStateNormal];
   [tab3 setImage:[UIImage imageNamed:@"tabbar_message_selected"] forState:UIControlStateSelected];
   [tab3 setImage:[UIImage imageNamed:@"tabbar_message_highlighted"] forState:UIControlStateHighlighted];

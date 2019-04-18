@@ -16,16 +16,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [WBLanguageManager setup];
   [WBLogger setup];
+  [self registerNotifications];
   [self setupWindow];
 #ifdef DEBUG
   [YYFPSLabel setup];
 #endif
-
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(languageDidChange:)
-                                               name:WBLanguageDidChangeNotification
-                                             object:nil];
   return YES;
 }
 
@@ -37,13 +34,19 @@
   [_window makeKeyAndVisible];
 }
 
+- (void)registerNotifications
+{
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(languageDidChange:)
+                                               name:WBLanguageDidChangeNotification
+                                             object:nil];
+}
 - (void)languageDidChange:(NSNotification *)notification
 {
   @weakify(self);
   dispatch_async(dispatch_get_main_queue(), ^{
     @strongify(self);
     self.window.rootViewController = [[WBRootViewController alloc] init];
-    [self.window makeKeyAndVisible];
   });
 }
 

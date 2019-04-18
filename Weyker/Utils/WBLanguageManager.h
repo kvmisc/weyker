@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+////////////////////////////////////////////////////////////////////////////////
+// 本地化宏
+extern NSBundle *WBLanguageBundle;
+#define WBLS(key) [WBLanguageBundle localizedStringForKey:(key) value:@"" table:nil]
+////////////////////////////////////////////////////////////////////////////////
+
+
+
 #define WB_LANGUAGE_CODE_EN @"en"
 #define WB_LANGUAGE_CODE_ZH_HANS @"zh-Hans"
 #define WB_LANGUAGE_CODE_ZH_HANT @"zh-Hant"
@@ -16,8 +24,13 @@
 
 @interface WBLanguageManager : NSObject
 
-+ (NSString *)currentLanguage;
++ (void)setup;
 
-+ (void)setLanguage:(NSString *)language;
++ (NSArray *)availableLanguages;
+
++ (NSString *)currentLanguage;
++ (void)changeToLanguage:(NSString *)code;
+
++ (void)updateLanguageBundle:(NSString *)code;
 
 @end
