@@ -49,6 +49,7 @@
 		BB431DD6225F426000537A90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DD1225F426000537A90 /* AppDelegate.m */; };
 		BB9619A22265C335008A4151 /* NSStringURI.m in Sources */ = {isa = PBXBuildFile; fileRef = BB96199F2265C335008A4151 /* NSStringURI.m */; };
 		BB9619A32265C335008A4151 /* NSStringExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9619A02265C335008A4151 /* NSStringExtentions.m */; };
+		BB9BFC43226826090071A008 /* WBTestNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9BFC42226826090071A008 /* WBTestNavView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +145,8 @@
 		BB96199F2265C335008A4151 /* NSStringURI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringURI.m; sourceTree = "<group>"; };
 		BB9619A02265C335008A4151 /* NSStringExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringExtentions.m; sourceTree = "<group>"; };
 		BB9619A12265C335008A4151 /* NSStringExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringExtentions.h; sourceTree = "<group>"; };
+		BB9BFC41226826090071A008 /* WBTestNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBTestNavView.h; sourceTree = "<group>"; };
+		BB9BFC42226826090071A008 /* WBTestNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBTestNavView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,6 +389,8 @@
 			children = (
 				BB3D3D542266EAD900952A4D /* WBTestViewController.h */,
 				BB3D3D552266EAD900952A4D /* WBTestViewController.m */,
+				BB9BFC41226826090071A008 /* WBTestNavView.h */,
+				BB9BFC42226826090071A008 /* WBTestNavView.m */,
 			);
 			name = Test;
 			sourceTree = "<group>";
@@ -607,6 +612,7 @@
 				BB349DCA2264227E00515502 /* YYWeakProxy.m in Sources */,
 				BB349DBF2264216A00515502 /* WBLogger.m in Sources */,
 				BB349DFE226423A600515502 /* WBWebViewController.m in Sources */,
+				BB9BFC43226826090071A008 /* WBTestNavView.m in Sources */,
 				BB349E1322645FFC00515502 /* WBAuthorizeView.m in Sources */,
 				BB349DF8226423A600515502 /* WBCoverView.m in Sources */,
 				BB349DFB226423A600515502 /* WBBaseView.m in Sources */,

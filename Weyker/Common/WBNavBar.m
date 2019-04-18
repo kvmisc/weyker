@@ -174,7 +174,7 @@
 {
   [super layoutSubviews];
 
-  // 根据前后占用空间来算标题的位置
+  // 根据前后用量来算标题位置
   CGFloat frntUsage = 0.0;
   CGFloat backUsage = 0.0;
 
@@ -203,6 +203,14 @@
                                 kWBNavBarHeight);
     frntUsage = SCREEN_PADDING + _leftBtn.bounds.size.width;
   }
+  if ( _leftView ) {
+    CGSize contentSize = [_leftView intrinsicContentSize];
+    _leftView.frame = CGRectMake(SCREEN_PADDING,
+                                 floor(self.bounds.size.height-(kWBNavBarHeight-contentSize.height)/2.0-contentSize.height),
+                                 contentSize.width,
+                                 contentSize.height);
+    frntUsage = SCREEN_PADDING + contentSize.width;
+  }
 
   if ( _rightBtn ) {
     [_rightBtn sizeToFit];
@@ -212,15 +220,26 @@
                                  kWBNavBarHeight);
     backUsage = _rightBtn.bounds.size.width + SCREEN_PADDING;
   }
+  if ( _rightView ) {
+    CGSize contentSize = [_rightView intrinsicContentSize];
+    _rightView.frame = CGRectMake(self.bounds.size.width-contentSize.width-SCREEN_PADDING,
+                                  floor(self.bounds.size.height-(kWBNavBarHeight-contentSize.height)/2.0-contentSize.height),
+                                  contentSize.width,
+                                  contentSize.height);
+    backUsage = contentSize.width + SCREEN_PADDING;
+  }
 
 
+  // titleLabel 会根据前后用量来压缩
   CGFloat titleMargin = MAX(frntUsage, backUsage) + CONTENT_SPACING;
   _titleLabel.frame = CGRectMake(titleMargin,
                                  self.bounds.size.height-kWBNavBarHeight,
                                  self.bounds.size.width-2*titleMargin,
                                  kWBNavBarHeight);
 
-
+  // titleView 啥也不管，给多大就显示多大
+  [_titleView sizeToFit];
+  _titleView.center = CGPointMake(self.center.x, floor(self.bounds.size.height-kWBNavBarHeight/2.0));
 }
 
 @end

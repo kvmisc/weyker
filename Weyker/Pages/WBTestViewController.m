@@ -8,6 +8,7 @@
 
 #import "WBTestViewController.h"
 #import "WBRootViewController.h"
+#import "WBTestNavView.h"
 
 @implementation WBTestViewController
 
@@ -36,10 +37,8 @@
   self.navigationItem.title = title;
   count++;
 
-  UIView *rightView = [[UIView alloc] init];
-  rightView.backgroundColor = [UIColor redColor];
+  UIView *rightView = [[WBTestNavView alloc] init];
   [self.navBar setRightView:rightView];
-  rightView.frame = CGRectMake(50, 0, 30, 30);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
