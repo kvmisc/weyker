@@ -22,7 +22,7 @@
   tab1.tag = 0;
   [tab1 setTitleColor:[UIColor tk_colorWithHexInteger:kWBRootTabBarTextColor] forState:UIControlStateNormal];
   tab1.titleLabel.font = [UIFont systemFontOfSize:kWBRootTabBarFontSize];
-  [tab1 setTitle:NSLocalizedString(@"微博", @"") forState:UIControlStateNormal];
+  [tab1 setTitle:NSLocalizedString(@"tabbar_weibo", @"") forState:UIControlStateNormal];
   [tab1 setImage:[UIImage imageNamed:@"tabbar_home"] forState:UIControlStateNormal];
   [tab1 setImage:[UIImage imageNamed:@"tabbar_home_selected"] forState:UIControlStateSelected];
   [tab1 setImage:[UIImage imageNamed:@"tabbar_home_highlighted"] forState:UIControlStateHighlighted];
@@ -33,7 +33,7 @@
   tab2.tag = 1;
   [tab2 setTitleColor:[UIColor tk_colorWithHexInteger:kWBRootTabBarTextColor] forState:UIControlStateNormal];
   tab2.titleLabel.font = [UIFont systemFontOfSize:kWBRootTabBarFontSize];
-  [tab2 setTitle:NSLocalizedString(@"发现", @"") forState:UIControlStateNormal];
+  [tab2 setTitle:NSLocalizedString(@"tabbar_discover", @"") forState:UIControlStateNormal];
   [tab2 setImage:[UIImage imageNamed:@"tabbar_discover"] forState:UIControlStateNormal];
   [tab2 setImage:[UIImage imageNamed:@"tabbar_discover_selected"] forState:UIControlStateSelected];
   [tab2 setImage:[UIImage imageNamed:@"tabbar_discover_highlighted"] forState:UIControlStateHighlighted];
@@ -44,7 +44,7 @@
   tab3.tag = 2;
   [tab3 setTitleColor:[UIColor tk_colorWithHexInteger:kWBRootTabBarTextColor] forState:UIControlStateNormal];
   tab3.titleLabel.font = [UIFont systemFontOfSize:kWBRootTabBarFontSize];
-  [tab3 setTitle:NSLocalizedString(@"消息", @"") forState:UIControlStateNormal];
+  [tab3 setTitle:NSLocalizedString(@"tabbar_message", @"") forState:UIControlStateNormal];
   [tab3 setImage:[UIImage imageNamed:@"tabbar_message"] forState:UIControlStateNormal];
   [tab3 setImage:[UIImage imageNamed:@"tabbar_message_selected"] forState:UIControlStateSelected];
   [tab3 setImage:[UIImage imageNamed:@"tabbar_message_highlighted"] forState:UIControlStateHighlighted];
@@ -55,7 +55,7 @@
   tab4.tag = 3;
   [tab4 setTitleColor:[UIColor tk_colorWithHexInteger:kWBRootTabBarTextColor] forState:UIControlStateNormal];
   tab4.titleLabel.font = [UIFont systemFontOfSize:kWBRootTabBarFontSize];
-  [tab4 setTitle:NSLocalizedString(@"我", @"") forState:UIControlStateNormal];
+  [tab4 setTitle:NSLocalizedString(@"tabbar_profile", @"") forState:UIControlStateNormal];
   [tab4 setImage:[UIImage imageNamed:@"tabbar_profile"] forState:UIControlStateNormal];
   [tab4 setImage:[UIImage imageNamed:@"tabbar_profile_selected"] forState:UIControlStateSelected];
   [tab4 setImage:[UIImage imageNamed:@"tabbar_profile_highlighted"] forState:UIControlStateHighlighted];

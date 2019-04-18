@@ -21,6 +21,11 @@
 #ifdef DEBUG
   [YYFPSLabel setup];
 #endif
+
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(languageDidChange:)
+                                               name:WBLanguageDidChangeNotification
+                                             object:nil];
   return YES;
 }
 
@@ -28,8 +33,18 @@
 {
   _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   _window.backgroundColor = [UIColor whiteColor];
-  _window.rootViewController = [[WBRootViewController alloc] init];;
+  _window.rootViewController = [[WBRootViewController alloc] init];
   [_window makeKeyAndVisible];
+}
+
+- (void)languageDidChange:(NSNotification *)notification
+{
+  @weakify(self);
+  dispatch_async(dispatch_get_main_queue(), ^{
+    @strongify(self);
+    self.window.rootViewController = [[WBRootViewController alloc] init];
+    [self.window makeKeyAndVisible];
+  });
 }
 
 
