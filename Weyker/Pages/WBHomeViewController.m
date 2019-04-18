@@ -13,7 +13,9 @@
 
 @end
 
-@implementation WBHomeViewController
+@implementation WBHomeViewController {
+  UIButton *_bt;
+}
 
 - (void)viewDidLoad
 {
@@ -25,6 +27,13 @@
 
   self.toolBar = [[WBRootToolBar alloc] init];
   [self.view addSubview:self.toolBar];
+
+  UIButton *bt = [UIButton buttonWithType:UIButtonTypeCustom];
+  _bt = bt;
+  [self.contentView addSubview:bt];
+  [bt mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.center.equalTo(self.contentView);
+  }];
 }
 
 - (void)setupNavBar
@@ -34,7 +43,6 @@
   self.navBar.titleLabel.text = @"时间线";
   self.navigationItem.title = @"时间线";
 
-  [self.navBar setupRightBtn];
   [self.navBar.rightBtn setTitle:@"注册" forState:UIControlStateNormal];
 }
 

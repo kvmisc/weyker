@@ -10,6 +10,8 @@
 
 @implementation WBBaseViewController
 
+#pragma mark - View lifecycle
+
 - (void)viewDidLoad
 {
   [super viewDidLoad];
@@ -57,10 +59,19 @@
                                   WB_SCREEN_HET-topSpacing-bottomSpacing);
 }
 
+
+#pragma mark - NavBar
+
 - (void)setupNavBar
 {
   if ( !_navBar ) {
     _navBar = [[WBNavBar alloc] init];
+    [_navBar.leftBtn addTarget:self
+                        action:@selector(navBarLeftAction:)
+              forControlEvents:UIControlEventTouchUpInside];
+    [_navBar.rightBtn addTarget:self
+                         action:@selector(navBarRightAction:)
+               forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_navBar];
   }
   [self setupNavBarBackIfNeeded];
@@ -76,17 +87,15 @@
         // 是导航的根，检查导航是否被 Present，决定是否显示 Close 按钮
         if ( self.navigationController.presentingViewController ) {
           [_navBar setupDismissBtn];
-          [_navBar.backBtn addTarget:self action:@selector(navBarBackAction:) forControlEvents:UIControlEventTouchUpInside];
         }
       } else {
         // 非导航的根，要显示返回按钮
         [_navBar setupPopBtn];
-        [_navBar.backBtn addTarget:self action:@selector(navBarBackAction:) forControlEvents:UIControlEventTouchUpInside];
         // 取到前一个 ViewController，再取出里面的标题，如果标题太长，将标题压缩，显示
         UIViewController *controller = [controllerAry objectAtIndex:idx-1];
         NSString *title = [WBNavBar truncateText:controller.navigationItem.title toLength:2];
         if ( title.length>0 ) {
-          [_navBar.backBtn setTitle:title forState:UIControlStateNormal];
+          [_navBar.leftBtn setTitle:title forState:UIControlStateNormal];
         }
       }
     }
@@ -94,12 +103,11 @@
     // 不在导航中，检查是否被 Present，决定是否显示 Close 按钮
     if ( self.presentingViewController ) {
       [_navBar setupDismissBtn];
-      [_navBar.backBtn addTarget:self action:@selector(navBarBackAction:) forControlEvents:UIControlEventTouchUpInside];
     } else {
     }
   }
 }
-- (void)navBarBackAction:(id)sender
+- (void)navBarLeftAction:(id)sender
 {
   if ( self.navigationController ) {
     NSArray *controllerAry = self.navigationController.viewControllers;
@@ -124,22 +132,12 @@
     }
   }
 }
-- (void)navBarLeftAction:(id)sender
-{
-}
 - (void)navBarRightAction:(id)sender
 {
 }
 
-- (void)disableContentInsetAdjustment:(UIScrollView *)scrollView
-{
-  if ( @available(iOS 11.0, *) ) {
-    scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-  } else {
-    self.automaticallyAdjustsScrollViewInsets = NO;
-  }
-}
 
+#pragma mark - ContentView
 
 - (BOOL)shouldLoadContentView
 {
@@ -162,6 +160,18 @@
       _contentView = [[UIView alloc] init];
       [self.view addSubview:_contentView];
     }
+  }
+}
+
+
+#pragma mark - Public methods
+
+- (void)disableContentInsetAdjustment:(UIScrollView *)scrollView
+{
+  if ( @available(iOS 11.0, *) ) {
+    scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+  } else {
+    self.automaticallyAdjustsScrollViewInsets = NO;
   }
 }
 

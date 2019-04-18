@@ -32,9 +32,7 @@
   self.navigationItem.title = title;
   count++;
 
-  [self.navBar setupRightBtn];
   [self.navBar.rightBtn setTitle:@"Present" forState:UIControlStateNormal];
-  [self.navBar.rightBtn addTarget:self action:@selector(navBarRightAction:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)navBarRightAction:(id)sender

@@ -10,8 +10,6 @@
 
 @interface WBNavBar : WBBaseView
 
-@property (nonatomic, strong, readonly) UIButton *backBtn;
-
 @property (nonatomic, strong, readonly) UIButton *leftBtn;
 @property (nonatomic, strong) UIView *leftView;
 
@@ -21,13 +19,10 @@
 @property (nonatomic, strong, readonly) UIButton *rightBtn;
 @property (nonatomic, strong) UIView *rightView;
 
-- (void)setupPopBtn; // 设置 backBtn 为 Pop 样式，可能是一个键头
-- (void)setupDismissBtn; // 设置 backBtn 为 Dismiss 样式，可能是一个叉叉
-
+- (void)setupPopBtn; // 设置 leftBtn 为 Pop 样式，可能是一个键头
+- (void)setupDismissBtn; // 设置 leftBtn 为 Dismiss 样式，可能是一个叉叉
 - (void)setupLeftBtn;
-
-- (void)setupTitleLabel; // 一般都会有标题，此项默认调用
-
+- (void)setupTitleLabel;
 - (void)setupRightBtn;
 
 // 长字符串显示在导航栏会让样子很糟，这里的 length 是字符数，返回的字符串长度为 length+1
