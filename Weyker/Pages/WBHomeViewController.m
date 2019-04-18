@@ -40,10 +40,9 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-  Class cls = NSClassFromString(@"WBTestViewController");
+  Class cls = NSClassFromString(@"WBPushChildViewController");
   UIViewController *vc = [[cls alloc] init];
   [self.navigationController pushViewController:vc animated:YES];
-  NSLog(@"%@", NSStringFromCGRect(self.navBar.backBtn.frame));
 
 //  AppDelegate *dlg = WB_APP_DELEGATE;
 //  WBRootViewController *vc = dlg.window.rootViewController;

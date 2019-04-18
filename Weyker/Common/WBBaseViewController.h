@@ -21,6 +21,12 @@
 
 
 - (void)setupNavBar;
+- (void)setupNavBarLeft;
+- (void)setupNavBarTitle;
+- (void)setupNavBarRight;
+- (void)navBarBackAction:(id)sender;
+- (void)navBarLeftAction:(id)sender;
+- (void)navBarRightAction:(id)sender;
 
 - (void)disableContentInsetAdjustment:(UIScrollView *)scrollView;
 

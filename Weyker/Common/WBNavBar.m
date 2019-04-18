@@ -13,24 +13,10 @@
 // 按钮和标题的间隙
 #define CONTENT_SPACING 5.0
 
-// 返回图片宽度
-#define BACK_IMG_WID 16.0
+// 返回最小宽度
+#define BACK_POP_WID 16.0
+#define BACK_DISMISS_WID 30.0
 
-
-#define MIN_BTN_WID 40.0
-#define MAX_BTN_WID 50.0
-
-// 返回按钮，"个人…"
-#define BTN_WID_BACK_LONG 56
-// 返回按钮，"主页"
-#define BTN_WID_BACK_TXT 45
-// 返回按钮，""
-#define BTN_WID_BACK_IMG 16
-
-// 文字按钮，"取消…"
-#define BTN_WID_LONG 40
-// 文字按钮，"完成"
-#define BTN_WID_TXT 30
 
 @implementation WBNavBar
 
@@ -42,8 +28,9 @@
 }
 
 
-- (void)setupBackBtn
+- (void)setupPopBtn
 {
+  [self removeBackBtn];
   [self removeLeftBtn];
   [self removeLeftView];
 
@@ -51,8 +38,18 @@
   [_backBtn setTitleColor:[UIColor tk_colorWithHexInteger:kWBNavBarButtonTextColor] forState:UIControlStateNormal];
   _backBtn.titleLabel.font = [UIFont systemFontOfSize:kWBNavBarButtonFontSize];
   [_backBtn setImage:[UIImage imageNamed:@"navbar_back"] forState:UIControlStateNormal];
-  [_backBtn setImage:[UIImage imageNamed:@"navbar_back_highlighted"] forState:UIControlStateHighlighted];
-  [_backBtn addTarget:self action:@selector(backButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+  [self addSubview:_backBtn];
+}
+- (void)setupDismissBtn
+{
+  [self removeBackBtn];
+  [self removeLeftBtn];
+  [self removeLeftView];
+
+  _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+  [_backBtn setTitleColor:[UIColor tk_colorWithHexInteger:kWBNavBarButtonTextColor] forState:UIControlStateNormal];
+  _backBtn.titleLabel.font = [UIFont systemFontOfSize:kWBNavBarButtonFontSize];
+  [_backBtn setImage:[UIImage imageNamed:@"navbar_close"] forState:UIControlStateNormal];
   [self addSubview:_backBtn];
 }
 
@@ -65,7 +62,6 @@
   _leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
   [_leftBtn setTitleColor:[UIColor tk_colorWithHexInteger:kWBNavBarButtonTextColor] forState:UIControlStateNormal];
   _leftBtn.titleLabel.font = [UIFont systemFontOfSize:kWBNavBarButtonFontSize];
-  [_leftBtn addTarget:self action:@selector(leftButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
   [self addSubview:_leftBtn];
 }
 - (void)setLeftView:(UIView *)leftView
@@ -117,7 +113,6 @@
   _rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
   [_rightBtn setTitleColor:[UIColor tk_colorWithHexInteger:kWBNavBarButtonTextColor] forState:UIControlStateNormal];
   _rightBtn.titleLabel.font = [UIFont systemFontOfSize:kWBNavBarButtonFontSize];
-  [_rightBtn addTarget:self action:@selector(rightButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
   [self addSubview:_rightBtn];
 }
 - (void)setRightView:(UIView *)rightView
@@ -150,22 +145,7 @@
 - (void)removeRightBtn    { [_rightBtn removeFromSuperview];    _rightBtn = nil; }
 - (void)removeRightView   { [_rightView removeFromSuperview];   _rightView = nil; }
 
-
-- (void)backButtonClicked:(UIButton *)btn
-{
-  NSLog(@"back clicked");
-}
-
-- (void)leftButtonClicked:(UIButton *)btn
-{
-  NSLog(@"left clicked");
-}
-
-- (void)rightButtonClicked:(UIButton *)btn
-{
-  NSLog(@"right clicked");
-}
-
+#pragma mark - Metrics
 
 - (CGSize)intrinsicContentSize
 {
@@ -185,14 +165,15 @@
 
   if ( _backBtn ) {
     CGSize contentSize = [_backBtn intrinsicContentSize];
-    if ( contentSize.width<=BACK_IMG_WID ) {
-      // 此时的返回按钮应该只有图片，图片太窄，按钮要加宽
+    if ( contentSize.width<=BACK_POP_WID ) {
+      // 此时的返回按钮应该是 "<"，太窄，按钮要加宽
       _backBtn.frame = CGRectMake(0.0,
                                   selfHeight-kWBNavBarHeight,
                                   ceil(contentSize.width+2*SCREEN_PADDING),
                                   kWBNavBarHeight);
       frntUsage = ceil(contentSize.width);
     } else {
+      // 此时的返回按钮应该是 "<文字" 或者 "X"
       _backBtn.frame = CGRectMake(SCREEN_PADDING,
                                   selfHeight-kWBNavBarHeight,
                                   ceil(contentSize.width),

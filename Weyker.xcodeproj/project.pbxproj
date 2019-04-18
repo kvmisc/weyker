@@ -50,6 +50,8 @@
 		BB9619A22265C335008A4151 /* NSStringURI.m in Sources */ = {isa = PBXBuildFile; fileRef = BB96199F2265C335008A4151 /* NSStringURI.m */; };
 		BB9619A32265C335008A4151 /* NSStringExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9619A02265C335008A4151 /* NSStringExtentions.m */; };
 		BB9BFC43226826090071A008 /* WBTestNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9BFC42226826090071A008 /* WBTestNavView.m */; };
+		BB9BFC492268429E0071A008 /* WBPushChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9BFC482268429E0071A008 /* WBPushChildViewController.m */; };
+		BB9BFC4C226843360071A008 /* WBPresentChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9BFC4B226843360071A008 /* WBPresentChildViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,6 +149,10 @@
 		BB9619A12265C335008A4151 /* NSStringExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringExtentions.h; sourceTree = "<group>"; };
 		BB9BFC41226826090071A008 /* WBTestNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBTestNavView.h; sourceTree = "<group>"; };
 		BB9BFC42226826090071A008 /* WBTestNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBTestNavView.m; sourceTree = "<group>"; };
+		BB9BFC472268429E0071A008 /* WBPushChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBPushChildViewController.h; sourceTree = "<group>"; };
+		BB9BFC482268429E0071A008 /* WBPushChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBPushChildViewController.m; sourceTree = "<group>"; };
+		BB9BFC4A226843360071A008 /* WBPresentChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBPresentChildViewController.h; sourceTree = "<group>"; };
+		BB9BFC4B226843360071A008 /* WBPresentChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBPresentChildViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -391,6 +397,10 @@
 				BB3D3D552266EAD900952A4D /* WBTestViewController.m */,
 				BB9BFC41226826090071A008 /* WBTestNavView.h */,
 				BB9BFC42226826090071A008 /* WBTestNavView.m */,
+				BB9BFC472268429E0071A008 /* WBPushChildViewController.h */,
+				BB9BFC482268429E0071A008 /* WBPushChildViewController.m */,
+				BB9BFC4A226843360071A008 /* WBPresentChildViewController.h */,
+				BB9BFC4B226843360071A008 /* WBPresentChildViewController.m */,
 			);
 			name = Test;
 			sourceTree = "<group>";
@@ -603,7 +613,9 @@
 				BB349DBB2264216A00515502 /* NSStringUnicode.m in Sources */,
 				BB9619A22265C335008A4151 /* NSStringURI.m in Sources */,
 				BB349DF0226423A600515502 /* WBWeakScriptMessageHandler.m in Sources */,
+				BB9BFC492268429E0071A008 /* WBPushChildViewController.m in Sources */,
 				BB19108A2265F46100F3F6E9 /* WBMessageViewController.m in Sources */,
+				BB9BFC4C226843360071A008 /* WBPresentChildViewController.m in Sources */,
 				BB349DF6226423A600515502 /* WBCoverContentView.m in Sources */,
 				BB431DD5225F426000537A90 /* main.m in Sources */,
 				BB349DB82264216A00515502 /* UIColorExtentions.m in Sources */,

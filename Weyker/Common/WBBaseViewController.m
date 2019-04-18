@@ -63,17 +63,72 @@
     _navBar = [[WBNavBar alloc] init];
     [self.view addSubview:_navBar];
   }
+  [self setupNavBarBackIfNeeded];
+}
+- (void)setupNavBarBackIfNeeded
+{
   if ( self.navigationController ) {
-    NSUInteger idx = [self.navigationController.viewControllers indexOfObjectIdenticalTo:self];
-    if ( (idx<self.navigationController.viewControllers.count) && (idx>0) ) {
-      // 处于导航中，且不是第一个，应该显示返回按钮
-      [_navBar setupBackBtn];
-      // 取到前一个 ViewController，再取出里面的标题，如果标题太长，将标题压缩，显示
-      UIViewController *vc = [self.navigationController.viewControllers objectAtIndex:idx-1];
-      NSString *title = [WBNavBar truncateText:vc.navigationItem.title toLength:2];
-      [_navBar.backBtn setTitle:title forState:UIControlStateNormal];
+    NSArray *controllerAry = self.navigationController.viewControllers;
+    NSUInteger idx = [controllerAry indexOfObjectIdenticalTo:self];
+    if ( idx<controllerAry.count ) {
+      // 处于导航中
+      if ( idx==0 ) {
+        // 是导航的根，检查导航是否被 Present，决定是否显示 Close 按钮
+        if ( self.navigationController.presentingViewController ) {
+          [_navBar setupDismissBtn];
+          [_navBar.backBtn addTarget:self action:@selector(navBarBackAction:) forControlEvents:UIControlEventTouchUpInside];
+        }
+      } else {
+        // 非导航的根，要显示返回按钮
+        [_navBar setupPopBtn];
+        [_navBar.backBtn addTarget:self action:@selector(navBarBackAction:) forControlEvents:UIControlEventTouchUpInside];
+        // 取到前一个 ViewController，再取出里面的标题，如果标题太长，将标题压缩，显示
+        UIViewController *controller = [controllerAry objectAtIndex:idx-1];
+        NSString *title = [WBNavBar truncateText:controller.navigationItem.title toLength:2];
+        if ( title.length>0 ) {
+          [_navBar.backBtn setTitle:title forState:UIControlStateNormal];
+        }
+      }
+    }
+  } else {
+    // 不在导航中，检查是否被 Present，决定是否显示 Close 按钮
+    if ( self.presentingViewController ) {
+      [_navBar setupDismissBtn];
+      [_navBar.backBtn addTarget:self action:@selector(navBarBackAction:) forControlEvents:UIControlEventTouchUpInside];
+    } else {
     }
   }
+}
+- (void)navBarBackAction:(id)sender
+{
+  if ( self.navigationController ) {
+    NSArray *controllerAry = self.navigationController.viewControllers;
+    NSUInteger idx = [controllerAry indexOfObjectIdenticalTo:self];
+    if ( idx<controllerAry.count ) {
+      // 处于导航中
+      if ( idx==0 ) {
+        // 是导航的根，检查导航是否被 Present，决定是否 Dismiss
+        if ( self.navigationController.presentingViewController ) {
+          [self.navigationController dismissViewControllerAnimated:YES completion:NULL];
+        }
+      } else {
+        // 非导航的根，Pop
+        [self.navigationController popViewControllerAnimated:YES];
+      }
+    }
+  } else {
+    // 不在导航中，检查是否被 Present，决定是否 Dismiss
+    if ( self.presentingViewController ) {
+      [self dismissViewControllerAnimated:YES completion:NULL];
+    } else {
+    }
+  }
+}
+- (void)navBarLeftAction:(id)sender
+{
+}
+- (void)navBarRightAction:(id)sender
+{
 }
 
 - (void)disableContentInsetAdjustment:(UIScrollView *)scrollView
