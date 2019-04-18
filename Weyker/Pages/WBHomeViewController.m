@@ -32,10 +32,11 @@
   [super setupNavBar];
 
   [self.navBar setupTitleLabel];
-  self.navBar.titleLabel.text = @"Home";
+  self.navBar.titleLabel.text = @"时间线";
+  self.navigationItem.title = @"时间线";
 
   [self.navBar setupRightBtn];
-  [self.navBar.rightBtn setTitle:@"Home" forState:UIControlStateNormal];
+  [self.navBar.rightBtn setTitle:@"注册" forState:UIControlStateNormal];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -43,6 +44,11 @@
   Class cls = NSClassFromString(@"WBTestViewController");
   UIViewController *vc = [[cls alloc] init];
   [self.navigationController pushViewController:vc animated:YES];
+  NSLog(@"%@", NSStringFromCGRect(self.navBar.backBtn.frame));
+
+//  AppDelegate *dlg = WB_APP_DELEGATE;
+//  WBRootViewController *vc = dlg.window.rootViewController;
+//  NSLog(@"%@ %@", vc.navigationController, vc.navigationItem.title);
 }
 
 @end

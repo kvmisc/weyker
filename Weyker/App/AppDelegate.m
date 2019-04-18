@@ -28,10 +28,7 @@
 {
   _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   _window.backgroundColor = [UIColor whiteColor];
-  UIViewController *vc = [[WBRootViewController alloc] init];
-  UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
-  nc.navigationBarHidden = YES;
-  _window.rootViewController = nc;
+  _window.rootViewController = [[WBRootViewController alloc] init];;
   [_window makeKeyAndVisible];
 }
 

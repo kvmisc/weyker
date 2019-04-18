@@ -64,8 +64,14 @@
     [self.view addSubview:_navBar];
   }
   if ( self.navigationController ) {
-    if ( self.navigationController.viewControllers.count>1 ) {
+    NSUInteger idx = [self.navigationController.viewControllers indexOfObjectIdenticalTo:self];
+    if ( (idx<self.navigationController.viewControllers.count) && (idx>0) ) {
+      // 处于导航中，且不是第一个，应该显示返回按钮
       [_navBar setupBackBtn];
+      // 取到前一个 ViewController，再取出里面的标题，如果标题太长，将标题压缩，显示
+      UIViewController *vc = [self.navigationController.viewControllers objectAtIndex:idx-1];
+      NSString *title = [WBNavBar truncateText:vc.navigationItem.title toLength:2];
+      [_navBar.backBtn setTitle:title forState:UIControlStateNormal];
     }
   }
 }

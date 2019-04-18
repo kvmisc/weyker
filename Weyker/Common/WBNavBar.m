@@ -8,14 +8,37 @@
 
 #import "WBNavBar.h"
 
+// 屏幕左右的间隙
+#define SCREEN_PADDING 10.0
+// 按钮和标题的间隙
+#define CONTENT_SPACING 5.0
+
+// 返回图片宽度
+#define BACK_IMG_WID 16.0
+
+
 #define MIN_BTN_WID 40.0
 #define MAX_BTN_WID 50.0
+
+// 返回按钮，"个人…"
+#define BTN_WID_BACK_LONG 56
+// 返回按钮，"主页"
+#define BTN_WID_BACK_TXT 45
+// 返回按钮，""
+#define BTN_WID_BACK_IMG 16
+
+// 文字按钮，"取消…"
+#define BTN_WID_LONG 40
+// 文字按钮，"完成"
+#define BTN_WID_TXT 30
 
 @implementation WBNavBar
 
 - (void)setup
 {
   self.backgroundColor = [UIColor yellowColor];
+
+  [self setupTitleLabel];
 }
 
 
@@ -63,13 +86,13 @@
   [self removeTitleView];
 
   _titleLabel = [[UILabel alloc] init];
-  _titleLabel.font = [UIFont systemFontOfSize:kWBNavBarTitleFontSize];
+  _titleLabel.font = [UIFont boldSystemFontOfSize:kWBNavBarTitleFontSize];
   _titleLabel.textColor = [UIColor tk_colorWithHexInteger:kWBNavBarTitleTextColor];
   _titleLabel.textAlignment = NSTextAlignmentCenter;
   _titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+  _titleLabel.adjustsFontSizeToFitWidth = NO;
   _titleLabel.numberOfLines = 1;
   _titleLabel.backgroundColor = [UIColor clearColor];
-  _titleLabel.adjustsFontSizeToFitWidth = NO;
   [self addSubview:_titleLabel];
 }
 - (void)setTitleView:(UIView *)titleView
@@ -105,6 +128,14 @@
   } else {
     [self removeRightView];
   }
+}
+
++ (NSString *)truncateText:(NSString *)text toLength:(NSUInteger)length
+{
+  if ( text.length>length ) {
+    return [NSString stringWithFormat:@"%@…", [text substringToIndex:length]];
+  }
+  return text;
 }
 
 #pragma mark - Private methods
@@ -143,25 +174,53 @@
 {
   [super layoutSubviews];
 
-  _backBtn.frame = CGRectMake(0.0,
-                              self.bounds.size.height-kWBNavBarHeight,
-                              MAX_BTN_WID,
-                              kWBNavBarHeight);
+  // 根据前后占用空间来算标题的位置
+  CGFloat frntUsage = 0.0;
+  CGFloat backUsage = 0.0;
 
-  _leftBtn.frame = CGRectMake(0.0,
-                              self.bounds.size.height-kWBNavBarHeight,
-                              MAX_BTN_WID,
-                              kWBNavBarHeight);
+  if ( _backBtn ) {
+    [_backBtn sizeToFit];
+    if ( _backBtn.bounds.size.width<=BACK_IMG_WID ) {
+      // 此时的返回按钮应该只有图片，图片太窄，按钮要加宽
+      _backBtn.frame = CGRectMake(0.0,
+                                  self.bounds.size.height-kWBNavBarHeight,
+                                  _backBtn.bounds.size.width+2*SCREEN_PADDING,
+                                  kWBNavBarHeight);
+      frntUsage = _backBtn.bounds.size.width;
+    } else {
+      _backBtn.frame = CGRectMake(SCREEN_PADDING,
+                                  self.bounds.size.height-kWBNavBarHeight,
+                                  _backBtn.bounds.size.width,
+                                  kWBNavBarHeight);
+      frntUsage = SCREEN_PADDING + _backBtn.bounds.size.width;
+    }
+  }
+  if ( _leftBtn ) {
+    [_leftBtn sizeToFit];
+    _leftBtn.frame = CGRectMake(SCREEN_PADDING,
+                                self.bounds.size.height-kWBNavBarHeight,
+                                _leftBtn.bounds.size.width,
+                                kWBNavBarHeight);
+    frntUsage = SCREEN_PADDING + _leftBtn.bounds.size.width;
+  }
 
-  _titleLabel.frame = CGRectMake(MAX_BTN_WID,
+  if ( _rightBtn ) {
+    [_rightBtn sizeToFit];
+    _rightBtn.frame = CGRectMake(self.bounds.size.width-_rightBtn.bounds.size.width-SCREEN_PADDING,
                                  self.bounds.size.height-kWBNavBarHeight,
-                                 self.bounds.size.width-2*MAX_BTN_WID,
+                                 _rightBtn.bounds.size.width,
+                                 kWBNavBarHeight);
+    backUsage = _rightBtn.bounds.size.width + SCREEN_PADDING;
+  }
+
+
+  CGFloat titleMargin = MAX(frntUsage, backUsage) + CONTENT_SPACING;
+  _titleLabel.frame = CGRectMake(titleMargin,
+                                 self.bounds.size.height-kWBNavBarHeight,
+                                 self.bounds.size.width-2*titleMargin,
                                  kWBNavBarHeight);
 
-  _rightBtn.frame = CGRectMake(self.bounds.size.width-MAX_BTN_WID,
-                               self.bounds.size.height-kWBNavBarHeight,
-                               MAX_BTN_WID,
-                               kWBNavBarHeight);
+
 }
 
 @end

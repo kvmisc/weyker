@@ -30,10 +30,16 @@
   [super setupNavBar];
 
   [self.navBar setupTitleLabel];
-  self.navBar.titleLabel.text = @"Test";
+  static int count = 1;
+  NSString *title = [NSString stringWithFormat:@"测%d", count];
+  self.navBar.titleLabel.text = title;
+  self.navigationItem.title = title;
+  count++;
 
-  [self.navBar setupRightBtn];
-  [self.navBar.rightBtn setTitle:@"Done" forState:UIControlStateNormal];
+  UIView *rightView = [[UIView alloc] init];
+  rightView.backgroundColor = [UIColor redColor];
+  [self.navBar setRightView:rightView];
+  rightView.frame = CGRectMake(50, 0, 30, 30);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

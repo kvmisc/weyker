@@ -22,7 +22,12 @@
 
 - (void)setupBackBtn;
 - (void)setupLeftBtn;
-- (void)setupTitleLabel;
+- (void)setupTitleLabel; // 一般都会有标题，此项默认调用
 - (void)setupRightBtn;
+
+// 长字符串显示在导航栏会让样子很糟，这里的 length 是字符数，返回的字符串长度为 length+1
+// "取消收藏" -> "取消…"
+// "取消" -> "取消"
++ (NSString *)truncateText:(NSString *)text toLength:(NSUInteger)length;
 
 @end
