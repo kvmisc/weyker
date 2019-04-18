@@ -30,7 +30,6 @@
 {
   [super setupNavBar];
 
-  [self.navBar setupTitleLabel];
   static int count = 1;
   NSString *title = [NSString stringWithFormat:@"测%d", count];
   self.navBar.titleLabel.text = title;

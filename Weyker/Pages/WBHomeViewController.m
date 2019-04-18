@@ -31,7 +31,6 @@
 {
   [super setupNavBar];
 
-  [self.navBar setupTitleLabel];
   self.navBar.titleLabel.text = @"时间线";
   self.navigationItem.title = @"时间线";
 

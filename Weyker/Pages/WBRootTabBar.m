@@ -70,6 +70,11 @@
   _shouldNotifyRepeatedly = NO;
 }
 
+- (CGSize)intrinsicContentSize
+{
+  return CGSizeMake(UIViewNoIntrinsicMetric, kWBRootTabBarHeight);
+}
+
 - (void)layoutSubviews
 {
   [super layoutSubviews];
@@ -84,10 +89,6 @@
   }
 }
 
-//- (CGSize)intrinsicContentSize
-//{
-//  return CGSizeMake(UIViewNoIntrinsicMetric, kWBRootTabBarHeight);
-//}
 
 - (void)buttonClicked:(UIButton *)btn
 {

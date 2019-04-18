@@ -83,6 +83,7 @@
 
 - (void)setupTitleLabel
 {
+  [self removeTitleLabel];
   [self removeTitleView];
 
   _titleLabel = [[UILabel alloc] init];
@@ -92,6 +93,7 @@
   _titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
   _titleLabel.adjustsFontSizeToFitWidth = NO;
   _titleLabel.numberOfLines = 1;
+  _titleLabel.tag = 101;
   _titleLabel.backgroundColor = [UIColor clearColor];
   [self addSubview:_titleLabel];
 }
@@ -167,79 +169,83 @@
 
 - (CGSize)intrinsicContentSize
 {
-  return CGSizeMake(UIViewNoIntrinsicMetric, kWBRootTabBarHeight);
+  return CGSizeMake(UIViewNoIntrinsicMetric, kWBNavBarHeight);
 }
 
 - (void)layoutSubviews
 {
   [super layoutSubviews];
 
+  CGFloat selfWidth = self.bounds.size.width;
+  CGFloat selfHeight = self.bounds.size.height;
+
   // 根据前后用量来算标题位置
   CGFloat frntUsage = 0.0;
   CGFloat backUsage = 0.0;
 
   if ( _backBtn ) {
-    [_backBtn sizeToFit];
-    if ( _backBtn.bounds.size.width<=BACK_IMG_WID ) {
+    CGSize contentSize = [_backBtn intrinsicContentSize];
+    if ( contentSize.width<=BACK_IMG_WID ) {
       // 此时的返回按钮应该只有图片，图片太窄，按钮要加宽
       _backBtn.frame = CGRectMake(0.0,
-                                  self.bounds.size.height-kWBNavBarHeight,
-                                  _backBtn.bounds.size.width+2*SCREEN_PADDING,
+                                  selfHeight-kWBNavBarHeight,
+                                  ceil(contentSize.width+2*SCREEN_PADDING),
                                   kWBNavBarHeight);
-      frntUsage = _backBtn.bounds.size.width;
+      frntUsage = ceil(contentSize.width);
     } else {
       _backBtn.frame = CGRectMake(SCREEN_PADDING,
-                                  self.bounds.size.height-kWBNavBarHeight,
-                                  _backBtn.bounds.size.width,
+                                  selfHeight-kWBNavBarHeight,
+                                  ceil(contentSize.width),
                                   kWBNavBarHeight);
-      frntUsage = SCREEN_PADDING + _backBtn.bounds.size.width;
+      frntUsage = SCREEN_PADDING + ceil(contentSize.width);
     }
   }
   if ( _leftBtn ) {
-    [_leftBtn sizeToFit];
+    CGSize contentSize = [_leftBtn intrinsicContentSize];
     _leftBtn.frame = CGRectMake(SCREEN_PADDING,
-                                self.bounds.size.height-kWBNavBarHeight,
-                                _leftBtn.bounds.size.width,
+                                selfHeight-kWBNavBarHeight,
+                                ceil(contentSize.width),
                                 kWBNavBarHeight);
-    frntUsage = SCREEN_PADDING + _leftBtn.bounds.size.width;
+    frntUsage = SCREEN_PADDING + ceil(contentSize.width);
   }
   if ( _leftView ) {
     CGSize contentSize = [_leftView intrinsicContentSize];
     _leftView.frame = CGRectMake(SCREEN_PADDING,
-                                 floor(self.bounds.size.height-(kWBNavBarHeight-contentSize.height)/2.0-contentSize.height),
+                                 floor(selfHeight-(kWBNavBarHeight-contentSize.height)/2.0-contentSize.height),
                                  contentSize.width,
                                  contentSize.height);
     frntUsage = SCREEN_PADDING + contentSize.width;
   }
 
   if ( _rightBtn ) {
-    [_rightBtn sizeToFit];
-    _rightBtn.frame = CGRectMake(self.bounds.size.width-_rightBtn.bounds.size.width-SCREEN_PADDING,
-                                 self.bounds.size.height-kWBNavBarHeight,
-                                 _rightBtn.bounds.size.width,
+    CGSize contentSize = [_rightBtn intrinsicContentSize];
+    _rightBtn.frame = CGRectMake(floor(selfWidth-contentSize.width-SCREEN_PADDING),
+                                 selfHeight-kWBNavBarHeight,
+                                 ceil(contentSize.width),
                                  kWBNavBarHeight);
-    backUsage = _rightBtn.bounds.size.width + SCREEN_PADDING;
+    backUsage = ceil(contentSize.width) + SCREEN_PADDING;
   }
   if ( _rightView ) {
     CGSize contentSize = [_rightView intrinsicContentSize];
-    _rightView.frame = CGRectMake(self.bounds.size.width-contentSize.width-SCREEN_PADDING,
-                                  floor(self.bounds.size.height-(kWBNavBarHeight-contentSize.height)/2.0-contentSize.height),
+    _rightView.frame = CGRectMake(selfWidth-contentSize.width-SCREEN_PADDING,
+                                  floor(selfHeight-(kWBNavBarHeight-contentSize.height)/2.0-contentSize.height),
                                   contentSize.width,
                                   contentSize.height);
     backUsage = contentSize.width + SCREEN_PADDING;
   }
 
-
-  // titleLabel 会根据前后用量来压缩
+  // titleLabel 会根据前后用量来压缩，不会根据自己尺寸来布局
   CGFloat titleMargin = MAX(frntUsage, backUsage) + CONTENT_SPACING;
   _titleLabel.frame = CGRectMake(titleMargin,
-                                 self.bounds.size.height-kWBNavBarHeight,
-                                 self.bounds.size.width-2*titleMargin,
+                                 selfHeight-kWBNavBarHeight,
+                                 selfWidth-2*titleMargin,
                                  kWBNavBarHeight);
-
   // titleView 啥也不管，给多大就显示多大
-  [_titleView sizeToFit];
-  _titleView.center = CGPointMake(self.center.x, floor(self.bounds.size.height-kWBNavBarHeight/2.0));
+  CGSize contentSize = [_titleView intrinsicContentSize];
+  _titleView.frame = CGRectMake(floor((selfWidth-contentSize.width)/2.0),
+                                floor(selfHeight-kWBNavBarHeight+(kWBNavBarHeight-contentSize.width)/2.0),
+                                ceil(contentSize.width),
+                                ceil(contentSize.height));
 }
 
 @end
