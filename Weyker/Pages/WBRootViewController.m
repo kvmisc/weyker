@@ -109,7 +109,7 @@
   }
 }
 
-#pragma mark - Subview setup
+#pragma mark - Setup subviews
 
 - (void)setupPages
 {

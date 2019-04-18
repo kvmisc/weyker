@@ -72,6 +72,7 @@
   [self removeLeftView];
 
   [_leftBtn setImage:[UIImage imageNamed:@"navbar_back"] forState:UIControlStateNormal];
+  [_leftBtn setTitle:nil forState:UIControlStateNormal];
 
   _leftBtn.hidden = NO;
 }
@@ -80,6 +81,7 @@
   [self removeLeftView];
 
   [_leftBtn setImage:[UIImage imageNamed:@"navbar_close"] forState:UIControlStateNormal];
+  [_leftBtn setTitle:nil forState:UIControlStateNormal];
 
   _leftBtn.hidden = NO;
 }
