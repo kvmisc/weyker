@@ -66,6 +66,7 @@
 		BB19109B2265F70200F3F6E9 /* WBRootTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBRootTabBar.h; sourceTree = "<group>"; };
 		BB19109C2265F70200F3F6E9 /* WBRootTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBRootTabBar.m; sourceTree = "<group>"; };
 		BB1910A32265FB3A00F3F6E9 /* WBAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAppearance.h; sourceTree = "<group>"; };
+		BB22788322695C8F00F600E2 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		BB349D942264216A00515502 /* UIColorExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorExtentions.h; sourceTree = "<group>"; };
 		BB349D952264216A00515502 /* UINavigationControllerExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationControllerExtentions.m; sourceTree = "<group>"; };
 		BB349D962264216A00515502 /* NSObjectExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectExtentions.h; sourceTree = "<group>"; };
@@ -551,6 +552,7 @@
 				en,
 				Base,
 				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = BB431DA6225F417E00537A90;
 			productRefGroup = BB431DB0225F417E00537A90 /* Products */;
@@ -677,6 +679,7 @@
 			children = (
 				BBA9AF1F2268787100D4AFCB /* en */,
 				BBA9AF212268788B00D4AFCB /* zh-Hans */,
+				BB22788322695C8F00F600E2 /* zh-Hant */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

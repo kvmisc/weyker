@@ -30,7 +30,6 @@ extern NSBundle *WBLanguageBundle;
 
 + (NSString *)currentLanguage;
 + (void)changeToLanguage:(NSString *)code;
-
-+ (void)updateLanguageBundle:(NSString *)code;
++ (void)changeToSystemLanguage;
 
 @end

@@ -14,18 +14,7 @@ NSBundle *WBLanguageBundle = nil;
 
 + (void)setup
 {
-  NSString *code = nil;
-  NSString *currentLanguage = [self currentLanguage];
-  if ( [currentLanguage hasPrefix:@"en"] ) {
-    code = WB_LANGUAGE_CODE_EN;
-  } else if ( [currentLanguage hasPrefix:@"zh-Hans"] ) {
-    code = WB_LANGUAGE_CODE_ZH_HANS;
-  } else if ( [currentLanguage hasPrefix:@"zh-Hant"] ) {
-    code = WB_LANGUAGE_CODE_ZH_HANT;
-  } else {
-    code = WB_LANGUAGE_CODE_EN;
-  }
-
+  NSString *code = [self fixedLanguage:[self currentLanguage]];
   [self updateLanguageBundle:code];
 }
 
@@ -54,6 +43,29 @@ NSBundle *WBLanguageBundle = nil;
   }
 }
 
++ (void)changeToSystemLanguage
+{
+  [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"AppleLanguages"];
+  [[NSUserDefaults standardUserDefaults] synchronize];
+
+  [self setup];
+
+  [[NSNotificationCenter defaultCenter] postNotificationName:WBLanguageDidChangeNotification object:nil];
+}
+
++ (NSString *)fixedLanguage:(NSString *)code
+{
+  if ( [code hasPrefix:@"en"] ) {
+    return WB_LANGUAGE_CODE_EN;
+  } else if ( [code hasPrefix:@"zh-Hans"] ) {
+    return WB_LANGUAGE_CODE_ZH_HANS;
+  } else if ( [code hasPrefix:@"zh-Hant"] ) {
+    return WB_LANGUAGE_CODE_ZH_HANT;
+  } else {
+    //return WB_LANGUAGE_CODE_EN;
+  }
+  return WB_LANGUAGE_CODE_EN;
+}
 + (void)updateLanguageBundle:(NSString *)code
 {
   if ( code.length>0 ) {

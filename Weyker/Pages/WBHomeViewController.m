@@ -35,23 +35,29 @@
     make.center.equalTo(self.contentView);
   }];
 
-  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    NSString *code = [WBLanguageManager currentLanguage];
-    NSLog(@"before: %@", code);
-    if ( [code hasPrefix:@"en"] ) {
-      NSLog(@"to: %@", WB_LANGUAGE_CODE_ZH_HANS);
-      [WBLanguageManager changeToLanguage:WB_LANGUAGE_CODE_ZH_HANS];
-      NSLog(@"become: %@", [WBLanguageManager currentLanguage]);
-    }
-    if ( [code hasPrefix:@"zh"] ) {
-      NSLog(@"to: %@", WB_LANGUAGE_CODE_EN);
-      [WBLanguageManager changeToLanguage:WB_LANGUAGE_CODE_EN];
-      NSLog(@"become: %@", [WBLanguageManager currentLanguage]);
-    }
-    NSLog(@" ");
-    NSLog(@" ");
-    NSLog(@" ");
-  });
+//  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//    NSString *code = [WBLanguageManager currentLanguage];
+//    NSLog(@"before: %@", code);
+////    if ( [code hasPrefix:@"en"] ) {
+////      NSLog(@"to: %@", WB_LANGUAGE_CODE_ZH_HANS);
+////      [WBLanguageManager changeToLanguage:WB_LANGUAGE_CODE_ZH_HANS];
+////      NSLog(@"become: %@", [WBLanguageManager currentLanguage]);
+////    }
+////    if ( [code hasPrefix:@"zh"] ) {
+////      NSLog(@"to: %@", WB_LANGUAGE_CODE_EN);
+////      [WBLanguageManager changeToLanguage:WB_LANGUAGE_CODE_EN];
+////      NSLog(@"become: %@", [WBLanguageManager currentLanguage]);
+////    }
+//
+//    NSLog(@"to: %@", WB_LANGUAGE_CODE_EN);
+//    [WBLanguageManager changeToLanguage:WB_LANGUAGE_CODE_EN];
+//    [WBLanguageManager changeToSystemLanguage];
+//    NSLog(@"become: %@", [WBLanguageManager currentLanguage]);
+//
+//    NSLog(@" ");
+//    NSLog(@" ");
+//    NSLog(@" ");
+//  });
 }
 
 - (void)setupNavBar
@@ -66,6 +72,14 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+  NSString *code = [WBLanguageManager currentLanguage];
+  NSLog(@"before: %@", code);
+  NSLog(@"to: %@", WB_LANGUAGE_CODE_EN);
+//  [WBLanguageManager changeToLanguage:WB_LANGUAGE_CODE_EN];
+  [WBLanguageManager changeToSystemLanguage];
+  NSLog(@"become: %@", [WBLanguageManager currentLanguage]);
+
+
 //  Class cls = NSClassFromString(@"WBPushChildViewController");
 //  UIViewController *vc = [[cls alloc] init];
 //  [self.navigationController pushViewController:vc animated:YES];
