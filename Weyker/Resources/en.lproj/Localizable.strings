@@ -1,12 +1,15 @@
 
 /* TabBar */
-"tabbar_weibo" = "Weibo";
+"tabbar_tweets" = "Weibo";
 "tabbar_discover" = "Discover";
 "tabbar_message" = "Message";
 "tabbar_profile" = "Me";
 
 /* Profile */
 "profile_navbar_title" = "Me";
+"profile_profile_tweets" = "Tweets";
+"profile_profile_following" = "Following";
+"profile_profile_followers" = "Followers";
 
 /* Setting */
 "setting_navbar_title" = "Setting";

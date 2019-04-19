@@ -179,7 +179,7 @@
 
   if ( _leftBtn ) {
     CGSize contentSize = [_leftBtn intrinsicContentSize];
-    if ( contentSize.width<=BACK_POP_WID+1.0 ) {
+    if ( contentSize.width<=BACK_POP_WID ) {
       // 此时应该是不带文字的返回按钮，按钮要加宽
       _leftBtn.frame = CGRectMake(0.0,
                                   selfHeight-kWBNavBarHeight,
@@ -188,7 +188,7 @@
       frntUsage = ceil(contentSize.width);
     } else {
       // 此时可能是带文字的返回按钮、关闭按钮、图标按钮或文字按钮
-      if ( contentSize.width<=BTN_MIN_WID+1.0 ) {
+      if ( contentSize.width<=BTN_MIN_WID ) {
         CGFloat padding = floor(SCREEN_PADDING-(BTN_MIN_WID-contentSize.width)/2.0);
         _leftBtn.frame = CGRectMake(padding,
                                     selfHeight-kWBNavBarHeight,

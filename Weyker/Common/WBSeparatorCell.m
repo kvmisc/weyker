@@ -35,19 +35,19 @@
   _bottomSeparator.backgroundColor = [[UIColor blueColor] CGColor];
 }
 
-- (void)layoutSublayersOfLayer:(CALayer *)layer
+- (void)layoutSubviews
 {
-  [super layoutSublayersOfLayer:layer];
+  [super layoutSubviews];
 
   _topSeparator.frame = CGRectMake(0.0,
                                    0.0,
                                    self.layer.bounds.size.width,
-                                   0.5);
+                                   1.0/[[UIScreen mainScreen] scale]);
 
   _bottomSeparator.frame = CGRectMake(0.0,
                                       self.layer.bounds.size.height-0.5,
                                       self.layer.bounds.size.width,
-                                      0.5);
+                                      1.0/[[UIScreen mainScreen] scale]);
 }
 
 @end

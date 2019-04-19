@@ -35,6 +35,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 #import "Extentions/NSStringUnicode.h"
 #import "Extentions/NSStringURI.h"
 #import "Extentions/NSStringExtentions.h"
+#import "Extentions/NSMutableAttributedStringExtentions.h"
 #import "Extentions/UIColorExtentions.h"
 #import "Extentions/UIImageExtentions.h"
 #import "Extentions/UIButtonExtentions.h"

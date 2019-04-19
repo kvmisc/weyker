@@ -1,12 +1,15 @@
 
 /* TabBar */
-"tabbar_weibo" = "微博";
+"tabbar_tweets" = "微博";
 "tabbar_discover" = "发现";
 "tabbar_message" = "消息";
 "tabbar_profile" = "我";
 
 /* Profile */
 "profile_navbar_title" = "我";
+"profile_profile_tweets" = "微博";
+"profile_profile_following" = "关注";
+"profile_profile_followers" = "粉丝";
 
 /* Setting */
 "setting_navbar_title" = "设置";

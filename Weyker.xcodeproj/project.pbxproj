@@ -45,6 +45,8 @@
 		BB40276522699FB4006271F2 /* UITableViewExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB40276422699FB4006271F2 /* UITableViewExtentions.m */; };
 		BB4027682269A128006271F2 /* WBProfileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4027672269A128006271F2 /* WBProfileDataSource.m */; };
 		BB40276C2269A38F006271F2 /* WBSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB40276B2269A38F006271F2 /* WBSettingViewController.m */; };
+		BB40276F2269B66D006271F2 /* WBSeparatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB40276E2269B66D006271F2 /* WBSeparatorView.m */; };
+		BB4027732269BB61006271F2 /* NSMutableAttributedStringExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4027722269BB61006271F2 /* NSMutableAttributedStringExtentions.m */; };
 		BB431DD4225F426000537A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB431DCC225F426000537A90 /* Assets.xcassets */; };
 		BB431DD5225F426000537A90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DD0225F426000537A90 /* main.m */; };
 		BB431DD6225F426000537A90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DD1225F426000537A90 /* AppDelegate.m */; };
@@ -149,6 +151,10 @@
 		BB4027672269A128006271F2 /* WBProfileDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBProfileDataSource.m; sourceTree = "<group>"; };
 		BB40276A2269A38F006271F2 /* WBSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBSettingViewController.h; sourceTree = "<group>"; };
 		BB40276B2269A38F006271F2 /* WBSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBSettingViewController.m; sourceTree = "<group>"; };
+		BB40276D2269B66D006271F2 /* WBSeparatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBSeparatorView.h; sourceTree = "<group>"; };
+		BB40276E2269B66D006271F2 /* WBSeparatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBSeparatorView.m; sourceTree = "<group>"; };
+		BB4027712269BB61006271F2 /* NSMutableAttributedStringExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableAttributedStringExtentions.h; sourceTree = "<group>"; };
+		BB4027722269BB61006271F2 /* NSMutableAttributedStringExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableAttributedStringExtentions.m; sourceTree = "<group>"; };
 		BB431DAF225F417E00537A90 /* Weyker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weyker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB431DCC225F426000537A90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB431DCE225F426000537A90 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -255,6 +261,8 @@
 				BB96199F2265C335008A4151 /* NSStringURI.m */,
 				BB9619A12265C335008A4151 /* NSStringExtentions.h */,
 				BB9619A02265C335008A4151 /* NSStringExtentions.m */,
+				BB4027712269BB61006271F2 /* NSMutableAttributedStringExtentions.h */,
+				BB4027722269BB61006271F2 /* NSMutableAttributedStringExtentions.m */,
 				BB349D942264216A00515502 /* UIColorExtentions.h */,
 				BB349D9F2264216A00515502 /* UIColorExtentions.m */,
 				BB349DA52264216A00515502 /* UIImageExtentions.h */,
@@ -314,6 +322,7 @@
 				BB349DDE226423A500515502 /* README.md */,
 				BB3D3D572266F48000952A4D /* View */,
 				BB3D3D582266F48D00952A4D /* ViewController */,
+				BB4027702269B684006271F2 /* SeparatorView */,
 				BB725AAF2269899600A5DF4F /* TableView */,
 				BB349E02226424AC00515502 /* CoverView */,
 				BB349E03226424DC00515502 /* MessageCenter */,
@@ -447,6 +456,15 @@
 				BB40276B2269A38F006271F2 /* WBSettingViewController.m */,
 			);
 			name = Setting;
+			sourceTree = "<group>";
+		};
+		BB4027702269B684006271F2 /* SeparatorView */ = {
+			isa = PBXGroup;
+			children = (
+				BB40276D2269B66D006271F2 /* WBSeparatorView.h */,
+				BB40276E2269B66D006271F2 /* WBSeparatorView.m */,
+			);
+			name = SeparatorView;
 			sourceTree = "<group>";
 		};
 		BB431DA6225F417E00537A90 = {
@@ -690,6 +708,7 @@
 				BB349DBE2264216A00515502 /* WBDateFormatter.m in Sources */,
 				BB40276522699FB4006271F2 /* UITableViewExtentions.m in Sources */,
 				BB349DBB2264216A00515502 /* NSStringUnicode.m in Sources */,
+				BB40276F2269B66D006271F2 /* WBSeparatorView.m in Sources */,
 				BB9619A22265C335008A4151 /* NSStringURI.m in Sources */,
 				BB349DF0226423A600515502 /* WBWeakScriptMessageHandler.m in Sources */,
 				BB9BFC492268429E0071A008 /* WBPushChildViewController.m in Sources */,
@@ -700,6 +719,7 @@
 				BB9BFC6822686A320071A008 /* WBLanguageManager.m in Sources */,
 				BB431DD5225F426000537A90 /* main.m in Sources */,
 				BB349DB82264216A00515502 /* UIColorExtentions.m in Sources */,
+				BB4027732269BB61006271F2 /* NSMutableAttributedStringExtentions.m in Sources */,
 				BB349DFD226423A600515502 /* WBBaseViewController.m in Sources */,
 				BB725AAA226979CE00A5DF4F /* WBProfilePersonCell.m in Sources */,
 				BB349DCA2264227E00515502 /* YYWeakProxy.m in Sources */,

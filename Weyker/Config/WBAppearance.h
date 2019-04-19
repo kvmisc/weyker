@@ -21,3 +21,14 @@
 #define kWBNavBarButtonTextColor 0x000000ff
 #define kWBNavBarTitleFontSize 16.0
 #define kWBNavBarTitleTextColor 0x000000ff
+
+/* Profile */
+#define kWBProfileProfileNameFontSize 14.0
+#define kWBProfileProfileNameTextColor 0x000000ff
+
+#define kWBProfileProfileInfoFontSize 12.0
+#define kWBProfileProfileInfoTextColor 0x333333ff
+
+#define kWBProfileProfileButtonFontSize 14.0
+#define kWBProfileProfileButtonTextColor1 0xff0000ff
+#define kWBProfileProfileButtonTextColor2 0x000000ff

@@ -35,7 +35,8 @@
 
 - (void)setupTableView
 {
-  _tableView = [[UITableView alloc] init];
+  _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+  _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
   [self.contentView addSubview:_tableView];
   _dataSource = [[WBProfileDataSource alloc] initWithTableView:_tableView];
 }
