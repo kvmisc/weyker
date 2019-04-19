@@ -22,8 +22,6 @@
   [super viewDidLoad];
 
   self.contentView.backgroundColor = [UIColor lightGrayColor];
-
-  [self setupNavBar];
 }
 
 - (void)setupNavBar

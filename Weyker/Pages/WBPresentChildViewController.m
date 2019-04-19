@@ -18,8 +18,6 @@
 {
   [super viewDidLoad];
   self.contentView.backgroundColor = [UIColor purpleColor];
-
-  [self setupNavBar];
 }
 
 - (void)setupNavBar

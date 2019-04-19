@@ -17,8 +17,6 @@
   [super viewDidLoad];
   self.contentView.backgroundColor = [UIColor brownColor];
 
-  [self setupNavBar];
-
 //  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //    UINavigationController *nc = (UINavigationController *)(WB_APP_DELEGATE.window.rootViewController);
 //    WBRootViewController *root = [nc.viewControllers firstObject];

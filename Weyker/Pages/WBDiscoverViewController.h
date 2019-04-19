@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WBDiscoverViewController : WBBaseViewController
+@interface WBDiscoverViewController : WBBaseNavViewController
 
 @end

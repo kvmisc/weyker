@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WBHomeViewController : WBBaseViewController
+@interface WBHomeViewController : WBBaseNavViewController
 
 @end

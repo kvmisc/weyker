@@ -47,6 +47,7 @@
 		BB431DD4225F426000537A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB431DCC225F426000537A90 /* Assets.xcassets */; };
 		BB431DD5225F426000537A90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DD0225F426000537A90 /* main.m */; };
 		BB431DD6225F426000537A90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB431DD1225F426000537A90 /* AppDelegate.m */; };
+		BB725A9F22696BF200A5DF4F /* WBToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BB725A9E22696BF200A5DF4F /* WBToolBar.m */; };
 		BB9619A22265C335008A4151 /* NSStringURI.m in Sources */ = {isa = PBXBuildFile; fileRef = BB96199F2265C335008A4151 /* NSStringURI.m */; };
 		BB9619A32265C335008A4151 /* NSStringExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9619A02265C335008A4151 /* NSStringExtentions.m */; };
 		BB9BFC43226826090071A008 /* WBTestNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9BFC42226826090071A008 /* WBTestNavView.m */; };
@@ -55,6 +56,7 @@
 		BB9BFC64226869A70071A008 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BB9BFC61226869A70071A008 /* README.md */; };
 		BB9BFC6822686A320071A008 /* WBLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9BFC6622686A310071A008 /* WBLanguageManager.m */; };
 		BBA9AF202268787100D4AFCB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBA9AF1E2268787100D4AFCB /* Localizable.strings */; };
+		BBF76C1A2269690500DB2266 /* WBBaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF76C192269690500DB2266 /* WBBaseNavViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,6 +149,8 @@
 		BB431DD0225F426000537A90 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BB431DD1225F426000537A90 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BB431DD2225F426000537A90 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB725A9D22696BF200A5DF4F /* WBToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBToolBar.h; sourceTree = "<group>"; };
+		BB725A9E22696BF200A5DF4F /* WBToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBToolBar.m; sourceTree = "<group>"; };
 		BB96199E2265C335008A4151 /* NSStringURI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringURI.h; sourceTree = "<group>"; };
 		BB96199F2265C335008A4151 /* NSStringURI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringURI.m; sourceTree = "<group>"; };
 		BB9619A02265C335008A4151 /* NSStringExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringExtentions.m; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 		BB9BFC6722686A310071A008 /* WBLanguageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBLanguageManager.h; sourceTree = "<group>"; };
 		BBA9AF1F2268787100D4AFCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BBA9AF212268788B00D4AFCB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BBF76C182269690500DB2266 /* WBBaseNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBBaseNavViewController.h; sourceTree = "<group>"; };
+		BBF76C192269690500DB2266 /* WBBaseNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBBaseNavViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,6 +389,10 @@
 				BB349DEC226423A500515502 /* WBBaseViewController.m */,
 				BB3D3D6422671F0400952A4D /* WBNavBar.h */,
 				BB3D3D6322671F0300952A4D /* WBNavBar.m */,
+				BB725A9D22696BF200A5DF4F /* WBToolBar.h */,
+				BB725A9E22696BF200A5DF4F /* WBToolBar.m */,
+				BBF76C182269690500DB2266 /* WBBaseNavViewController.h */,
+				BBF76C192269690500DB2266 /* WBBaseNavViewController.m */,
 				BB349DDC226423A500515502 /* WBBaseTableViewController.h */,
 				BB349DEE226423A500515502 /* WBBaseTableViewController.m */,
 				BB349DCF226423A500515502 /* WBBaseTableViewCell.h */,
@@ -620,8 +630,10 @@
 				BB349DB52264216A00515502 /* UITextXXXMaxLength.m in Sources */,
 				BB349DF1226423A600515502 /* WBMessageCenter.m in Sources */,
 				BB349DFA226423A600515502 /* WBCoverAlertContentView.m in Sources */,
+				BB725A9F22696BF200A5DF4F /* WBToolBar.m in Sources */,
 				BB349DFF226423A600515502 /* WBBaseTableViewController.m in Sources */,
 				BB349DEF226423A600515502 /* WBCoverActionContentView.m in Sources */,
+				BBF76C1A2269690500DB2266 /* WBBaseNavViewController.m in Sources */,
 				BB349DB32264216A00515502 /* UINavigationControllerExtentions.m in Sources */,
 				BB349DC12264216A00515502 /* WBGlobal.m in Sources */,
 				BB349E0C2264593000515502 /* WBRootViewController.m in Sources */,

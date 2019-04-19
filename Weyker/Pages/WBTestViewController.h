@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WBTestViewController : WBBaseViewController
+@interface WBTestViewController : WBBaseNavViewController
 
 @end

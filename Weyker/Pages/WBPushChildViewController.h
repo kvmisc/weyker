@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WBPushChildViewController : WBBaseViewController
+@interface WBPushChildViewController : WBBaseNavViewController
 
 @end

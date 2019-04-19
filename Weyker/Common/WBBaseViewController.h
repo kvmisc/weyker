@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "WBNavBar.h"
+#import "WBToolBar.h"
 
 @interface WBBaseViewController : UIViewController
 
@@ -17,13 +18,10 @@
 // 除开 NavBar 和 ToolBar 的区域
 @property (nonatomic, strong, readonly) UIView *contentView;
 @property (nonatomic, strong) WBNavBar *navBar;
-@property (nonatomic, strong) UIView *toolBar;
+@property (nonatomic, strong) WBToolBar *toolBar;
 
 
 - (void)setupNavBar;
-- (void)navBarLeftAction:(id)sender; // 如果左按钮不是返回或关闭按钮，一定要在子类重写此方法，且不能调用 [super xxx];
-- (void)navBarRightAction:(id)sender;
-
 - (void)setupToolBar;
 
 - (BOOL)shouldLoadContentView;

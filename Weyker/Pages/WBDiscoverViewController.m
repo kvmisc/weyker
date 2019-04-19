@@ -20,8 +20,6 @@
   [super viewDidLoad];
 
   self.contentView.backgroundColor = [UIColor redColor];
-
-  [self setupNavBar];
 }
 
 - (void)setupToolBar
