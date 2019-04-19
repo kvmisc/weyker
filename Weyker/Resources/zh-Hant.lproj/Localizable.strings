@@ -1,6 +1,6 @@
 
 /* TabBar */
-"tabbar_tweets" = "微博";
+"tabbar_home" = "微博";
 "tabbar_discover" = "发现";
 "tabbar_message" = "消息";
 "tabbar_profile" = "我";

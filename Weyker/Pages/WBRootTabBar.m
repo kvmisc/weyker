@@ -22,7 +22,7 @@
   tab1.tag = 0;
   [tab1 setTitleColor:[UIColor tk_colorWithHexInteger:kWBRootTabBarTextColor] forState:UIControlStateNormal];
   tab1.titleLabel.font = [UIFont systemFontOfSize:kWBRootTabBarFontSize];
-  [tab1 setTitle:WBLS(@"tabbar_tweets") forState:UIControlStateNormal];
+  [tab1 setTitle:WBLS(@"tabbar_home") forState:UIControlStateNormal];
   [tab1 setImage:[UIImage imageNamed:@"tabbar_home"] forState:UIControlStateNormal];
   [tab1 setImage:[UIImage imageNamed:@"tabbar_home_selected"] forState:UIControlStateSelected];
   [tab1 setImage:[UIImage imageNamed:@"tabbar_home_highlighted"] forState:UIControlStateHighlighted];

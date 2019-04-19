@@ -1,6 +1,6 @@
 
 /* TabBar */
-"tabbar_tweets" = "Weibo";
+"tabbar_home" = "Weibo";
 "tabbar_discover" = "Discover";
 "tabbar_message" = "Message";
 "tabbar_profile" = "Me";
