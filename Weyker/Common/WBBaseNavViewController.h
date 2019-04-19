@@ -15,4 +15,10 @@
 - (void)navBarLeftAction:(id)sender;
 - (void)navBarRightAction:(id)sender;
 
+- (void)setNavBarLeftImage:(UIImage *)image;
+- (void)setNavBarLeftTitle:(NSString *)title;
+- (void)setNavBarTitle:(NSString *)title;
+- (void)setNavBarRightImage:(UIImage *)image;
+- (void)setNavBarRightTitle:(NSString *)title;
+
 @end

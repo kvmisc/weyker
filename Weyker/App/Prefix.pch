@@ -47,7 +47,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 #import "Common/WBBaseView.h"
 #import "Common/WBBaseViewController.h"
 #import "Common/WBBaseNavViewController.h"
-#import "Common/WBBaseTableViewController.h"
+#import "Common/WBTableViewDataSource.h"
 #import "Common/WBCoverView.h"
 #import "Common/WBMessageCenter.h"
 #import "Common/WBWebViewController.h"

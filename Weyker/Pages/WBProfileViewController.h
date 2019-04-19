@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WBProfileViewController : WBBaseViewController
+@interface WBProfileViewController : WBBaseNavViewController
 
 @end

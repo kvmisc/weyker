@@ -10,7 +10,8 @@
 #import "WBRootToolBar.h"
 
 @interface WBProfileViewController ()
-
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) WBTableViewDataSource *dataSource;
 @end
 
 @implementation WBProfileViewController
@@ -19,20 +20,33 @@
 {
   [super viewDidLoad];
 
-  self.contentView.backgroundColor = [UIColor blueColor];
+  [self setupTableView];
+}
+
+- (void)viewWillLayoutSubviews
+{
+  [super viewWillLayoutSubviews];
+  _tableView.frame = self.contentView.bounds;
+}
+
+- (void)setupTableView
+{
+  _tableView = [[UITableView alloc] init];
+  [self.contentView addSubview:_tableView];
+  _dataSource = [[WBTableViewDataSource alloc] initWithTableView:_tableView];
+}
+
+- (void)setupNavBar
+{
+  [super setupNavBar];
+  [self setNavBarTitle:WBLS(@"profile_navbar_title")];
+  [self setNavBarRightImage:[UIImage imageNamed:@"navbar_setting"]];
 }
 
 - (void)setupToolBar
 {
   self.toolBar = [[WBRootToolBar alloc] init];
   [self.view addSubview:self.toolBar];
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-  Class cls = NSClassFromString(@"WBTestViewController");
-  UIViewController *vc = [[cls alloc] init];
-  [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

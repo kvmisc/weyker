@@ -1,6 +1,9 @@
 
+/* TabBar */
 "tabbar_weibo" = "微博";
 "tabbar_discover" = "发现";
 "tabbar_message" = "消息";
 "tabbar_profile" = "我";
 
+/* Profile */
+"profile_navbar_title" = "我";

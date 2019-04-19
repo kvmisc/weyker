@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "WBBaseView.h"
+
 @class WBCoverView;
 
 
-@interface WBCoverContentView : UIView
+@interface WBCoverContentView : WBBaseView
 
 @property (nonatomic, weak, readonly) WBCoverView *coverView;
 

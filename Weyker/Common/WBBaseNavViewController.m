@@ -61,6 +61,28 @@
 {
 }
 
+- (void)setNavBarLeftImage:(UIImage *)image
+{
+  [self.navBar.leftBtn setImage:image forState:UIControlStateNormal];
+}
+- (void)setNavBarLeftTitle:(NSString *)title
+{
+  [self.navBar.leftBtn setTitle:title forState:UIControlStateNormal];
+}
+- (void)setNavBarTitle:(NSString *)title
+{
+  self.navBar.titleLabel.text = title;
+  self.navigationItem.title = title;
+}
+- (void)setNavBarRightImage:(UIImage *)image
+{
+  [self.navBar.rightBtn setImage:image forState:UIControlStateNormal];
+}
+- (void)setNavBarRightTitle:(NSString *)title
+{
+  [self.navBar.rightBtn setTitle:title forState:UIControlStateNormal];
+}
+
 #pragma mark - Private methods
 
 - (void)setupNavBarBackIfNeeded

@@ -22,24 +22,6 @@
 
 @implementation WBCoverView
 
-- (id)initWithFrame:(CGRect)frame
-{
-  self = [super initWithFrame:frame];
-  if (self) {
-    [self setup];
-  }
-  return self;
-}
-
-- (id)initWithCoder:(NSCoder *)coder
-{
-  self = [super initWithCoder:coder];
-  if (self) {
-    [self setup];
-  }
-  return self;
-}
-
 - (void)setup
 {
   self.backgroundColor = [UIColor clearColor];

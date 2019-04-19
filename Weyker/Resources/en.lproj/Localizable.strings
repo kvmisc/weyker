@@ -1,5 +1,9 @@
 
+/* TabBar */
 "tabbar_weibo" = "Weibo";
 "tabbar_discover" = "Discover";
 "tabbar_message" = "Message";
 "tabbar_profile" = "Me";
+
+/* Profile */
+"profile_navbar_title" = "Me";

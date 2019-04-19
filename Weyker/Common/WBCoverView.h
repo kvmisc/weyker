@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "WBBaseView.h"
+
 #import "WBCoverContentView.h"
 #import "WBCoverAlertContentView.h"
 #import "WBCoverActionContentView.h"
@@ -21,7 +23,7 @@ typedef enum : NSUInteger {
   WBCoverViewStatusHideFailed,
 } WBCoverViewStatus;
 
-@interface WBCoverView : UIView
+@interface WBCoverView : WBBaseView
 
 @property (nonatomic, strong, readonly) UIImageView *backgroundView;
 // 点击灰色的遮罩隐藏此视图，默认 YES
