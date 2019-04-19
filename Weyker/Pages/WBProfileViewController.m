@@ -16,6 +16,7 @@
 @interface WBProfileViewController ()
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) WBTableViewDataSource *dataSource;
+@property (nonatomic, strong) WBHTTPRequest *request;
 @end
 
 @implementation WBProfileViewController
@@ -25,6 +26,25 @@
   [super viewDidLoad];
 
   [self setupTableView];
+
+
+
+  NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
+  AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:configuration];
+  //AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://kevinsblog.cn/"]
+  //                                                         sessionConfiguration:configuration];
+
+  AFHTTPResponseSerializer *serializer = [[AFHTTPResponseSerializer alloc] init];
+  manager.responseSerializer = serializer;
+  self.request = [[WBHTTPRequest alloc] init];
+  self.request.HTTPManager = manager;
+  self.request.address = @"https://api.weibo.com/2/users/show.json";
+  //self.request.address = @"http://kevinsblog.cn/";
+  self.request.method = @"GET";
+  [self.request.queries tk_setParameterStr:@"9ea6c0cfc687f731c6ca0b2623530763" forKey:@"access_token"];
+  [self.request start:^(WBHTTPRequest *request, NSError *error) {
+    NSLog(@"req: %@", error);
+  }];
 }
 
 - (void)viewWillLayoutSubviews
@@ -35,7 +55,7 @@
 
 - (void)setupTableView
 {
-  _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+  _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
   _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
   [self.contentView addSubview:_tableView];
   _dataSource = [[WBProfileDataSource alloc] initWithTableView:_tableView];
@@ -44,6 +64,7 @@
 - (void)setupNavBar
 {
   [super setupNavBar];
+  [self setNavBarLeftTitle:@"登录"];
   [self setNavBarTitle:WBLS(@"profile_navbar_title")];
   [self setNavBarRightImage:[UIImage imageNamed:@"navbar_setting"]];
 }
@@ -54,6 +75,22 @@
   [self.view addSubview:self.toolBar];
 }
 
+- (void)navBarLeftAction:(id)sender
+{
+  @weakify(self);
+  WBAuthorizeView *authorizeView = [[WBAuthorizeView alloc] init];
+  [authorizeView prepareForView:WB_APP_DELEGATE.window viewport:nil];
+  [authorizeView.coverView show:YES];
+  [authorizeView startAuthorize:^(NSString *token) {
+    @strongify(self);
+    if ( token.length>0 ) {
+      [self.request.queries tk_setParameterStr:token forKey:@"access_token"];
+      [self.request start:^(WBHTTPRequest *request, NSError *error) {
+        NSLog(@"req: %@", error);
+      }];
+    }
+  }];
+}
 - (void)navBarRightAction:(id)sender
 {
   WBSettingViewController *vc = [[WBSettingViewController alloc] init];
