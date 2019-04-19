@@ -30,7 +30,6 @@
 
 - (void)setup
 {
-  WBPrintMethod();
 }
 
 //- (void)awakeFromNib

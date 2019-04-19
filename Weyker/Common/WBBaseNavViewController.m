@@ -14,6 +14,8 @@
 
 @implementation WBBaseNavViewController
 
+#pragma mark - Public methods
+
 - (void)setupNavBar
 {
   if ( !self.navBar ) {
@@ -28,6 +30,39 @@
   }
   [self setupNavBarBackIfNeeded];
 }
+
+- (void)navBarLeftAction:(id)sender
+{
+  if ( self.navigationController ) {
+    NSArray *controllerAry = self.navigationController.viewControllers;
+    NSUInteger idx = [controllerAry indexOfObjectIdenticalTo:self];
+    if ( idx<controllerAry.count ) {
+      // 处于导航中
+      if ( idx==0 ) {
+        // 是导航的根，检查导航是否被 Present，决定是否 Dismiss
+        if ( self.navigationController.presentingViewController ) {
+          [self.navigationController dismissViewControllerAnimated:YES completion:NULL];
+        }
+      } else {
+        // 非导航的根，Pop
+        [self.navigationController popViewControllerAnimated:YES];
+      }
+    }
+  } else {
+    // 不在导航中，检查是否被 Present，决定是否 Dismiss
+    if ( self.presentingViewController ) {
+      [self dismissViewControllerAnimated:YES completion:NULL];
+    } else {
+    }
+  }
+}
+
+- (void)navBarRightAction:(id)sender
+{
+}
+
+#pragma mark - Private methods
+
 - (void)setupNavBarBackIfNeeded
 {
   if ( self.navigationController ) {
@@ -58,34 +93,6 @@
     } else {
     }
   }
-}
-- (void)navBarLeftAction:(id)sender
-{
-  if ( self.navigationController ) {
-    NSArray *controllerAry = self.navigationController.viewControllers;
-    NSUInteger idx = [controllerAry indexOfObjectIdenticalTo:self];
-    if ( idx<controllerAry.count ) {
-      // 处于导航中
-      if ( idx==0 ) {
-        // 是导航的根，检查导航是否被 Present，决定是否 Dismiss
-        if ( self.navigationController.presentingViewController ) {
-          [self.navigationController dismissViewControllerAnimated:YES completion:NULL];
-        }
-      } else {
-        // 非导航的根，Pop
-        [self.navigationController popViewControllerAnimated:YES];
-      }
-    }
-  } else {
-    // 不在导航中，检查是否被 Present，决定是否 Dismiss
-    if ( self.presentingViewController ) {
-      [self dismissViewControllerAnimated:YES completion:NULL];
-    } else {
-    }
-  }
-}
-- (void)navBarRightAction:(id)sender
-{
 }
 
 @end

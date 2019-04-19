@@ -11,13 +11,19 @@
 @implementation WBBaseTableViewController
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{ return 1; }
+{
+  return 1;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{ return 0; }
+{
+  return 0;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{ return nil; }
+{
+  return nil;
+}
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {

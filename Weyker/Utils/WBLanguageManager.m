@@ -30,7 +30,7 @@ NSBundle *WBLanguageBundle = nil;
 + (NSString *)currentLanguage
 {
   NSArray *languageAry = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"];
-  WBLog(@"Languages: %@", [languageAry componentsJoinedByString:@", "]);
+  //WBLog(@"Languages: %@", [languageAry componentsJoinedByString:@", "]);
   return [languageAry firstObject];
 }
 + (void)changeToLanguage:(NSString *)code
