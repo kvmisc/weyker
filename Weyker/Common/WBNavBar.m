@@ -12,6 +12,8 @@
 #define SCREEN_PADDING 10.0
 // 按钮和标题的间隙
 #define CONTENT_SPACING 5.0
+// 按钮最小宽度
+#define BTN_MIN_WID 44.0
 
 // 图标宽度
 #define BACK_POP_WID 16.0
@@ -177,7 +179,7 @@
 
   if ( _leftBtn ) {
     CGSize contentSize = [_leftBtn intrinsicContentSize];
-    if ( contentSize.width<=BACK_POP_WID ) {
+    if ( contentSize.width<=BACK_POP_WID+1.0 ) {
       // 此时应该是不带文字的返回按钮，按钮要加宽
       _leftBtn.frame = CGRectMake(0.0,
                                   selfHeight-kWBNavBarHeight,
@@ -186,11 +188,20 @@
       frntUsage = ceil(contentSize.width);
     } else {
       // 此时可能是带文字的返回按钮、关闭按钮、图标按钮或文字按钮
-      _leftBtn.frame = CGRectMake(SCREEN_PADDING,
-                                  selfHeight-kWBNavBarHeight,
-                                  ceil(contentSize.width),
-                                  kWBNavBarHeight);
-      frntUsage = SCREEN_PADDING + ceil(contentSize.width);
+      if ( contentSize.width<=BTN_MIN_WID+1.0 ) {
+        CGFloat padding = floor(SCREEN_PADDING-(BTN_MIN_WID-contentSize.width)/2.0);
+        _leftBtn.frame = CGRectMake(padding,
+                                    selfHeight-kWBNavBarHeight,
+                                    BTN_MIN_WID,
+                                    kWBNavBarHeight);
+        frntUsage = padding + BTN_MIN_WID;
+      } else {
+        _leftBtn.frame = CGRectMake(SCREEN_PADDING,
+                                    selfHeight-kWBNavBarHeight,
+                                    ceil(contentSize.width),
+                                    kWBNavBarHeight);
+        frntUsage = SCREEN_PADDING + ceil(contentSize.width);
+      }
     }
   }
   if ( _leftView ) {
@@ -204,11 +215,20 @@
 
   if ( _rightBtn ) {
     CGSize contentSize = [_rightBtn intrinsicContentSize];
-    _rightBtn.frame = CGRectMake(floor(selfWidth-contentSize.width-SCREEN_PADDING),
-                                 selfHeight-kWBNavBarHeight,
-                                 ceil(contentSize.width),
-                                 kWBNavBarHeight);
-    backUsage = ceil(contentSize.width) + SCREEN_PADDING;
+    if ( contentSize.width<=BTN_MIN_WID+1.0 ) {
+      CGFloat padding = floor(SCREEN_PADDING-(BTN_MIN_WID-contentSize.width)/2.0);
+      _rightBtn.frame = CGRectMake(floor(selfWidth-BTN_MIN_WID-padding),
+                                   selfHeight-kWBNavBarHeight,
+                                   BTN_MIN_WID,
+                                   kWBNavBarHeight);
+      backUsage = BTN_MIN_WID + padding;
+    } else {
+      _rightBtn.frame = CGRectMake(floor(selfWidth-contentSize.width-SCREEN_PADDING),
+                                   selfHeight-kWBNavBarHeight,
+                                   ceil(contentSize.width),
+                                   kWBNavBarHeight);
+      backUsage = ceil(contentSize.width) + SCREEN_PADDING;
+    }
   }
   if ( _rightView ) {
     CGSize contentSize = [_rightView intrinsicContentSize];
