@@ -9,6 +9,8 @@
 #import "WBProfileViewController.h"
 #import "WBRootToolBar.h"
 
+#import "WBSettingViewController.h"
+
 @interface WBProfileViewController ()
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) WBTableViewDataSource *dataSource;
@@ -47,6 +49,12 @@
 {
   self.toolBar = [[WBRootToolBar alloc] init];
   [self.view addSubview:self.toolBar];
+}
+
+- (void)navBarRightAction:(id)sender
+{
+  WBSettingViewController *vc = [[WBSettingViewController alloc] init];
+  [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

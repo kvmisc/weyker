@@ -7,3 +7,6 @@
 
 /* Profile */
 "profile_navbar_title" = "Me";
+
+/* Setting */
+"setting_navbar_title" = "Setting";
