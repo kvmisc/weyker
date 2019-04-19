@@ -43,7 +43,7 @@
 - (void)dealloc
 {
   [_link invalidate];
-  WBLog(@"timer release");
+  //WBLog(@"timer release");
 }
 
 - (CGSize)sizeThatFits:(CGSize)size

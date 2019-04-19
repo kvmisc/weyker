@@ -271,8 +271,8 @@
 		BB349DC32264227E00515502 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				BB349DC42264227E00515502 /* YYFPSLabel */,
 				BB349DC92264227E00515502 /* README.md */,
+				BB349DC42264227E00515502 /* YYFPSLabel */,
 			);
 			path = Vendors;
 			sourceTree = "<group>";

@@ -1,12 +1,5 @@
-/* 
-  Localizable.strings
-  Weyker
 
-  Created by Haiping Wu on 2019/4/18.
-  Copyright © 2019 migu. All rights reserved.
-*/
-
-"tabbar_weibo" = "微b";
-"tabbar_discover" = "发s";
-"tabbar_message" = "消s";
-"tabbar_profile" = "我r";
+"tabbar_weibo" = "微T";
+"tabbar_discover" = "发T";
+"tabbar_message" = "消T";
+"tabbar_profile" = "我T";

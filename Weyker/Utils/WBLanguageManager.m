@@ -23,12 +23,14 @@ NSBundle *WBLanguageBundle = nil;
   return @[
            @{@"name":@"English", @"code":@"en"},
            @{@"name":@"简体中文", @"code":@"zh-Hans"},
+           @{@"name":@"繁体中文", @"code":@"zh-Hant"}
            ];
 }
 
 + (NSString *)currentLanguage
 {
   NSArray *languageAry = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"];
+  WBLog(@"Languages: %@", [languageAry componentsJoinedByString:@", "]);
   return [languageAry firstObject];
 }
 + (void)changeToLanguage:(NSString *)code
@@ -48,7 +50,7 @@ NSBundle *WBLanguageBundle = nil;
   [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"AppleLanguages"];
   [[NSUserDefaults standardUserDefaults] synchronize];
 
-  [self setup];
+  [self updateLanguageBundle:[self fixedLanguage:nil]];
 
   [[NSNotificationCenter defaultCenter] postNotificationName:WBLanguageDidChangeNotification object:nil];
 }
@@ -62,9 +64,9 @@ NSBundle *WBLanguageBundle = nil;
   } else if ( [code hasPrefix:@"zh-Hant"] ) {
     return WB_LANGUAGE_CODE_ZH_HANT;
   } else {
-    //return WB_LANGUAGE_CODE_EN;
+    //return WB_LANGUAGE_CODE_ZH_HANS;
   }
-  return WB_LANGUAGE_CODE_EN;
+  return WB_LANGUAGE_CODE_ZH_HANS;
 }
 + (void)updateLanguageBundle:(NSString *)code
 {

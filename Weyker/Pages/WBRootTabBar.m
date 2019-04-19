@@ -55,7 +55,7 @@
   tab4.tag = 3;
   [tab4 setTitleColor:[UIColor tk_colorWithHexInteger:kWBRootTabBarTextColor] forState:UIControlStateNormal];
   tab4.titleLabel.font = [UIFont systemFontOfSize:kWBRootTabBarFontSize];
-  [tab4 setTitle:NSLocalizedString(@"tabbar_profile", @"") forState:UIControlStateNormal];
+  [tab4 setTitle:WBLS(@"tabbar_profile") forState:UIControlStateNormal];
   [tab4 setImage:[UIImage imageNamed:@"tabbar_profile"] forState:UIControlStateNormal];
   [tab4 setImage:[UIImage imageNamed:@"tabbar_profile_selected"] forState:UIControlStateSelected];
   [tab4 setImage:[UIImage imageNamed:@"tabbar_profile_highlighted"] forState:UIControlStateHighlighted];
