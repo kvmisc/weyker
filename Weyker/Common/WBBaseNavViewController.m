@@ -8,11 +8,22 @@
 
 #import "WBBaseNavViewController.h"
 
-@interface WBBaseNavViewController ()
+@interface WBBaseNavViewController () <
+    UIGestureRecognizerDelegate
+>
 
 @end
 
 @implementation WBBaseNavViewController
+
+#pragma mark - View lifecycle
+
+- (void)viewDidLoad
+{
+  [super viewDidLoad];
+
+  self.navigationController.interactivePopGestureRecognizer.delegate = self;
+}
 
 #pragma mark - Public methods
 

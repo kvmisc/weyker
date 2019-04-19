@@ -33,29 +33,29 @@
 - (void)registerNib:(Class)cls
 {
   if ( cls ) {
-    [_tableView registerClass:cls forCellReuseIdentifier:NSStringFromClass(cls)];
-  }
-}
-- (void)registerNib:(Class)cls identifier:(NSString *)identifier
-{
-  if ( (cls) && (identifier.length>0) ) {
-    [_tableView registerClass:cls forCellReuseIdentifier:identifier];
-  }
-}
-- (void)registerClass:(Class)cls
-{
-  if ( cls ) {
     NSString *nibName = NSStringFromClass(cls);
     UINib *nib = [UINib nibWithNibName:nibName bundle:[NSBundle mainBundle]];
     [_tableView registerNib:nib forCellReuseIdentifier:nibName];
   }
 }
-- (void)registerClass:(Class)cls identifier:(NSString *)identifier
+- (void)registerNib:(Class)cls identifier:(NSString *)identifier
 {
   if ( (cls) && (identifier.length>0) ) {
     NSString *nibName = NSStringFromClass(cls);
     UINib *nib = [UINib nibWithNibName:nibName bundle:[NSBundle mainBundle]];
     [_tableView registerNib:nib forCellReuseIdentifier:identifier];
+  }
+}
+- (void)registerClass:(Class)cls
+{
+  if ( cls ) {
+    [_tableView registerClass:cls forCellReuseIdentifier:NSStringFromClass(cls)];
+  }
+}
+- (void)registerClass:(Class)cls identifier:(NSString *)identifier
+{
+  if ( (cls) && (identifier.length>0) ) {
+    [_tableView registerClass:cls forCellReuseIdentifier:identifier];
   }
 }
 

@@ -9,6 +9,8 @@
 #import "WBProfileViewController.h"
 #import "WBRootToolBar.h"
 
+#import "WBProfileDataSource.h"
+
 #import "WBSettingViewController.h"
 
 @interface WBProfileViewController ()
@@ -35,7 +37,7 @@
 {
   _tableView = [[UITableView alloc] init];
   [self.contentView addSubview:_tableView];
-  _dataSource = [[WBTableViewDataSource alloc] initWithTableView:_tableView];
+  _dataSource = [[WBProfileDataSource alloc] initWithTableView:_tableView];
 }
 
 - (void)setupNavBar

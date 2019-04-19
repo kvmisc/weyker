@@ -17,6 +17,9 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+
+  self.view.backgroundColor = [UIColor brownColor];
+  self.contentView.backgroundColor = [UIColor purpleColor];
 }
 
 - (void)setupNavBar
