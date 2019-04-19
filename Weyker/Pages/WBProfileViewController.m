@@ -20,7 +20,10 @@
   [super viewDidLoad];
 
   self.contentView.backgroundColor = [UIColor blueColor];
+}
 
+- (void)setupToolBar
+{
   self.toolBar = [[WBRootToolBar alloc] init];
   [self.view addSubview:self.toolBar];
 }

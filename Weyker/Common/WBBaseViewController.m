@@ -16,6 +16,9 @@
 {
   [super viewDidLoad];
 
+  //[self setupNavBar];
+  [self setupToolBar];
+
   [self loadContentViewIfNeeded];
 }
 - (void)viewDidAppear:(BOOL)animated
@@ -133,6 +136,13 @@
   }
 }
 - (void)navBarRightAction:(id)sender
+{
+}
+
+
+#pragma mark - ToolBar
+
+- (void)setupToolBar
 {
 }
 

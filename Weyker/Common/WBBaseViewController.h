@@ -24,6 +24,8 @@
 - (void)navBarLeftAction:(id)sender; // 如果左按钮不是返回或关闭按钮，一定要在子类重写此方法，且不能调用 [super xxx];
 - (void)navBarRightAction:(id)sender;
 
+- (void)setupToolBar;
+
 - (BOOL)shouldLoadContentView;
 
 - (void)disableContentInsetAdjustment:(UIScrollView *)scrollView;

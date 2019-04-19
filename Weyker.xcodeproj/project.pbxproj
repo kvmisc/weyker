@@ -297,7 +297,6 @@
 				BB349E02226424AC00515502 /* CoverView */,
 				BB349E03226424DC00515502 /* MessageCenter */,
 				BB349E042264252600515502 /* WebController */,
-				BB349E052264255200515502 /* TableViewController */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -339,17 +338,6 @@
 				BB349E1222645FFC00515502 /* WBAuthorizeView.m */,
 			);
 			name = WebController;
-			sourceTree = "<group>";
-		};
-		BB349E052264255200515502 /* TableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				BB349DDC226423A500515502 /* WBBaseTableViewController.h */,
-				BB349DEE226423A500515502 /* WBBaseTableViewController.m */,
-				BB349DCF226423A500515502 /* WBBaseTableViewCell.h */,
-				BB349DDF226423A500515502 /* WBBaseTableViewCell.m */,
-			);
-			name = TableViewController;
 			sourceTree = "<group>";
 		};
 		BB3D3D422266B94400952A4D /* Home */ = {
@@ -395,6 +383,10 @@
 				BB349DEC226423A500515502 /* WBBaseViewController.m */,
 				BB3D3D6422671F0400952A4D /* WBNavBar.h */,
 				BB3D3D6322671F0300952A4D /* WBNavBar.m */,
+				BB349DDC226423A500515502 /* WBBaseTableViewController.h */,
+				BB349DEE226423A500515502 /* WBBaseTableViewController.m */,
+				BB349DCF226423A500515502 /* WBBaseTableViewCell.h */,
+				BB349DDF226423A500515502 /* WBBaseTableViewCell.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";

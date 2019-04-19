@@ -24,16 +24,6 @@
   self.contentView.backgroundColor = [UIColor lightGrayColor];
 
   [self setupNavBar];
-
-  self.toolBar = [[WBRootToolBar alloc] init];
-  [self.view addSubview:self.toolBar];
-
-  UIButton *bt = [UIButton buttonWithType:UIButtonTypeCustom];
-  _bt = bt;
-  [self.contentView addSubview:bt];
-  [bt mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.center.equalTo(self.contentView);
-  }];
 }
 
 - (void)setupNavBar
@@ -44,6 +34,12 @@
   self.navigationItem.title = @"时间线";
 
   [self.navBar.rightBtn setTitle:@"下一个" forState:UIControlStateNormal];
+}
+
+- (void)setupToolBar
+{
+  self.toolBar = [[WBRootToolBar alloc] init];
+  [self.view addSubview:self.toolBar];
 }
 
 - (void)navBarRightAction:(id)sender

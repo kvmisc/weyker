@@ -22,7 +22,7 @@
 
 - (void)setup
 {
-  self.backgroundColor = [UIColor yellowColor];
+  self.backgroundColor = [UIColor whiteColor];
 
   [self setupLeftBtn];
   [self setupTitleLabel];
