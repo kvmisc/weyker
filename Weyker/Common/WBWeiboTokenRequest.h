@@ -1,5 +1,5 @@
 //
-//  WBWeiboAccessTokenRequest.h
+//  WBWeiboTokenRequest.h
 //  Weyker
 //
 //  Created by Haiping Wu on 2019/4/20.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WBWeiboAccessTokenRequest : WBWeiboPostRequest
+@interface WBWeiboTokenRequest : WBWeiboPostRequest
 
 @property (nonatomic, copy) NSString *accessToken;
 

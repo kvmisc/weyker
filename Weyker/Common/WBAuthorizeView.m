@@ -8,7 +8,7 @@
 
 #import "WBAuthorizeView.h"
 #import "WBWeakScriptMessageHandler.h"
-#import "WBWeiboAccessTokenRequest.h"
+#import "WBWeiboTokenRequest.h"
 
 @interface WBAuthorizeView () <
     WKNavigationDelegate,
@@ -19,7 +19,7 @@
 @property (nonatomic, strong) UIProgressView *progressView;
 @property (nonatomic, strong) UIButton *closeBtn;
 
-@property (nonatomic, strong) WBWeiboAccessTokenRequest *tokenRequest;
+@property (nonatomic, strong) WBWeiboTokenRequest *tokenRequest;
 
 @property (nonatomic, copy) void (^completion)(NSString *token);
 
@@ -126,7 +126,7 @@
 - (void)requestAccessToken:(NSString *)code
 {
   if ( !_tokenRequest ) {
-    _tokenRequest = [[WBWeiboAccessTokenRequest alloc] initWithCode:code];
+    _tokenRequest = [[WBWeiboTokenRequest alloc] initWithCode:code];
   }
   [_tokenRequest cancel];
 

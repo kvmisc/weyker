@@ -1,5 +1,5 @@
 //
-//  WBWeiboAccessToken.h
+//  WBWeiboToken.h
 //  Weyker
 //
 //  Created by Haiping Wu on 2019/4/20.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WBWeiboAccessToken : NSObject
+@interface WBWeiboToken : NSObject
 //{
 //  "access_token":"2.007PbFFD0OG9MW079addf400vUoffE",
 //  "remind_in":"139296",
