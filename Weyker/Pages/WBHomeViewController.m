@@ -66,29 +66,34 @@
 //  NSLog(@"become: %@", [WBLanguageManager currentLanguage]);
 
 
-  NSMutableString *str = [[NSMutableString alloc] initWithString:@"https://api.weibo.com/2/account/get_uid.json"];
-//  NSMutableString *str = [[NSMutableString alloc] initWithString:@"https://api.weibo.com/oauth2/get_token_info"];
+//  NSMutableString *str = [[NSMutableString alloc] initWithString:@"https://api.weibo.com/2/account/get_uid.json"];
+////  NSMutableString *str = [[NSMutableString alloc] initWithString:@"https://api.weibo.com/oauth2/get_token_info"];
+//
+//  NSString *key = @"access_token";
+//  NSString *token = @"2.00lpwkiH0OG9MW6181fb0a71trcOXE";
+//  [str appendFormat:@"?%@=%@", [key tk_URLEncodedString], [token tk_URLEncodedString]];
+//  NSLog(@"%@", str);
 
-  NSString *key = @"access_token";
-  NSString *token = @"2.00lpwkiH0OG9MW6181fb0a71trcOXE";
-  [str appendFormat:@"?%@=%@", [key tk_URLEncodedString], [token tk_URLEncodedString]];
-  NSLog(@"%@", str);
 
+//  NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
+//  AFHTTPSessionManager *HTTPSessionManager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:configuration];
 
   NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
-  AFHTTPSessionManager *HTTPSessionManager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:configuration];
-  //  HTTPSessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:WB_API_BASE_URL]
-  //                                                sessionConfiguration:configuration];
+  AFHTTPSessionManager *HTTPSessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:WB_API_BASE_URL]];
+
   AFHTTPResponseSerializer *serializer = [[AFHTTPResponseSerializer alloc] init];
   HTTPSessionManager.responseSerializer = serializer;
 
 
-  
-  //NSString *token = @"2.007PbFFD0OG9MW079addf400vUoffE";
-  _uidRequest = [[WBWeiboUidRequest alloc] init];
-  _uidRequest.HTTPManager = HTTPSessionManager;
-  _uidRequest.address = @"https://api.weibo.com/2/account/get_uid.json?access_token=2.00lpwkiH0OG9MW6181fb0a71trcOXE";
-  _uidRequest.method = @"GET";
+
+  NSString *key = @"access_token";
+//  NSString *token = @"2.007PbFFD0OG9MW079addf400vUoffE";
+  NSString *token = @"2.00lpwkiH0OG9MW6181fb0a71trcOXE";
+  _uidRequest = [[WBWeiboUidRequest alloc] initWithToken:token];
+//  _uidRequest.HTTPManager = HTTPSessionManager;
+//  _uidRequest.address = @"2/account/get_uid.json";
+//  [_uidRequest.queries tk_setParameterStr:token forKey:key];
+//  _uidRequest.method = @"GET";
   [_uidRequest start:^(WBHTTPRequest *request, NSError *error) {
     NSLog(@"%@", self.uidRequest.uid);
   }];

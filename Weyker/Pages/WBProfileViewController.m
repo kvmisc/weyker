@@ -84,6 +84,7 @@
   [authorizeView.coverView show:YES];
   [authorizeView startAuthorize:^(NSString *uid, WBWeiboToken *token) {
     @strongify(self);
+    NSLog(@"%@ %@", uid, token.access_token);
 //    if ( token.length>0 ) {
 //      [self.request.queries tk_setParameterStr:token forKey:@"access_token"];
 //      [self.request start:^(WBHTTPRequest *request, NSError *error) {

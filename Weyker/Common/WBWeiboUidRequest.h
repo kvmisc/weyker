@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Utils/WBWeiboGetRequest.h"
 
-@interface WBWeiboUidRequest : WBHTTPRequest
+@interface WBWeiboUidRequest : WBWeiboGetRequest
 
 @property (nonatomic, copy) NSString *uid;
 
