@@ -18,6 +18,7 @@
 {
   [WBLanguageManager setup];
   [WBLogger setup];
+  [[WBAccountManager sharedObject] loadLastAccount];
   [self registerNotifications];
   [self setupWindow];
 #ifdef DEBUG

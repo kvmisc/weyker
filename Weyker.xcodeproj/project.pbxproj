@@ -72,6 +72,7 @@
 		BBBC5499226AD4060029F4F7 /* WBWeiboToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBC5498226AD4060029F4F7 /* WBWeiboToken.m */; };
 		BBBC549C226AEB450029F4F7 /* WBWeiboUidRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBC549B226AEB450029F4F7 /* WBWeiboUidRequest.m */; };
 		BBBC549F226AF0A40029F4F7 /* WBWeiboHTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBC549E226AF0A40029F4F7 /* WBWeiboHTTPManager.m */; };
+		BBBC54A2226B0CF80029F4F7 /* WBAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBC54A1226B0CF80029F4F7 /* WBAccountManager.m */; };
 		BBF76C1A2269690500DB2266 /* WBBaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF76C192269690500DB2266 /* WBBaseNavViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -214,6 +215,8 @@
 		BBBC549B226AEB450029F4F7 /* WBWeiboUidRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBWeiboUidRequest.m; sourceTree = "<group>"; };
 		BBBC549D226AF0A40029F4F7 /* WBWeiboHTTPManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBWeiboHTTPManager.h; sourceTree = "<group>"; };
 		BBBC549E226AF0A40029F4F7 /* WBWeiboHTTPManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBWeiboHTTPManager.m; sourceTree = "<group>"; };
+		BBBC54A0226B0CF80029F4F7 /* WBAccountManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBAccountManager.h; sourceTree = "<group>"; };
+		BBBC54A1226B0CF80029F4F7 /* WBAccountManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBAccountManager.m; sourceTree = "<group>"; };
 		BBF76C182269690500DB2266 /* WBBaseNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBBaseNavViewController.h; sourceTree = "<group>"; };
 		BBF76C192269690500DB2266 /* WBBaseNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBBaseNavViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -608,6 +611,7 @@
 			isa = PBXGroup;
 			children = (
 				BB9BFC61226869A70071A008 /* README.md */,
+				BBBC54A3226B0D020029F4F7 /* AccountManager */,
 				BB4027822269CE84006271F2 /* HTTPRequest */,
 				BBBC548F226ABFFF0029F4F7 /* WeiboRequest */,
 				BB9BFC6922686A3B0071A008 /* LanguageManager */,
@@ -636,6 +640,15 @@
 				BBBC549E226AF0A40029F4F7 /* WBWeiboHTTPManager.m */,
 			);
 			name = WeiboRequest;
+			sourceTree = "<group>";
+		};
+		BBBC54A3226B0D020029F4F7 /* AccountManager */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC54A0226B0CF80029F4F7 /* WBAccountManager.h */,
+				BBBC54A1226B0CF80029F4F7 /* WBAccountManager.m */,
+			);
+			name = AccountManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -755,6 +768,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBBC54A2226B0CF80029F4F7 /* WBAccountManager.m in Sources */,
 				BBBC5499226AD4060029F4F7 /* WBWeiboToken.m in Sources */,
 				BB349DCB2264227E00515502 /* YYFPSLabel.m in Sources */,
 				BB349DB52264216A00515502 /* UITextXXXMaxLength.m in Sources */,
