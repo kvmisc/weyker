@@ -18,6 +18,13 @@
 
 // 已加载帐号，且帐号未过期
 - (BOOL)isAccountValid;
+// xxx/Documents
+// xxx/Documents/${relativePath}
+- (NSString *)documentPath:(NSString *)relativePath;
+// xxx/Documents/Users/
+// xxx/Documents/Users/${uid}
+// xxx/Documents/Users/${uid}/${relativePath}
+- (NSString *)userDocumentPath:(NSString *)relativePath;
 
 // 加载上次登录成功的帐号，如果帐号过期，uid 和 token 置为空
 // 找到帐号，且未过期，则返回 YES
@@ -25,7 +32,6 @@
 // 加载任意已保存的帐号，不管是否过期
 // 找到帐号，则返回 YES
 - (BOOL)loadEverAccount:(NSString *)uid;
-
 // 登录成功以后设置到 uid 和 token，并保存到磁盘
 - (void)saveAccount:(NSString *)uid token:(WBWeiboToken *)token;
 

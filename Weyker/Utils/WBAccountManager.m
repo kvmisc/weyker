@@ -24,6 +24,14 @@
 {
   return ((_uid.length>0) && (_token) && ([_token notExpired]));
 }
+- (NSString *)documentPath:(NSString *)relativePath
+{
+  return [WBGlobal pathGlobal:relativePath];
+}
+- (NSString *)userDocumentPath:(NSString *)relativePath
+{
+  return [WBGlobal pathUser:_uid relativePath:relativePath];
+}
 
 - (BOOL)loadLastAccount
 {

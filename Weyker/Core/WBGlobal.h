@@ -39,5 +39,8 @@
 + (NSString *)pathUser:(NSString *)uid relativePath:(NSString *)relativePath;
 // /xxx/xxx/Documents/Users/${uid}/${service}/${file}
 + (NSString *)pathUser:(NSString *)uid service:(NSString *)service file:(NSString *)file;
+#ifdef DEBUG
++ (void)testPath;
+#endif
 
 @end
