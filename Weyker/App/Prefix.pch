@@ -54,9 +54,10 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 #import "Common/WBMessageCenter.h"
 #import "Common/WBWebViewController.h"
 
-
 // Utils
 #import "Utils/WBHTTPRequest.h"
+#import "Utils/WBWeiboGetRequest.h"
+#import "Utils/WBWeiboPostRequest.h"
 #import "Utils/WBLanguageManager.h"
 
 // Config

@@ -8,6 +8,7 @@
 
 #import "WBAuthorizeView.h"
 #import "WBWeakScriptMessageHandler.h"
+#import "WBWeiboAccessTokenRequest.h"
 
 @interface WBAuthorizeView () <
     WKNavigationDelegate,
@@ -17,6 +18,8 @@
 
 @property (nonatomic, strong) UIProgressView *progressView;
 @property (nonatomic, strong) UIButton *closeBtn;
+
+@property (nonatomic, strong) WBWeiboAccessTokenRequest *tokenRequest;
 
 @property (nonatomic, copy) void (^completion)(NSString *token);
 
@@ -110,13 +113,42 @@
 
   NSMutableString *url = [[NSMutableString alloc] initWithString:@"https://api.weibo.com/oauth2/authorize"];
   NSDictionary *queries = @{
-                            @"client_id": @"475810706",
-                            @"redirect_uri": @"https://api.weibo.com/oauth2/default.html",
+                            @"client_id": WB_WEIBO_APP_KEY,
+                            @"redirect_uri": WB_AUTHORIZE_REDIRECT_URI,
+                            @"scope": WB_AUTHORIZE_SCOPE_ALL,
                             @"display": @"mobile"
                             };
   [url tk_addQueryDictionary:queries];
   NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
   [self loadRequest:request];
+}
+
+- (void)requestAccessToken:(NSString *)code
+{
+  if ( !_tokenRequest ) {
+    _tokenRequest = [[WBWeiboAccessTokenRequest alloc] initWithCode:code];
+  }
+  [_tokenRequest cancel];
+
+  @weakify(self);
+  [_tokenRequest start:^(WBHTTPRequest *request, NSError *error) {
+    @strongify(self);
+    if ( error ) {
+      if ( self.completion ) {
+        self.completion(nil);
+      }
+    } else {
+      if ( self.tokenRequest.accessToken.length>0 ) {
+        if ( self.completion ) {
+          self.completion(self.tokenRequest.accessToken);
+        }
+      } else {
+        if ( self.completion ) {
+          self.completion(nil);
+        }
+      }
+    }
+  }];
 }
 
 - (void)loadRequest:(NSURLRequest *)request
@@ -273,13 +305,10 @@
   WBPrintMethod();
   NSString *url = navigationAction.request.URL.absoluteString;
   WBLog(@"Load: %@", url);
-  if ( [url hasPrefix:@"https://api.weibo.com/oauth2/default.html"] ) {
-    NSString *token = [[url tk_queryDictionary] objectForKey:@"code"];
-    if ( token.length>0 ) {
-      if ( _completion ) {
-        _completion(token);
-      }
-      [self.coverView hide:YES];
+  if ( [url hasPrefix:WB_AUTHORIZE_REDIRECT_URI] ) {
+    NSString *code = [[url tk_queryDictionary] objectForKey:@"code"];
+    if ( code.length>0 ) {
+      [self requestAccessToken:code];
     } else {
       // 虽然这次没拿到 token，万一新浪还会打开这网址呢，等着。用户可以手动关闭这个窗口的。
     }

@@ -30,21 +30,22 @@
 
 
   NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
-  AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:configuration];
-  //AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://kevinsblog.cn/"]
-  //                                                         sessionConfiguration:configuration];
-
+  AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://api.weibo.com/"]
+                                                           sessionConfiguration:configuration];
   AFHTTPResponseSerializer *serializer = [[AFHTTPResponseSerializer alloc] init];
   manager.responseSerializer = serializer;
+
   self.request = [[WBHTTPRequest alloc] init];
   self.request.HTTPManager = manager;
-  self.request.address = @"https://api.weibo.com/2/users/show.json";
-  //self.request.address = @"http://kevinsblog.cn/";
+  //self.request.address = @"users/show.json";
+  self.request.address = @"2/statuses/home_timeline.json";
   self.request.method = @"GET";
-  [self.request.queries tk_setParameterStr:@"9ea6c0cfc687f731c6ca0b2623530763" forKey:@"access_token"];
-  [self.request start:^(WBHTTPRequest *request, NSError *error) {
-    NSLog(@"req: %@", error);
-  }];
+
+//  [self.request.queries tk_setParameterStr:@"9ea6c0cfc687f731c6ca0b2623530763" forKey:@"access_token"];
+////  [self.request start:^(WBHTTPRequest *request, NSError *error) {
+////    NSString *str = [[NSString alloc] initWithData:request.responseData encoding:NSUTF8StringEncoding];
+////    NSLog(@"req: %@", str);
+////  }];
 }
 
 - (void)viewWillLayoutSubviews
@@ -86,7 +87,8 @@
     if ( token.length>0 ) {
       [self.request.queries tk_setParameterStr:token forKey:@"access_token"];
       [self.request start:^(WBHTTPRequest *request, NSError *error) {
-        NSLog(@"req: %@", error);
+        NSString *str = [[NSString alloc] initWithData:request.responseData encoding:NSUTF8StringEncoding];
+        NSLog(@"req: %@", str);
       }];
     }
   }];
