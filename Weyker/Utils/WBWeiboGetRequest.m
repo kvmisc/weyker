@@ -12,14 +12,7 @@
 
 - (void)setup
 {
-  NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
-  AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:WB_API_BASE_URL]
-                                                           sessionConfiguration:configuration];
-  AFHTTPResponseSerializer *serializer = [[AFHTTPResponseSerializer alloc] init];
-  manager.responseSerializer = serializer;
-
-  self.HTTPManager = manager;
-
+  self.HTTPManager = [WBWeiboHTTPManager HTTPSessionManager];
 
   [self.queries tk_setParameterStr:WB_WEIBO_APP_KEY forKey:@"client_id"];
 }

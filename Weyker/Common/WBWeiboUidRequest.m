@@ -27,13 +27,25 @@
 {
   [super setup];
 
-  self.address = @"2/account/get_uid.json";
-  self.method = @"GET";
+//  NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
+//  AFHTTPSessionManager *HTTPSessionManager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:configuration];
+////  HTTPSessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:WB_API_BASE_URL]
+////                                                sessionConfiguration:configuration];
+//  AFHTTPResponseSerializer *serializer = [[AFJSONResponseSerializer alloc] init];
+//  HTTPSessionManager.responseSerializer = serializer;
+//  self.HTTPManager = HTTPSessionManager;
+
+
+  //self.address = @"https://www.baidu.com/"; //@"2/account/get_uid.json";
+  //self.method = @"GET";
 }
 
 - (void)parse:(id)object
 {
-  NSLog(@"%@", object);
+//  NSString *str = [[NSString alloc] initWithData:self.responseData encoding:NSUTF8StringEncoding];
+//  NSLog(@"%@", str);
+//  NSLog(@"%@", object);
+  self.uid = [object objectForKey:@"uid"];
 //  WBWeiboToken *token = [WBWeiboToken yy_modelWithDictionary:object];
 //  if ( (token.access_token.length>0)
 //      && (token.expires_in.length>0)

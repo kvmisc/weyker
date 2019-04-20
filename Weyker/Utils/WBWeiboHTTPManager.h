@@ -1,5 +1,5 @@
 //
-//  WBWeiboPostRequest.h
+//  WBWeiboHTTPManager.h
 //  Weyker
 //
 //  Created by Haiping Wu on 2019/4/20.
@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WBHTTPRequest.h"
-#import "WBWeiboHTTPManager.h"
 #import "WBWeiboKeys.h"
 
-@interface WBWeiboPostRequest : WBHTTPRequest
+@interface WBWeiboHTTPManager : NSObject
+
++ (AFHTTPSessionManager *)HTTPSessionManager;
 
 @end

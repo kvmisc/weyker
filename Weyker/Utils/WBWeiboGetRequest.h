@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "WBHTTPRequest.h"
+#import "WBWeiboHTTPManager.h"
 #import "WBWeiboKeys.h"
 
 @interface WBWeiboGetRequest : WBHTTPRequest
