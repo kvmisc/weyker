@@ -56,7 +56,7 @@
 
   NSString *string = self;
   if ( ![self containsString:@"?"] ) {
-    string = [NSString stringWithFormat:@"?%@", self];
+    string = [[NSString alloc] initWithFormat:@"?%@", self];
   }
 
   NSURLComponents *components = [[NSURLComponents alloc] initWithString:string];
@@ -164,10 +164,10 @@
   [self enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL *stop) {
     if ( key.length>0 ) {
       if ( obj.length>0 ) {
-        NSString *pair = [NSString stringWithFormat:@"%@=%@", [key tk_URLEncodedString], [obj tk_URLEncodedString]];
+        NSString *pair = [[NSString alloc] initWithFormat:@"%@=%@", [key tk_URLEncodedString], [obj tk_URLEncodedString]];
         [pairAry addObject:pair];
       } else {
-        NSString *pair = [NSString stringWithFormat:@"%@=", [key tk_URLEncodedString]];
+        NSString *pair = [[NSString alloc] initWithFormat:@"%@=", [key tk_URLEncodedString]];
         [pairAry addObject:pair];
       }
     }

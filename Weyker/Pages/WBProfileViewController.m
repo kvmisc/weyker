@@ -82,15 +82,15 @@
   WBAuthorizeView *authorizeView = [[WBAuthorizeView alloc] init];
   [authorizeView prepareForView:WB_APP_DELEGATE.window viewport:nil];
   [authorizeView.coverView show:YES];
-  [authorizeView startAuthorize:^(NSString *token) {
+  [authorizeView startAuthorize:^(NSString *uid, WBWeiboToken *token) {
     @strongify(self);
-    if ( token.length>0 ) {
-      [self.request.queries tk_setParameterStr:token forKey:@"access_token"];
-      [self.request start:^(WBHTTPRequest *request, NSError *error) {
-        NSString *str = [[NSString alloc] initWithData:request.responseData encoding:NSUTF8StringEncoding];
-        NSLog(@"req: %@", str);
-      }];
-    }
+//    if ( token.length>0 ) {
+//      [self.request.queries tk_setParameterStr:token forKey:@"access_token"];
+//      [self.request start:^(WBHTTPRequest *request, NSError *error) {
+//        NSString *str = [[NSString alloc] initWithData:request.responseData encoding:NSUTF8StringEncoding];
+//        NSLog(@"req: %@", str);
+//      }];
+//    }
   }];
 }
 - (void)navBarRightAction:(id)sender

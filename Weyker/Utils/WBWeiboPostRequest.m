@@ -13,7 +13,7 @@
 - (void)setup
 {
   NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
-  AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://api.weibo.com/"]
+  AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:WB_API_BASE_URL]
                                                            sessionConfiguration:configuration];
   AFHTTPResponseSerializer *serializer = [[AFHTTPResponseSerializer alloc] init];
   manager.responseSerializer = serializer;

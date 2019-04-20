@@ -8,7 +8,6 @@
 
 #import "WBAuthorizeView.h"
 #import "WBWeakScriptMessageHandler.h"
-#import "WBWeiboTokenRequest.h"
 
 @interface WBAuthorizeView () <
     WKNavigationDelegate,
@@ -20,8 +19,9 @@
 @property (nonatomic, strong) UIButton *closeBtn;
 
 @property (nonatomic, strong) WBWeiboTokenRequest *tokenRequest;
+@property (nonatomic, strong) WBWeiboUidRequest *uidRequest;
 
-@property (nonatomic, copy) void (^completion)(NSString *token);
+@property (nonatomic, copy) void (^completion)(NSString *uid, WBWeiboToken *token);
 
 @end
 
@@ -88,8 +88,10 @@
 - (void)closeButtonClicked:(id)sender
 {
   if ( _completion ) {
-    _completion(nil);
+    _completion(nil, nil);
   }
+  [_tokenRequest cancel];
+  [_uidRequest cancel];
   [self.coverView hide:YES];
 }
 
@@ -105,13 +107,14 @@
   _closeBtn.frame = CGRectMake(self.bounds.size.width-30.0, -10.0, 40.0, 40.0);
 }
 
-- (void)startAuthorize:(void (^)(NSString *token))completion
+- (void)startAuthorize:(void (^)(NSString *uid, WBWeiboToken *token))completion
 {
   if ( completion ) {
     _completion = [completion copy];
   }
 
-  NSMutableString *url = [[NSMutableString alloc] initWithString:@"https://api.weibo.com/oauth2/authorize"];
+  NSMutableString *url = [[NSMutableString alloc] initWithString:WB_API_BASE_URL];
+  [url appendString:@"oauth2/authorize"];
   NSDictionary *queries = @{
                             @"client_id": WB_WEIBO_APP_KEY,
                             @"redirect_uri": WB_AUTHORIZE_REDIRECT_URI,
@@ -133,21 +136,36 @@
   @weakify(self);
   [_tokenRequest start:^(WBHTTPRequest *request, NSError *error) {
     @strongify(self);
-    if ( error ) {
-      if ( self.completion ) {
-        self.completion(nil);
-      }
+    if ( self.tokenRequest.token ) {
+      [self requestUid:self.tokenRequest.token];
     } else {
-      if ( self.tokenRequest.accessToken.length>0 ) {
-        if ( self.completion ) {
-          self.completion(self.tokenRequest.accessToken);
-        }
-      } else {
-        if ( self.completion ) {
-          self.completion(nil);
-        }
+      if ( self.completion ) {
+        self.completion(nil, nil);
       }
     }
+  }];
+}
+
+- (void)requestUid:(WBWeiboToken *)token
+{
+  if ( !_uidRequest ) {
+    _uidRequest = [[WBWeiboUidRequest alloc] initWithToken:token.access_token];
+  }
+  [_uidRequest cancel];
+
+  @weakify(self);
+  [_uidRequest start:^(WBHTTPRequest *request, NSError *error) {
+    @strongify(self);
+    if ( self.uidRequest.uid.length>0 ) {
+      if ( self.completion ) {
+        self.completion(self.uidRequest.uid, token);
+      }
+    } else {
+      if ( self.completion ) {
+        self.completion(nil, nil);
+      }
+    }
+    [self.coverView hide:YES];
   }];
 }
 

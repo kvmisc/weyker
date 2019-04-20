@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Utils/WBWeiboPostRequest.h"
+#import "WBWeiboToken.h"
 
 @interface WBWeiboTokenRequest : WBWeiboPostRequest
 
-@property (nonatomic, copy) NSString *accessToken;
+@property (nonatomic, strong) WBWeiboToken *token;
 
 - (id)initWithCode:(NSString *)code;
 

@@ -70,6 +70,7 @@
 		BBBC5492226AC0E50029F4F7 /* WBWeiboPostRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBC5491226AC0E50029F4F7 /* WBWeiboPostRequest.m */; };
 		BBBC5496226AC9AC0029F4F7 /* WBWeiboTokenRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBC5495226AC9AC0029F4F7 /* WBWeiboTokenRequest.m */; };
 		BBBC5499226AD4060029F4F7 /* WBWeiboToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBC5498226AD4060029F4F7 /* WBWeiboToken.m */; };
+		BBBC549C226AEB450029F4F7 /* WBWeiboUidRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBC549B226AEB450029F4F7 /* WBWeiboUidRequest.m */; };
 		BBF76C1A2269690500DB2266 /* WBBaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF76C192269690500DB2266 /* WBBaseNavViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -208,6 +209,8 @@
 		BBBC5495226AC9AC0029F4F7 /* WBWeiboTokenRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBWeiboTokenRequest.m; sourceTree = "<group>"; };
 		BBBC5497226AD4060029F4F7 /* WBWeiboToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBWeiboToken.h; sourceTree = "<group>"; };
 		BBBC5498226AD4060029F4F7 /* WBWeiboToken.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBWeiboToken.m; sourceTree = "<group>"; };
+		BBBC549A226AEB450029F4F7 /* WBWeiboUidRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBWeiboUidRequest.h; sourceTree = "<group>"; };
+		BBBC549B226AEB450029F4F7 /* WBWeiboUidRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBWeiboUidRequest.m; sourceTree = "<group>"; };
 		BBF76C182269690500DB2266 /* WBBaseNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBBaseNavViewController.h; sourceTree = "<group>"; };
 		BBF76C192269690500DB2266 /* WBBaseNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBBaseNavViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -497,6 +500,8 @@
 				BBBC5495226AC9AC0029F4F7 /* WBWeiboTokenRequest.m */,
 				BBBC5497226AD4060029F4F7 /* WBWeiboToken.h */,
 				BBBC5498226AD4060029F4F7 /* WBWeiboToken.m */,
+				BBBC549A226AEB450029F4F7 /* WBWeiboUidRequest.h */,
+				BBBC549B226AEB450029F4F7 /* WBWeiboUidRequest.m */,
 			);
 			name = AuthorizeView;
 			sourceTree = "<group>";
@@ -785,6 +790,7 @@
 				BB431DD5225F426000537A90 /* main.m in Sources */,
 				BB349DB82264216A00515502 /* UIColorExtentions.m in Sources */,
 				BB4027732269BB61006271F2 /* NSMutableAttributedStringExtentions.m in Sources */,
+				BBBC549C226AEB450029F4F7 /* WBWeiboUidRequest.m in Sources */,
 				BB349DFD226423A600515502 /* WBBaseViewController.m in Sources */,
 				BB725AAA226979CE00A5DF4F /* WBProfilePersonCell.m in Sources */,
 				BB349DCA2264227E00515502 /* YYWeakProxy.m in Sources */,

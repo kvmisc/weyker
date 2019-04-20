@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WBWeiboToken : NSObject
+@interface WBWeiboToken : NSObject <
+    NSCoding
+>
 //{
 //  "access_token":"2.007PbFFD0OG9MW079addf400vUoffE",
 //  "remind_in":"139296",
@@ -18,7 +20,8 @@
 //}
 @property (nonatomic, copy) NSString *access_token;
 @property (nonatomic, copy) NSString *expires_in;
+@property (nonatomic, copy) NSString *create_at;
 
-- (BOOL)isExpired;
+- (BOOL)notExpired;
 
 @end

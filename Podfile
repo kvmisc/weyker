@@ -13,5 +13,6 @@ pod 'KVOController'
 pod 'Aspects'
 
 pod 'AFNetworking'
+pod 'YYModel'
 
 end

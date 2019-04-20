@@ -136,7 +136,7 @@
 + (NSString *)truncateText:(NSString *)text toLength:(NSUInteger)length
 {
   if ( text.length>length ) {
-    return [NSString stringWithFormat:@"%@…", [text substringToIndex:length]];
+    return [[NSString alloc] initWithFormat:@"%@…", [text substringToIndex:length]];
   }
   return text;
 }

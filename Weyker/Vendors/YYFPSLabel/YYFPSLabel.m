@@ -65,7 +65,7 @@
   float fps = _count / delta;
   _count = 0;
 
-  self.text = [NSString stringWithFormat:@"FPS: %d",(int)round(fps)];
+  self.text = [[NSString alloc] initWithFormat:@"FPS: %d",(int)round(fps)];
 }
 
 + (void)setup

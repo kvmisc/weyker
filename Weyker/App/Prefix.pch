@@ -21,6 +21,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 #import <Aspects/Aspects.h>
 
 #import <AFNetworking/AFNetworking.h>
+#import <YYModel/YYModel.h>
 
 #import "AppDelegate.h"
 

@@ -36,9 +36,17 @@
 
 - (void)parse:(id)object
 {
-  NSString *str = [[NSString alloc] initWithData:self.responseData encoding:NSUTF8StringEncoding];
-  NSLog(@"%@", str);
-  NSLog(@"%@", object);
+  WBWeiboToken *token = [WBWeiboToken yy_modelWithDictionary:object];
+  if ( (token.access_token.length>0)
+      && (token.expires_in.length>0)
+      && (token.expires_in.integerValue>0) )
+  {
+    NSTimeInterval timestamp = [[NSDate date] timeIntervalSince1970];
+    NSString *createAt = [[NSString alloc] initWithFormat:@"%lf", timestamp];
+    token.create_at = createAt;
+
+    _token = token;
+  }
 }
 
 @end

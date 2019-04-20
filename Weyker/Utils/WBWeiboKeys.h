@@ -6,6 +6,8 @@
 //  Copyright © 2017 firefly.com. All rights reserved.
 //
 
+#define WB_API_BASE_URL @"https://api.weibo.com/"
+
 #define WB_WEIBO_APP_KEY @"475810706"
 #define WB_WEIBO_APP_SECRET @"42076279bb036ec4d7d5899fce7a5775"
 

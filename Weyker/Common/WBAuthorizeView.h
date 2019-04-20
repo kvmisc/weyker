@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
+#import "WBWeiboTokenRequest.h"
+#import "WBWeiboUidRequest.h"
 
 @interface WBAuthorizeView : WBCoverContentView
 
 @property (nonatomic, strong, readonly) WKWebView *webView;
 @property (nonatomic, strong, readonly) NSURLRequest *request;
 
-- (void)startAuthorize:(void (^)(NSString *token))completion;
+- (void)startAuthorize:(void (^)(NSString *uid, WBWeiboToken *token))completion;
 
 - (void)loadRequest:(NSURLRequest *)request;
 
