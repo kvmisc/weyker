@@ -63,7 +63,6 @@
 		BB9BFC43226826090071A008 /* WBTestNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9BFC42226826090071A008 /* WBTestNavView.m */; };
 		BB9BFC492268429E0071A008 /* WBPushChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9BFC482268429E0071A008 /* WBPushChildViewController.m */; };
 		BB9BFC4C226843360071A008 /* WBPresentChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9BFC4B226843360071A008 /* WBPresentChildViewController.m */; };
-		BB9BFC64226869A70071A008 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BB9BFC61226869A70071A008 /* README.md */; };
 		BB9BFC6822686A320071A008 /* WBLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9BFC6622686A310071A008 /* WBLanguageManager.m */; };
 		BBA9AF202268787100D4AFCB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBA9AF1E2268787100D4AFCB /* Localizable.strings */; };
 		BBBC548E226ABFD30029F4F7 /* WBWeiboGetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBC548D226ABFD30029F4F7 /* WBWeiboGetRequest.m */; };
@@ -80,6 +79,14 @@
 		211EB5C4B48B12C0B606E397 /* Pods-Weyker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weyker.debug.xcconfig"; path = "Target Support Files/Pods-Weyker/Pods-Weyker.debug.xcconfig"; sourceTree = "<group>"; };
 		2BF0111BC1D5DF1721B2D86E /* libPods-Weyker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Weyker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9940D838517181638F5A5510 /* Pods-Weyker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weyker.release.xcconfig"; path = "Target Support Files/Pods-Weyker/Pods-Weyker.release.xcconfig"; sourceTree = "<group>"; };
+		BB18B185226EDEF1008A15E1 /* bump_build_number.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = bump_build_number.sh; sourceTree = "<group>"; };
+		BB18B186226EDEF1008A15E1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BB18B187226EDEF1008A15E1 /* update_pods.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = update_pods.txt; sourceTree = "<group>"; };
+		BB18B188226EDEF1008A15E1 /* block_declaration.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = block_declaration.md; sourceTree = "<group>"; };
+		BB18B189226EDEF1008A15E1 /* gcd_timer_sample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gcd_timer_sample.m; sourceTree = "<group>"; };
+		BB18B18B226EDEF1008A15E1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BB18B18C226EDF20008A15E1 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		BB18B18E226EDF4D008A15E1 /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = SOURCE_ROOT; };
 		BB1910872265F46100F3F6E9 /* WBMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBMessageViewController.h; sourceTree = "<group>"; };
 		BB1910882265F46100F3F6E9 /* WBMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBMessageViewController.m; sourceTree = "<group>"; };
 		BB19109B2265F70200F3F6E9 /* WBRootTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBRootTabBar.h; sourceTree = "<group>"; };
@@ -248,6 +255,28 @@
 				9940D838517181638F5A5510 /* Pods-Weyker.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BB18B184226EDEF1008A15E1 /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				BB18B186226EDEF1008A15E1 /* README.md */,
+				BB18B185226EDEF1008A15E1 /* bump_build_number.sh */,
+				BB18B187226EDEF1008A15E1 /* update_pods.txt */,
+				BB18B188226EDEF1008A15E1 /* block_declaration.md */,
+				BB18B189226EDEF1008A15E1 /* gcd_timer_sample.m */,
+			);
+			path = Docs;
+			sourceTree = "<group>";
+		};
+		BB18B18A226EDEF1008A15E1 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BB18B18B226EDEF1008A15E1 /* README.md */,
+				BB18B18E226EDF4D008A15E1 /* build.sh */,
+				BB18B18C226EDF20008A15E1 /* Podfile */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 		BB1910922265F49E00F3F6E9 /* Message */ = {
@@ -555,6 +584,8 @@
 				BB1910A22265FB3A00F3F6E9 /* Config */,
 				BB431DCB225F426000537A90 /* Resources */,
 				BB349DC32264227E00515502 /* Vendors */,
+				BB18B184226EDEF1008A15E1 /* Docs */,
+				BB18B18A226EDEF1008A15E1 /* Support */,
 			);
 			path = Weyker;
 			sourceTree = "<group>";
@@ -712,7 +743,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB9BFC64226869A70071A008 /* README.md in Resources */,
 				BBA9AF202268787100D4AFCB /* Localizable.strings in Resources */,
 				BB431DD4225F426000537A90 /* Assets.xcassets in Resources */,
 				BB725AAB226979CE00A5DF4F /* WBProfilePersonCell.xib in Resources */,
